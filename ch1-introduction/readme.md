@@ -19,7 +19,7 @@ This simply means that running time is function of input size provided to the al
 
 Now, running times could be divided in worst, best and average cases; where the worst-case analysis is most important. To determine these cases, we tend to bound our function `f(n)` on another function `g(n)` for larger values of n. The upper bound can be determined for all larger values of n for which values of some function `cg(n)` is always greater than that of `f(n)` i.e., `0 <= f(n) <= cg(n)`. **This gives us a tight upperbound (Big-O) on f(n)**. The tight lowerbound (Omega) is analogous to this i.e., `0 <= cg(n) <= f(n)`.
 
-We cane find the average bound (Theta) can be found from both upper and lowerbounds.
+We can find the average bound (Theta) using both the upper and lowerbounds.
 
 **A** major factor in algorithm analysis is complexity of the alogithm i.e., mapping the algorithm is terms of real-world factors like time, space, etc.
 
