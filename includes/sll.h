@@ -24,6 +24,11 @@ class sll
 	node *head;
 
   public:
+		node *returnHead()
+	{
+		return head;
+	}
+
 	void insert(int ele, int pos);
 	void remove(int pos);
 	void print();
