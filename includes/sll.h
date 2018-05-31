@@ -1,10 +1,11 @@
 #include "../headers.h"
 
+template <typename T>
 class node
 {
   public:
-	int data;
-	node *next;
+	T data;
+	node<T> *next;
 
 	node()
 	{
@@ -12,38 +13,44 @@ class node
 		next = NULL;
 	}
 
-	node(int ele)
+	node(T ele)
 	{
 		data = ele;
 		next = NULL;
 	}
 };
 
+template <typename T>
 class sll
 {
-	node *head;
+	node<T> *head;
 
   public:
-		node *returnHead()
+	node<T> *returnHead()
 	{
 		return head;
 	}
 
 	void insert(int ele, int pos);
 	void remove(int pos);
+
 	void print();
-	int length();
+	void printHead(node<T> *newHead);
+
 	void find(int n);
 	void cycle(bool start, bool length);
+
 	void reverse();
+
+	int length();
 	bool empty();
 };
 
-bool sll::empty()
+template <typename T>
+bool sll<T>::empty()
 {
 	if (head == NULL)
 	{
-		cout << "\n Underflow Detected.";
 		return true;
 	}
 	else
@@ -52,13 +59,14 @@ bool sll::empty()
 	}
 }
 
-void sll::reverse()
+template <typename T>
+void sll<T>::reverse()
 {
 	if (!empty())
 	{
-		node *p = head;
-		node *q = head;
-		node *r = head;
+		node<T> *p = head;
+		node<T> *q = p->next;
+		node<T> *r = q->next;
 
 		p->next = NULL;
 
@@ -72,14 +80,18 @@ void sll::reverse()
 
 		q->next = p;
 
+		head = q;
+
 		print();
 	}
 }
 
-void sll::cycle(bool start, bool length)
+template <typename T>
+void sll<T>::cycle(bool start, bool length)
 {
-	node *slow = head;
-	node *fast = head;
+	node<T> *slow = head;
+	node<T> *fast = head;
+
 	bool loop = false;
 
 	if (!empty())
@@ -131,11 +143,12 @@ void sll::cycle(bool start, bool length)
 	}
 }
 
-void sll::find(int n)
+template <typename T>
+void sll<T>::find(int n)
 {
 	if (!empty())
 	{
-		node *p = head;
+		node<T> *p = head;
 
 		int len = length();
 		int k = 1;
@@ -157,11 +170,12 @@ void sll::find(int n)
 	}
 }
 
-void sll::insert(int ele, int pos)
+template <typename T>
+void sll<T>::insert(int ele, int pos)
 {
-	node *newNode = new node(ele);
-	node *p = head;
-	node *q = head;
+	node<T> *newNode = new node<T>(ele);
+	node<T> *p = head;
+	node<T> *q = head;
 
 	if (pos == 1)
 	{
@@ -198,10 +212,11 @@ void sll::insert(int ele, int pos)
 	cout << "New node successfully inserted at " << pos << endl;
 }
 
-void sll::remove(int pos)
+template <typename T>
+void sll<T>::remove(int pos)
 {
-	node *p = head;
-	node *q = head;
+	node<T> *p = head;
+	node<T> *q = head;
 
 	if (pos == 1)
 	{
@@ -242,9 +257,10 @@ void sll::remove(int pos)
 	}
 }
 
-void sll::print()
+template <typename T>
+void sll<T>::print()
 {
-	node *p = head;
+	node<T> *p = head;
 
 	if (!empty())
 	{
@@ -259,9 +275,28 @@ void sll::print()
 	}
 }
 
-int sll::length()
+template <typename T>
+void sll<T>::printHead(node<T> *newHead)
 {
-	node *p = head;
+	node<T> *p = newHead;
+
+	if (!empty())
+	{
+		cout << "\n List content are: ";
+		while (p != NULL)
+		{
+			cout << p->data << " --> ";
+			p = p->next;
+		}
+
+		return;
+	}
+}
+
+template <typename T>
+int sll<T>::length()
+{
+	node<T> *p = head;
 	int count = 0;
 
 	if (!empty())

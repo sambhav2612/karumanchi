@@ -22,7 +22,7 @@ int main()
 		switch (ch)
 		{
 		case 'a':
-			cout << "\nEnter element to insert and position to insert at: ";
+			cout << "\nEnter element to insert: ";
 			cin >> ele;
 
 			obj.insert(ele);

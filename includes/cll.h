@@ -1,9 +1,10 @@
 #include "../headers.h"
 
+template <typename T>
 class node
 {
   public:
-	int data;
+	T data;
 	node *next;
 
 	node()
@@ -12,34 +13,37 @@ class node
 		next = NULL;
 	}
 
-	node(int ele)
+	node(T ele)
 	{
 		data = ele;
 		next = NULL;
 	}
 };
 
+template <typename T>
 class cll
 {
-	node *head;
+	node<T> *head;
 
   public:
-	node *returnHead()
+	node<T> *returnHead()
 	{
 		return head;
 	}
 
 	void insert(int ele, int pos);
 	void remove(int pos);
+
 	void print();
 	int length();
 };
 
-void cll::insert(int ele, int pos)
+template <typename T>
+void cll<T>::insert(int ele, int pos)
 {
-	node *newNode = new node(ele);
-	node *p = head;
-	node *q = head;
+	node<T> *newNode = new node<T>(ele);
+	node<T> *p = head;
+	node<T> *q = head;
 
 	if (pos == 1)
 	{
@@ -82,10 +86,11 @@ void cll::insert(int ele, int pos)
 	cout << "New node successfully inserted at " << pos << endl;
 }
 
-void cll::remove(int pos)
+template <typename T>
+void cll<T>::remove(int pos)
 {
-	node *p = head;
-	node *q = head;
+	node<T> *p = head;
+	node<T> *q = head;
 
 	if (pos == 1)
 	{
@@ -133,9 +138,10 @@ void cll::remove(int pos)
 	}
 }
 
-void cll::print()
+template <typename T>
+void cll<T>::print()
 {
-	node *p = head;
+	node<T> *p = head;
 
 	if (!head)
 	{
@@ -153,9 +159,10 @@ void cll::print()
 	return;
 }
 
-int cll::length()
+template <typename T>
+int cll<T>::length()
 {
-	node *p = head;
+	node<T> *p = head;
 	int count = 0;
 
 	if (!head)

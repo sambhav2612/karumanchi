@@ -1,9 +1,10 @@
 #include "../headers.h"
 
+template <typename T>
 class node
 {
   public:
-	int data;
+	T data;
 	node *next;
 	node *prev;
 
@@ -14,7 +15,7 @@ class node
 		prev = NULL;
 	}
 
-	node(int ele)
+	node(T ele)
 	{
 		data = ele;
 		next = NULL;
@@ -22,22 +23,25 @@ class node
 	}
 };
 
+template <typename T>
 class dll
 {
-	node *head;
+	node<T> *head;
 
   public:
 	void insert(int ele, int pos);
 	void remove(int pos);
+
 	void print();
 	int length();
 };
 
-void dll::insert(int ele, int pos)
+template <typename T>
+void dll<T>::insert(int ele, int pos)
 {
-	node *newNode = new node(ele);
-	node *p = head;
-	node *q = head;
+	node<T> *newNode = new node<T>(ele);
+	node<T> *p = head;
+	node<T> *q = head;
 
 	if (pos == 1)
 	{
@@ -78,10 +82,11 @@ void dll::insert(int ele, int pos)
 	cout << "New node successfully inserted at " << pos << endl;
 }
 
-void dll::remove(int pos)
+template <typename T>
+void dll<T>::remove(int pos)
 {
-	node *p = head;
-	node *q = head;
+	node<T> *p = head;
+	node<T> *q = head;
 
 	if (pos == 1)
 	{
@@ -124,9 +129,10 @@ void dll::remove(int pos)
 	}
 }
 
-void dll::print()
+template <typename T>
+void dll<T>::print()
 {
-	node *p = head;
+	node<T> *p = head;
 
 	if (!head)
 	{
@@ -144,9 +150,11 @@ void dll::print()
 	return;
 }
 
-int dll::length()
+template <typename T>
+int dll<T>::length()
 {
-	node *p = head;
+	node<T> *p = head;
+
 	int count = 0;
 
 	if (!head)

@@ -1,10 +1,11 @@
 #include "../headers.h"
 
+template <typename T>
 class node
 {
   public:
-	int data;
-	node *next;
+	T data;
+	node<T> *next;
 
 	node()
 	{
@@ -12,16 +13,17 @@ class node
 		next = NULL;
 	}
 
-	node(int ele)
+	node(T ele)
 	{
 		data = ele;
 		next = NULL;
 	}
 };
 
+template <typename T>
 class stack
 {
-	node *head;
+	node<T> *head;
 
   public:
 	stack()
@@ -29,14 +31,20 @@ class stack
 		head = NULL;
 	}
 
+	node<T> *returnHead()
+	{
+		return head;
+	}
+
 	void insert(int ele);
-	int remove();
+	T remove();
 	void print();
 	int length();
-	int top();
+	T top();
 };
 
-int stack::top()
+template <typename T>
+T stack<T>::top()
 {
 	if (head != NULL)
 	{
@@ -44,9 +52,10 @@ int stack::top()
 	}
 }
 
-void stack::insert(int ele)
+template <typename T>
+void stack<T>::insert(int ele)
 {
-	node *newNode = new node(ele);
+	node<T> *newNode = new node<T>(ele);
 
 	if (!head)
 	{
@@ -60,13 +69,14 @@ void stack::insert(int ele)
 
 	if (head && head == newNode)
 	{
-		cout << "New node successfully inserted at head." << endl;
+		cout << "New node successfully inserted at top." << endl;
 	}
 }
 
-int stack::remove()
+template <typename T>
+T stack<T>::remove()
 {
-	node *p = head;
+	node<T> *p = head;
 
 	if (head == NULL)
 	{
@@ -81,15 +91,17 @@ int stack::remove()
 	if (p)
 	{
 		delete (p);
-		cout << "Node removed from head." << endl;
 	}
+
+	cout << "Node removed from head." << endl;
 
 	return data;
 }
 
-void stack::print()
+template <typename T>
+void stack<T>::print()
 {
-	node *p = head;
+	node<T> *p = head;
 
 	if (head == NULL)
 	{
@@ -105,9 +117,10 @@ void stack::print()
 	}
 }
 
-int stack::length()
+template <typename T>
+int stack<T>::length()
 {
-	node *p = head;
+	node<T> *p = head;
 	int count = 0;
 
 	if (head == NULL)
