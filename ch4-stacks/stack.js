@@ -9,7 +9,7 @@ var stack = function () {
 		this.count++;
 
 		console.log("Pushed " + value + " to stack.")
-	}
+	};
 
 	this.pop = function () {
 		if (this.count == 0) {
@@ -21,24 +21,24 @@ var stack = function () {
 		delete this.sequence[this.count];
 
 		return res;
-	}
+	};
 
 	this.len = function () {
 		return this.count;
-	}
+	};
 
 	this.top = function () {
 		return this.sequence[this.count - 1];
-	}
+	};
 
 	this.counter = function () {
 		return this.count;
-	}
+	};
 
 	this.printer = function () {
 		console.log("Traversing queue... \t" + this.sequence);
-	}
-}
+	};
+};
 
 var obj = new stack();
 

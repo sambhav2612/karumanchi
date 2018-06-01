@@ -30,29 +30,29 @@ var pq = function () {
 		}
 
 		console.log("Pushed " + value + " to queue.")
-	}
+	};
 
 	this.dequeue = function () {
 		var value = sequence.shift();
 		return value[0];
-	}
+	};
 
 	this.len = function () {
 		return sequence.length;
-	}
+	};
 
 	this.top = function () {
 		return sequence[0];
-	}
+	};
 
 	this.isEmpty = function () {
 		return (sequence.length === 0);
-	}
+	};
 
 	this.printer = function () {
 		console.log("Traversing queue... \t first->" + sequence + "->last");
-	}
-}
+	};
+};
 
 var obj = new pq();
 
