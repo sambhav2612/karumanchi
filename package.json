@@ -1,0 +1,27 @@
+{
+  "name": "karumanchi",
+  "version": "0.0.4",
+  "description": "karumanchi ds guides and codes",
+  "scripts": {
+    "stack": "node ch4-stacks/stack.js",
+    "queue": "node ch5-queues/queue.js",
+    "pq": "node ch5-queues/priority-queue.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sambhav2612/karumanchi.git"
+  },
+  "keywords": [
+    "karumanchi",
+    "data",
+    "structures",
+    "ds",
+    "algo"
+  ],
+  "author": "Sambhav Jain",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/sambhav2612/karumanchi/issues"
+  },
+  "homepage": "https://github.com/sambhav2612/karumanchi#readme"
+}
