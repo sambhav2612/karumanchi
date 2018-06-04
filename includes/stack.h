@@ -5,7 +5,7 @@ class node
 {
   public:
 	T data;
-	node<T> *next;
+	node *next;
 
 	node()
 	{
@@ -41,7 +41,16 @@ class stack
 	void print();
 	int length();
 	T top();
+	bool isEmpty();
 };
+
+template <typename T>
+bool stack<T>::isEmpty()
+{
+	if (head == NULL)
+		return true;
+	return false;
+}
 
 template <typename T>
 T stack<T>::top()
@@ -69,7 +78,7 @@ void stack<T>::insert(int ele)
 
 	if (head && head == newNode)
 	{
-		cout << "New node successfully inserted at top." << endl;
+		cout << ele << " successfully inserted at top." << endl;
 	}
 }
 

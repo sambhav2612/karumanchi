@@ -2,7 +2,7 @@
 
 int main()
 {
-	stack obj;
+	stack<int> obj;
 	char yes = 'y';
 	char ch;
 

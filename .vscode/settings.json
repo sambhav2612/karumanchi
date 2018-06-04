@@ -3,7 +3,8 @@
         "iostream": "cpp",
         "utility": "cpp",
         "xstring": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "tuple": "cpp"
     },
     "files.autoSave": "onFocusChange",
     "editor.insertSpaces": false,
