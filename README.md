@@ -5,18 +5,24 @@ DS Problems from karumanchi
 ## Known Issues
 
 - Tower of Hanoi [Chapter 2]
-- Inserttion in SLL [Chapter 3] - **causes entire chapter 3 problems to fail.**
+- SLL Header File [Chapter 3] - **causes entire chapter 3 and some of chapter 4 problems to fail.**
 
 ## Latest Update
 
-- Added Chapter 4 and 5 Algorithms in JS.
+- Added 5 [Working] Algorithms in C++.
 
-### Guide to use JS Algos
+### Guide to run C++ Algos
+
+- Clone this repo
+- Install CMake or Make-like compiler-wrapper.
+- Run the commnd under scripts tag to compile all files with extension `.cpp` using makefile.
+
+### Guide to run JS Algos
 
 - Install Node
 - Clone this repo
 - Open the `package.json` file to find the appropriate command under **scripts tag**.
-- Run in a terminal in following fashion: 
+- Run in a terminal in following fashion:
 
 ```bash
 

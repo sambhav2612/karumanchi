@@ -4,7 +4,8 @@
         "utility": "cpp",
         "xstring": "cpp",
         "xutility": "cpp",
-        "tuple": "cpp"
+        "tuple": "cpp",
+        "ostream": "cpp"
     },
     "files.autoSave": "onFocusChange",
     "editor.insertSpaces": false,
