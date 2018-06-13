@@ -1,0 +1,44 @@
+{
+    "env": {
+        "myDefaultIncludePath": [
+            "/usr/include",
+            "usr/local/include",
+            "${workspaceFolder}",
+            "${workspaceFolder}/headers.h",
+            "${workspaceFolder}/includes/"
+        ],
+        "myCompilerPath": "/usr/local/bin/gcc-7"
+    },
+    "configurations": [
+        {
+            "name": "Win32",
+            "intelliSenseMode": "clang-x64",
+            "includePath": [
+                "${myDefaultIncludePath}",
+                "${default}"
+            ],
+            "defines": [
+                "FOO",
+                "BAR=100",
+                "${default}"
+            ],
+            "forcedInclude": [
+                "${workspaceFolder}/include/config.h",
+                "${default}"
+            ],
+            "compilerPath": "${default}",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "compileCommands": "${default}",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}",
+                    "${default}"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": "${default}"
+            }
+        }
+    ],
+    "version": 4
+}

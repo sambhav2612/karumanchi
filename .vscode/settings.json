@@ -9,5 +9,6 @@
     },
     "files.autoSave": "onFocusChange",
     "editor.insertSpaces": false,
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+    "C_Cpp.intelliSenseEngine": "Default"
 }
