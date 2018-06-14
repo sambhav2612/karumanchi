@@ -4,6 +4,7 @@
  * */
 
 #include "../headers.h"
+#include "stack.h"
 
 class node
 {
@@ -267,6 +268,32 @@ void tree::inorder(node *root)
 	}
 }
 
+void tree::inorderIt(node *root)
+{
+	stack obj;
+	node *p = root;
+
+	while (1)
+	{
+		while (p)
+		{
+			obj.push(p->data);
+			p = root->left;
+		}
+
+		if (obj.isEmpty())
+		{
+			break;
+		}
+
+		p = obj.pop();
+
+		cout << p->data << " ";
+
+		p = p->right;
+	}
+}
+
 void tree::preorder(node *root)
 {
 	switch (rand() % 2)
@@ -284,6 +311,31 @@ void tree::preorder(node *root)
 	}
 }
 
+void tree::preorderIt(node *root)
+{
+	stack obj;
+	node *p = root;
+
+	while (1)
+	{
+		while (p)
+		{
+			cout << p->data << " ";
+			obj.push(p->data);
+			p = root->left;
+		}
+
+		if (obj.isEmpty())
+		{
+			break;
+		}
+
+		p = obj.pop();
+
+		p = p->right;
+	}
+}
+
 void tree::postorder(node *root)
 {
 	switch (rand() % 2)
@@ -298,5 +350,51 @@ void tree::postorder(node *root)
 
 	default:
 		break;
+	}
+}
+
+void tree::postorderIt(node *root)
+{
+	stack obj;
+	node *p = root;
+	node *q = NULL;
+
+	while (1)
+	{
+		if (p)
+		{
+			obj.push(p->data);
+			p = p->left;
+		}
+		else
+		{
+			if (obj.isEmpty())
+			{
+				cout << endl
+					 << "Stack is empty > underflow!";
+				break;
+			}
+			else if (obj.top()->right == NULL)
+			{
+				p = obj.pop();
+				cout << p->data << "";
+
+				if (p == obj, top()->right)
+				{
+					cout << p->data << "";
+					// put in an unused object
+					q = obj.pop();
+				}
+			}
+
+			if (!obj.isEmpty())
+			{
+				p = obj.top()->right;
+			}
+			else
+			{
+				p = NULL;
+			}
+		}
 	}
 }

@@ -36,8 +36,8 @@ class stack
 		return head;
 	}
 
-	void insert(int ele);
-	T remove();
+	void push(int ele);
+	T pop();
 	void print();
 	int length();
 	T top();

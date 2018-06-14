@@ -9,7 +9,7 @@ DS Problems from karumanchi
 
 ## Latest Update
 
-- Added Tree ADT in C++.
+- Implmented Sparse Set using STL containers in C++.
 
 ### Guide to run C++ Algos
 
@@ -18,10 +18,21 @@ DS Problems from karumanchi
 - Compile and run using: 
 
 ```sh
-$ g++ -std=c11 -Wall <FILENAME.cpp> -o <OUTPUT-BINARY-NAME>
+$ g++ <FILENAME.cpp> -o <OUTPUT-BINARY-NAME>
 $ "OUTPUT-BINARY-NAME" # on windows cmd
 $ ./OUTPUT-BINARY-NAME	# on macOS and Unix-like
 ```
+
+Adding following flags in optional and depends on the users thugh are sugegsted to be used while developing-compiling locally:
+
+* -g - turn on debugging (so GDB gives more friendly output)
+* -Wall - turns on most warnings
+* -O or -O2 - turn on optimizations
+* -o <name> - name of the output file
+* -c - output an object file (.o)
+* -I<include path> - specify an include directory
+* -L<library path> - specify a lib directory
+* -l<library> - link with library lib<library>.a
 
 ### Guide to run JS Algos
 
@@ -39,6 +50,8 @@ $ npm run stack
 # OR, run directly via node
 $ node ch4-stacks/stack.js
 ```
+
+**NOTE:** Langauge formatting done automatically using VS Code IntelliSense. Better suggestions are welcome!
 
 ### License
 

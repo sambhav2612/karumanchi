@@ -1,11 +1,12 @@
 {
   "name": "karumanchi",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "karumanchi ds guides and codes",
   "scripts": {
     "stack": "node ch4-stacks/stack.js",
     "queue": "node ch5-queues/queue.js",
-    "pq": "node ch5-queues/priority-queue.js"
+    "pq": "node ch5-queues/priority-queue.js",
+    "set": "node set.js"
   },
   "repository": {
     "type": "git",
