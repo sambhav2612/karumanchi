@@ -25,14 +25,14 @@ $ ./OUTPUT-BINARY-NAME	# on macOS and Unix-like
 
 Adding following flags in optional and depends on the users thugh are sugegsted to be used while developing-compiling locally:
 
-* -g - turn on debugging (so GDB gives more friendly output)
-* -Wall - turns on most warnings
-* -O or -O2 - turn on optimizations
-* -o <name> - name of the output file
-* -c - output an object file (.o)
-* -I<include path> - specify an include directory
-* -L<library path> - specify a lib directory
-* -l<library> - link with library lib<library>.a
+* `-g` - turn on debugging (so GDB gives more friendly output)
+* `-Wall` - turns on most warnings
+* `-O or -O2` - turn on optimizations
+* `-o <name>` - name of the output file
+* `-c` - output an object file (.o)
+* `-I<include path>` - specify an include directory
+* `-L<library path>` - specify a lib directory
+* `-l<library>` - link with library lib<library>.a
 
 ### Guide to run JS Algos
 
