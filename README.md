@@ -9,13 +9,19 @@ DS Problems from karumanchi
 
 ## Latest Update
 
-- Added 5 [Working] Algorithms in C++.
+- Added Tree ADT in C++.
 
 ### Guide to run C++ Algos
 
 - Clone this repo
-- Install CMake or Make-like compiler-wrapper.
-- Run the commnd under scripts tag to compile all files with extension `.cpp` using makefile.
+- Install MinGW on Windows and g++ on macOS & Unix-like.
+- Compile and run using: 
+
+```sh
+$ g++ -std=c11 -Wall <FILENAME.cpp> -o <OUTPUT-BINARY-NAME>
+$ "OUTPUT-BINARY-NAME" # on windows cmd
+$ ./OUTPUT-BINARY-NAME	# on macOS and Unix-like
+```
 
 ### Guide to run JS Algos
 
@@ -24,8 +30,7 @@ DS Problems from karumanchi
 - Open the `package.json` file to find the appropriate command under **scripts tag**.
 - Run in a terminal in following fashion:
 
-```bash
-
+```sh
 $ npm run <TAG-NAME-INSIDE-SCRIPTS>
 
 # ex: to run stack.js in chapter 4
@@ -33,7 +38,6 @@ $ npm run stack
 
 # OR, run directly via node
 $ node ch4-stacks/stack.js
-
 ```
 
 ### License
