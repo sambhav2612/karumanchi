@@ -34,6 +34,8 @@ Adding following flags in optional and depends on the users thugh are sugegsted 
 * `-L<library path>` - specify a lib directory
 * `-l<library>` - link with library lib<library>.a
 
+However, it is suggested that you use first, second and fourth (while compiling source files) for best results and local development. 
+
 ### Guide to run JS Algos
 
 - Install Node

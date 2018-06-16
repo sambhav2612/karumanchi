@@ -4,7 +4,7 @@
  * */
 
 #include "../headers.h"
-#include "stack.h"
+#include <queue>
 
 class node
 {
@@ -16,6 +16,13 @@ class node
 	node()
 	{
 		data = INT_MIN;
+		left = NULL;
+		right = NULL;
+	}
+
+	node(int value)
+	{
+		data = value;
 		left = NULL;
 		right = NULL;
 	}
@@ -31,14 +38,51 @@ class tree
 		root = NULL;
 	}
 
+	node *returnRoot()
+	{
+		return root;
+	}
+
 	void insert(int ele);
 	int remove(int ele);
 	int search(int ele);
 	void traverse();
 
-	int size();
-	int height();
-	// TODO: add LCA
+	int size(node *root)
+	{
+		if (!root)
+		{
+			return 0;
+		}
+		else
+		{
+			return (size(root->left) + 1 + size(root->right));
+		}
+	}
+
+	int height(node *root)
+	{
+		if (!root)
+		{
+			return 0;
+		}
+		else
+		{
+			int leftSub = height(root->left);
+			int rightSub = height(root->right);
+
+			if (leftSub > rightSub)
+			{
+				return (leftSub + 1);
+			}
+			else
+			{
+				return (rightSub + 1);
+			}
+		}
+	}
+
+	void lca();
 
 	// sub-routines of traverse()
 	void inorder(node *root);
@@ -71,57 +115,94 @@ class tree
 
 void tree::insert(int ele)
 {
+	queue<node *> obj;
+
 	node *newNode = new node(ele);
-	node *p = root;
-	node *q = NULL;
+	/*node *p = root;
+	node *q = NULL;*/
+
+	node *temp;
 
 	if (!newNode)
 	{
 		cout << "\n New node could not be created!";
-		exit(0);
+		return;
+	}
+
+	if (!root)
+	{
+		root = newNode;
+		root->left = NULL;
+		root->right = NULL;
+
+		cout << "\n New Node " << ele << " inserted at root successfully!";
+
+		return;
+	}
+
+	obj.push(root);
+
+	// this the the old routine
+	/*
+	if (newNode->data < p->data)
+	{
+		// go to left while correct position not reached
+		while (newNode->data < p->data)
+		{
+			q = p;
+			p = p->left;
+		}
+
+		newNode = p;
+		q->left = newNode;
+
+		cout << "\n New node inserted at left of " << q->data << " successfully!";
+
+		return;
 	}
 	else
 	{
-		if (!root)
+		// go to right while correct position not reached
+		while (newNode->data >= p->data)
 		{
-			root = newNode;
-			root->left = NULL;
-			root->right = NULL;
-
-			cout << "\n New Node inserted at root";
-
-			return;
+			q = p;
+			p = p->right;
 		}
 
-		if (newNode->data < p->data)
+		newNode = p;
+		q->right = newNode;
+
+		cout << "\n New node inserted at right of " << q->data << " successfully!";
+
+		return;
+	}*/
+
+	// this is the new routine that uses queue STL
+	while (!obj.empty())
+	{
+		temp = obj.front();
+		obj.pop();
+
+		if (temp->left)
 		{
-			// go to left while correct position not reached
-			while (newNode->data < p->data)
-			{
-				q = p;
-				p = p->left;
-			}
-
-			newNode = p;
-			q->left = newNode;
-
-			cout << "\n New node inserted at left of " << q->data << " successfully!";
-
-			return;
+			obj.push(temp->left);
 		}
 		else
 		{
-			// go to right while correct position not reached
-			while (newNode->data >= p->data)
-			{
-				q = p;
-				p = p->right;
-			}
+			temp->left = newNode;
+			cout << "\n New node " << ele << " inserted at left of " << temp->data << " successfully!";
 
-			newNode = p;
-			q->right = newNode;
+			return;
+		}
 
-			cout << "\n New node inserted at right of " << q->data << " successfully!";
+		if (temp->right)
+		{
+			obj.push(temp->right);
+		}
+		else
+		{
+			temp->right = newNode;
+			cout << "\n New node " << ele << " inserted at right of " << temp->data << " successfully!";
 
 			return;
 		}
@@ -169,7 +250,7 @@ int tree::remove(int ele)
 			 << ele << "deleted.";
 	}
 
-	if (data != INT_MIN)
+	if (val != INT_MIN)
 	{
 		return val;
 	}
@@ -211,6 +292,37 @@ int tree::search(int ele)
 	else
 	{
 		return -1; // error code
+	}
+}
+
+void tree::lca()
+{
+	queue<node *> obj;
+	node *temp;
+
+	if (!root)
+	{
+		return;
+	}
+
+	obj.push(root);
+
+	while (!obj.empty())
+	{
+		temp = obj.front();
+
+		cout << " " << temp->data;
+		obj.pop();
+
+		if (temp->left)
+		{
+			obj.push(temp->left);
+		}
+
+		if (temp->right)
+		{
+			obj.push(temp->right);
+		}
 	}
 }
 
@@ -260,14 +372,14 @@ void tree::inorder(node *root)
 		break;
 
 	case 1: //iterative
-		inorderIt(root);
+		//inorderIt(root);
 		break;
 
 	default:
 		break;
 	}
 }
-
+/*
 void tree::inorderIt(node *root)
 {
 	stack obj;
@@ -293,7 +405,7 @@ void tree::inorderIt(node *root)
 		p = p->right;
 	}
 }
-
+*/
 void tree::preorder(node *root)
 {
 	switch (rand() % 2)
@@ -303,14 +415,14 @@ void tree::preorder(node *root)
 		break;
 
 	case 1: //iterative
-		preorderIt(root);
+		//preorderIt(root);
 		break;
 
 	default:
 		break;
 	}
 }
-
+/*
 void tree::preorderIt(node *root)
 {
 	stack obj;
@@ -335,7 +447,7 @@ void tree::preorderIt(node *root)
 		p = p->right;
 	}
 }
-
+*/
 void tree::postorder(node *root)
 {
 	switch (rand() % 2)
@@ -345,14 +457,14 @@ void tree::postorder(node *root)
 		break;
 
 	case 1: //iterative
-		postorderIt(root);
+		//postorderIt(root);
 		break;
 
 	default:
 		break;
 	}
 }
-
+/*
 void tree::postorderIt(node *root)
 {
 	stack obj;
@@ -398,3 +510,4 @@ void tree::postorderIt(node *root)
 		}
 	}
 }
+*/
