@@ -45,6 +45,26 @@ class tree
 
 	void insert(int ele);
 	int remove(int ele);
+
+	void deleteTree(node *root)
+	{
+		if (!root)
+		{
+			return;
+		}
+
+		deleteTree(root->left);
+		deleteTree(root->right);
+
+		delete (root);
+
+		if (!root)
+		{
+			cout << endl
+				 << "Tree deleted successfully!";
+		}
+	}
+
 	int search(int ele);
 	void traverse();
 
@@ -81,6 +101,8 @@ class tree
 			}
 		}
 	}
+
+	int leaves(node *root);
 
 	void lca();
 
@@ -209,6 +231,7 @@ void tree::insert(int ele)
 	}
 }
 
+// this sequnce is completely wrong and will be solved soon
 int tree::remove(int ele)
 {
 	node *p = root;
@@ -293,6 +316,46 @@ int tree::search(int ele)
 	{
 		return -1; // error code
 	}
+}
+
+int tree::leaves(node *root)
+{
+	queue<node *> obj;
+	node *temp;
+
+	int count = 0;
+
+	if (!root)
+	{
+		return 0;
+	}
+
+	obj.push(root);
+
+	while (!obj.empty())
+	{
+		temp = obj.front();
+		obj.pop();
+
+		if (!temp->left && !temp->right)
+		{
+			++count;
+		}
+		else
+		{
+			if (temp->left)
+			{
+				obj.push(temp->left);
+			}
+
+			if (temp->right)
+			{
+				obj.push(temp->right);
+			}
+		}
+	}
+
+	return count;
 }
 
 void tree::lca()

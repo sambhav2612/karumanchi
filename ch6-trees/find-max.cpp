@@ -57,6 +57,11 @@ int main()
 		 << " And size of tree is: " << obj.size(obj.returnRoot());
 	cout << endl
 		 << " And height of tree (# levels) is: " << obj.height(obj.returnRoot());
+	cout << endl
+		 << " And # leaves is: " << obj.leaves(obj.returnRoot());
+
+	//obj.deleteTree(obj.returnRoot());
+
 	cout << endl;
 
 	return 0;
