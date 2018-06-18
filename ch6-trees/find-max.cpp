@@ -30,6 +30,10 @@ int findmax(node *root)
 
 int main()
 {
+	int x = 5;
+	int array[1] = {0};
+	int length = 0;
+
 	tree obj;
 
 	/**
@@ -52,17 +56,22 @@ int main()
 
 	cout << endl
 		 << endl
-		 << " Max element is: " << findmax(obj.returnRoot());
-	cout << endl
-		 << " And size of tree is: " << obj.size(obj.returnRoot());
-	cout << endl
-		 << " And height of tree (# levels) is: " << obj.height(obj.returnRoot());
-	cout << endl
-		 << " And # leaves is: " << obj.leaves(obj.returnRoot());
-
-	//obj.deleteTree(obj.returnRoot());
-
-	cout << endl;
+		 << " Max element is: " << findmax(obj.returnRoot())
+		 << endl
+		 << " And, size of tree is: " << obj.size(obj.returnRoot())
+		 << endl
+		 << " And, height of tree (# levels) is: " << obj.height(obj.returnRoot())
+		 << endl
+		 << " And, # leaves is: " << obj.leaves(obj.returnRoot())
+		 << endl
+		 << " And, level with max sum is: " << obj.maxLevelSum(obj.returnRoot())
+		 << endl
+		 << " And, diameter of tree is: " << obj.diameter(obj.returnRoot(), &x)
+		 << endl
+		 << " And, Path length to every root->leaf path is: "
+		 << endl
+		 << obj.pathLength(obj.returnRoot(), array, length)
+		 << endl;
 
 	return 0;
 }

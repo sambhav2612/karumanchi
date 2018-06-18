@@ -5,5 +5,6 @@
 #include <vector>
 #include <type_traits>
 #include <climits>
+#include <algorithm>
 
 using namespace std;

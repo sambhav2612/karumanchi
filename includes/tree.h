@@ -5,6 +5,28 @@
 
 #include "../headers.h"
 #include <queue>
+#include <stack>
+
+// start
+// global sub-routine functions
+int max(int a, int b)
+{
+	if (a >= b)
+	{
+		return a;
+	}
+
+	return b;
+}
+
+void printArray(int array[], int len)
+{
+	for (int i = 0; i < len; ++i)
+	{
+		cout << array[i] << " ";
+	}
+}
+// end
 
 class node
 {
@@ -103,6 +125,26 @@ class tree
 	}
 
 	int leaves(node *root);
+	int maxLevelSum(node *root);
+
+	int diameter(node *root, int *ptr)
+	{
+		int left, right;
+		if (!root)
+		{
+			return 0;
+		}
+
+		left = diameter(root->left, ptr);
+		right = diameter(root->right, ptr);
+
+		if (left + right > *ptr)
+		{
+			*ptr = left + right;
+		}
+
+		return max(left, right) + 1;
+	}
 
 	void lca();
 
@@ -133,6 +175,8 @@ class tree
 		postorderRe(root->right);
 		cout << root->data << " ";
 	}
+
+	void pathLength(node *root, int array[], int pathLen);
 };
 
 void tree::insert(int ele)
@@ -164,42 +208,6 @@ void tree::insert(int ele)
 
 	obj.push(root);
 
-	// this the the old routine
-	/*
-	if (newNode->data < p->data)
-	{
-		// go to left while correct position not reached
-		while (newNode->data < p->data)
-		{
-			q = p;
-			p = p->left;
-		}
-
-		newNode = p;
-		q->left = newNode;
-
-		cout << "\n New node inserted at left of " << q->data << " successfully!";
-
-		return;
-	}
-	else
-	{
-		// go to right while correct position not reached
-		while (newNode->data >= p->data)
-		{
-			q = p;
-			p = p->right;
-		}
-
-		newNode = p;
-		q->right = newNode;
-
-		cout << "\n New node inserted at right of " << q->data << " successfully!";
-
-		return;
-	}*/
-
-	// this is the new routine that uses queue STL
 	while (!obj.empty())
 	{
 		temp = obj.front();
@@ -358,6 +366,55 @@ int tree::leaves(node *root)
 	return count;
 }
 
+int tree::maxLevelSum(node *root)
+{
+	queue<node *> obj;
+	node *temp = NULL;
+
+	int level = 0, maxLevel = 0, currentSum = 0, maxSum = 0;
+
+	obj.push(root);
+	obj.push(NULL);
+
+	while (!obj.empty())
+	{
+		temp = obj.front();
+		obj.pop();
+
+		if (temp == NULL)
+		{
+			if (currentSum > maxSum)
+			{
+				maxSum = currentSum;
+				maxLevel = level;
+			}
+
+			currentSum = 0;
+
+			if (!obj.empty())
+			{
+				obj.push(NULL);
+			}
+
+			++level;
+		}
+		else
+		{
+			currentSum += temp->data;
+
+			if (temp->left)
+			{
+				obj.push(temp->left);
+			}
+
+			if (temp->right)
+			{
+				obj.push(temp->right);
+			}
+		}
+	}
+}
+
 void tree::lca()
 {
 	queue<node *> obj;
@@ -442,33 +499,34 @@ void tree::inorder(node *root)
 		break;
 	}
 }
-/*
+
 void tree::inorderIt(node *root)
 {
-	stack obj;
+	stack<node *> obj;
 	node *p = root;
 
 	while (1)
 	{
 		while (p)
 		{
-			obj.push(p->data);
+			obj.push(p);
 			p = root->left;
 		}
 
-		if (obj.isEmpty())
+		if (obj.empty())
 		{
 			break;
 		}
 
-		p = obj.pop();
+		p = obj.top();
+		obj.pop();
 
 		cout << p->data << " ";
 
 		p = p->right;
 	}
 }
-*/
+
 void tree::preorder(node *root)
 {
 	switch (rand() % 2)
@@ -478,17 +536,17 @@ void tree::preorder(node *root)
 		break;
 
 	case 1: //iterative
-		//preorderIt(root);
+		preorderIt(root);
 		break;
 
 	default:
 		break;
 	}
 }
-/*
+
 void tree::preorderIt(node *root)
 {
-	stack obj;
+	stack<node *> obj;
 	node *p = root;
 
 	while (1)
@@ -496,21 +554,22 @@ void tree::preorderIt(node *root)
 		while (p)
 		{
 			cout << p->data << " ";
-			obj.push(p->data);
+			obj.push(p);
 			p = root->left;
 		}
 
-		if (obj.isEmpty())
+		if (obj.empty())
 		{
 			break;
 		}
 
-		p = obj.pop();
+		p = obj.top();
+		obj.pop();
 
 		p = p->right;
 	}
 }
-*/
+
 void tree::postorder(node *root)
 {
 	switch (rand() % 2)
@@ -520,17 +579,17 @@ void tree::postorder(node *root)
 		break;
 
 	case 1: //iterative
-		//postorderIt(root);
+		postorderIt(root);
 		break;
 
 	default:
 		break;
 	}
 }
-/*
+
 void tree::postorderIt(node *root)
 {
-	stack obj;
+	stack<node *> obj;
 	node *p = root;
 	node *q = NULL;
 
@@ -538,12 +597,12 @@ void tree::postorderIt(node *root)
 	{
 		if (p)
 		{
-			obj.push(p->data);
+			obj.push(p);
 			p = p->left;
 		}
 		else
 		{
-			if (obj.isEmpty())
+			if (obj.empty())
 			{
 				cout << endl
 					 << "Stack is empty > underflow!";
@@ -551,18 +610,21 @@ void tree::postorderIt(node *root)
 			}
 			else if (obj.top()->right == NULL)
 			{
-				p = obj.pop();
+				p = obj.top();
+				obj.pop();
+
 				cout << p->data << "";
 
-				if (p == obj, top()->right)
+				if (p == obj.top()->right)
 				{
 					cout << p->data << "";
 					// put in an unused object
-					q = obj.pop();
+					q = obj.top();
+					obj.pop();
 				}
 			}
 
-			if (!obj.isEmpty())
+			if (!obj.empty())
 			{
 				p = obj.top()->right;
 			}
@@ -573,4 +635,24 @@ void tree::postorderIt(node *root)
 		}
 	}
 }
-*/
+
+void pathLength(node *root, int array[], int pathLen)
+{
+	if (root == NULL)
+	{
+		return;
+	}
+
+	array[pathLen] = root->data;
+	++pathLen;
+
+	if (root->left == NULL && root->right == NULL)
+	{
+		printArray(array, pathLen);
+	}
+	else
+	{
+		pathLength(root->left, array, pathLen);
+		pathLength(root->right, array, pathLen);
+	}
+}
