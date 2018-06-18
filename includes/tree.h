@@ -1,6 +1,10 @@
 /**
  * Implmeentation of Tree ADT
- * Optimisations required: add a sub-routine for remove() that returns both the pointer to element to be deleted after finding it and it's parent as while deletion I think both it's link to parent and itself should be deleted and it'd not be cool otherwise.
+ *
+ * Optimisations required: add a sub-routine for remove() that returns both 
+ * the pointer to element to be deleted after finding it and it's parent as 
+ * while deletion I think both it's link to parent and itself should be 
+ * deleted and it'd not be cool otherwise.
  * */
 
 #include "../headers.h"
