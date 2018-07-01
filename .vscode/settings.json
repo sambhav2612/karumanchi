@@ -10,5 +10,11 @@
     "files.autoSave": "onFocusChange",
     "editor.insertSpaces": false,
     "editor.wordWrap": "on",
-    "C_Cpp.intelliSenseEngine": "Default"
+    "C_Cpp.intelliSenseEngine": "Default",
+    "clang.cxxflags": [
+        "-std=c++11",
+        "-std=c++14"
+    ],
+    "clang.diagnostic.enable": true,
+    "clang.executable": "clang"
 }
