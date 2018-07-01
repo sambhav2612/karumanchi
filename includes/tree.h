@@ -1,11 +1,12 @@
 /**
- * Implmeentation of Tree ADT
+ * Implmeentation of Binary Search Tree ADT
  *
  * Optimisations required: add a sub-routine for remove() that returns both 
  * the pointer to element to be deleted after finding it and it's parent as 
  * while deletion I think both it's link to parent and itself should be 
  * deleted and it'd not be cool otherwise.
- * */
+ * 
+ */
 
 #include "../headers.h"
 #include <queue>
@@ -70,7 +71,7 @@ class tree
 	}
 
 	void insert(int ele);
-	int remove(int ele);
+	node *remove(node *root, int ele);
 
 	void deleteTree(node *root)
 	{
@@ -181,6 +182,26 @@ class tree
 	}
 
 	void pathLength(node *root, int array[], int pathLen);
+
+	node *findmin(node *root)
+	{
+		if (!root)
+			return nullptr;
+		else if (!root->left)
+			return root;
+		else
+			return findmin(root->left);
+	}
+
+	node *findmax(node *root)
+	{
+		if (!root)
+			return nullptr;
+		else if (!root->right)
+			return root;
+		else
+			return findmax(root->right);
+	}
 };
 
 void tree::insert(int ele)
@@ -188,9 +209,6 @@ void tree::insert(int ele)
 	queue<node *> obj;
 
 	node *newNode = new node(ele);
-	/*node *p = root;
-	node *q = NULL;*/
-
 	node *temp;
 
 	if (!newNode)
@@ -243,56 +261,40 @@ void tree::insert(int ele)
 	}
 }
 
-// this sequnce is completely wrong and will be solved soon
-int tree::remove(int ele)
+node *tree::remove(node *root, int ele)
 {
-	node *p = root;
-	node *q = NULL;
+	node *temp = nullptr;
 
-	int val = INT_MIN; // setting to a macro to check if value was changed
-
-	if (ele < p->data)
-	{
-		// go to left while correct position not reached
-		while (ele < p->data)
-		{
-			q = p;
-			p = p->left;
-		}
-
-		val = p->data;
-		q->left = NULL; // remove link from parent
-	}
-	else
-	{
-		// go to right while correct position not reached
-		while (ele >= p->data)
-		{
-			q = p;
-			p = p->right;
-		}
-
-		val = p->data;
-		q->right = NULL; // remove link from parent
-	}
-
-	delete (p);
-
-	if (p)
-	{
-		delete (p);
+	if (!root)
 		cout << endl
-			 << ele << "deleted.";
-	}
-
-	if (val != INT_MIN)
-	{
-		return val;
-	}
+			 << "Tree not found!";
+	else if (ele < root->data)
+		root->left = remove(root->left, ele);
+	else if (ele > root->data)
+		root->right = remove(root->right, ele);
 	else
 	{
-		return -1; // error code
+		if (root->left && root->right)
+		{
+			temp = findmax(root->left); // or, temp = findmin(root->right)
+			root->data = temp->data;
+			root->left = remove(root->left, root->data);
+		}
+		else
+		{
+			// single child
+			temp = root;
+
+			if (!root->left)
+				root = root->right;
+			if (!root->right)
+				root = root->left;
+
+			delete (temp);
+		}
 	}
+
+	return root;
 }
 
 int tree::search(int ele)

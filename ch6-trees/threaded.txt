@@ -1,0 +1,2 @@
+1. Store some information in the unused NULL pointers.
+2. Use this information to find predecessors and successors for any node being traversed.

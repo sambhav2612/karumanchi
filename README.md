@@ -9,32 +9,33 @@ DS Problems from karumanchi
 
 ## Latest Update
 
-- Implmented Sparse Set using STL containers in C++.
+- Implemented Expression Tree algorithm in C++.
+- Update BST ADT with optimised `remove()` method.
 
 ### Guide to run C++ Algos
 
 - Clone this repo
 - Install MinGW on Windows and g++ on macOS & Unix-like.
-- Compile and run using: 
+- Compile and run using:
 
 ```sh
 $ g++ <FILENAME.cpp> -o <OUTPUT-BINARY-NAME>
 $ "OUTPUT-BINARY-NAME" # on windows cmd
-$ ./OUTPUT-BINARY-NAME	# on macOS and Unix-like
+$ ./OUTPUT-BINARY-NAME # on macOS and Unix-like
 ```
 
 Adding following flags in optional and depends on the users thugh are sugegsted to be used while developing-compiling locally:
 
-* `-g` - turn on debugging (so GDB gives more friendly output)
-* `-Wall` - turns on most warnings
-* `-O or -O2` - turn on optimizations
-* `-o <name>` - name of the output file
-* `-c` - output an object file (.o)
-* `-I<include path>` - specify an include directory
-* `-L<library path>` - specify a lib directory
-* `-l<library>` - link with library lib<library>.a
+- `-g` - turn on debugging (so GDB gives more friendly output)
+- `-Wall` - turns on most warnings
+- `-O or -O2` - turn on optimizations
+- `-o <name>` - name of the output file
+- `-c` - output an object file (.o)
+- `-I<include path>` - specify an include directory
+- `-L<library path>` - specify a lib directory
+- `-l<library>` - link with library lib<library>.a
 
-However, it is suggested that you use first, second and fourth (while compiling source files) for best results and local development. 
+However, it is suggested that you use **_first, second and fourth_** (while compiling source files) for best results and local development.
 
 ### Guide to run JS Algos
 
