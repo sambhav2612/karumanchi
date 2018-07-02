@@ -35,6 +35,9 @@
 *.out
 *.app
 
+# Stackdumps
+*.stackdump
+
 ### Node ###
 # Logs
 logs

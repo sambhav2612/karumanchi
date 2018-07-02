@@ -6,11 +6,12 @@ DS Problems from karumanchi
 
 - Tower of Hanoi [Chapter 2]
 - SLL Header File [Chapter 3] - **causes entire chapter 3 and some of chapter 4 problems to fail.**
+- Last node is not being inserted in BST ADT [Chapter 6] - **causes most of the BST algorithms to fail.**
 
 ## Latest Update
 
-- Implemented Expression Tree algorithm in C++.
-- Update BST ADT with optimised `remove()` method.
+- Update BST ADT with optimised `shortest_path` aka `lca` method.
+- Add [sorted] array to bst convertor.
 
 ### Guide to run C++ Algos
 

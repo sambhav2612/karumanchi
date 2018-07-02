@@ -152,6 +152,16 @@ class tree
 	}
 
 	void lca();
+	node *shortest_path(node *root, node *a, node *b)
+	{
+		if ((a->data > root->data && b->data < root->data) || (a->data < root->data && b->data > root->data))
+			return root;
+
+		if (a->data < root->data)
+			return shortest_path(root->left, a, b);
+		else
+			return shortest_path(root->right, a, b);
+	}
 
 	// sub-routines of traverse()
 	void inorder(node *root);
