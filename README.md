@@ -35,7 +35,7 @@ Adding following flags in optional and depends on the users thugh are sugegsted 
 - `-L<library path>` - specify a lib directory
 - `-l<library>` - link with library lib<library>.a
 
-However, it is suggested that you use **_first, second and fourth_** (while compiling source files) for best results and local development.
+**H**owever, it is suggested that you use **_first, second and fourth_** (while compiling source files) for best results and local development.
 
 ### Guide to run JS Algos
 
@@ -55,6 +55,111 @@ $ node ch4-stacks/stack.js
 ```
 
 **NOTE:** Langauge formatting done automatically using VS Code IntelliSense. Better suggestions are welcome!
+
+### Directory Tree
+
+Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
+
+```bash
+│   .gitignore
+│   CMakeLists.txt
+│   headers.h
+│   headers.h.gch
+│   LICENSE
+│   Makefile
+│   package.json
+│   README.md
+│   set.js
+│   sparse-set.cpp
+│   sparse-set.h
+│   stl.h
+│
+├───.vscode
+│       compile_commands.json
+│       c_cpp_properties.json
+│       settings.json
+│
+├───ch1-introduction
+│       readme.md
+│
+├───ch2-recursion and backtracking
+│       check-sorting-recursion.cpp
+│       n-ary-strings.cpp
+│       readme.md
+│       tower-of-hanoi.cpp
+│
+├───ch3-linked lists
+│       cycle.cpp
+│       fractional-node.cpp
+│       merge.cpp
+│       nth-element-from-end.cpp
+│       pairwise-reverse.cpp
+│       palindrome.cpp
+│       readme.md
+│       reverse-kth.cpp
+│       reverse-sll.cpp
+│       sort.cpp
+│       split-cll.cpp
+│
+├───ch4-stacks
+│       adjacentBigger.cpp
+│       adjacentRepeat.cpp
+│       growth.cpp
+│       infix-to-postfix.cpp
+│       postfix.cpp
+│       reverse.cpp
+│       span.cpp
+│       stack.cpp
+│       stack.js
+│       symbol-parser.cpp
+│
+├───ch5-queues
+│       linked-list-queue.cpp
+│       priority-queue.js
+│       queue.js
+│       simple-queue.cpp
+│
+├───ch6-trees
+│       array2bst.cpp
+│       bst2dll.cpp
+│       check-bst.cpp
+│       count-tree.cpp
+│       dll2bst.cpp
+│       expression-tree.cpp
+│       find-max.cpp
+│       inorder-sucessor.cpp
+│       kth-smallest.cpp
+│       preorder-sucessor.cpp
+│       ranger.cpp
+│       readme.txt
+│       reverse-lca.cpp
+│       threaded-tree.cpp
+│       threaded-tree.txt
+│
+├───codechef
+│   │   codechef.h
+│   │   readme.md
+│   │
+│   └───arrays
+│           CHN15A.cpp
+│           CNOTE.cpp
+│           COPS.cpp
+│           FRGTNLNG.cpp
+│           LECANDY.cpp
+│           RAINBOWA.cpp
+│           SALARY.cpp
+│
+├───codeforces
+├───includes
+│       cll.h
+│       dll.h
+│       queue.h
+│       sll.h
+│       stack.h
+│       tree.h
+│
+└───stl
+```
 
 ### License
 
