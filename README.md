@@ -10,8 +10,7 @@ DS Problems from karumanchi
 
 ## Latest Update
 
-- Update BST ADT with optimised `shortest_path` aka `lca` method.
-- Add [sorted] array to bst convertor.
+Add arrays part to the codechef sub-directory.
 
 ### Guide to run C++ Algos
 
@@ -19,7 +18,7 @@ DS Problems from karumanchi
 - Install MinGW on Windows and g++ on macOS & Unix-like.
 - Compile and run using:
 
-```sh
+```bash
 $ g++ <FILENAME.cpp> -o <OUTPUT-BINARY-NAME>
 $ "OUTPUT-BINARY-NAME" # on windows cmd
 $ ./OUTPUT-BINARY-NAME # on macOS and Unix-like
