@@ -16,5 +16,11 @@
         "-std=c++14"
     ],
     "clang.diagnostic.enable": true,
-    "clang.executable": "clang"
+    "clang.executable": "clang",
+    "json.format.enable": true,
+    "javascript.format.enable": true,
+    "javascript.format.insertSpaceAfterSemicolonInForStatements": true,
+    "javascript.format.insertSpaceBeforeAndAfterBinaryOperators": true,
+    "javascript.nameSuggestions": true,
+    "javascript.showUnused": true
 }
