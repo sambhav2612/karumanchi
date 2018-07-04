@@ -1,12 +1,18 @@
-CXX=clang++
-CXXFLAGS=-Wall -Werror -std=c++11
+CC=g++
+OPTS=-g -O -Wall
+CFLAGS=$(OPTS)
+LDFLAGS=
 
-all: $(patsubst %.cpp, %.out, $(wildcard *.cpp))
+DIRS=./ch1-introduction ./ch10-sorting ./ch2-recursion-and-backtracking ./ch3-linked-lists ./ch4-stacks ./ch5-queues ./ch6-trees ./codechef/arrays ./misc
+HEADERS=./includes
+SRC=$(wildcard $(DIRS)/**/*.cpp)
+OBJ=$(patsubst $(DIRS)/%.cpp, obj/%.o, $(SRC))
 
-%.out: %.cpp Makefile
-	$(CXX) $(CXXFLAGS) $< -o $(@:.out=)
+all: $(OBJ)
+	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJ) -o all
+
+obj/%.o: $(DIRS)/%.cpp
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean: $(patsubst %.cpp, %.clean, $(wildcard *.cpp))
-
-%.clean:
-	rm -f $(@:.clean=)
+	rm -f *.exe

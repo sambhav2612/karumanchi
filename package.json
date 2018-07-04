@@ -1,6 +1,6 @@
 {
   "name": "karumanchi",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "karumanchi ds guides and codes",
   "scripts": {
     "stack": "node js/stack.js",

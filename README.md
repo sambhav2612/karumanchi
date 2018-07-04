@@ -86,13 +86,13 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │       quick.cpp
 │       shell.cpp
 │
-├───ch2-recursion and backtracking
+├───ch2-recursion-and-backtracking
 │       check-sorting-recursion.cpp
 │       n-ary-strings.cpp
 │       readme.md
 │       tower-of-hanoi.cpp
 │
-├───ch3-linked lists
+├───ch3-linked-lists
 │       cycle.cpp
 │       fractional-node.cpp
 │       merge.cpp
