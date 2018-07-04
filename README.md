@@ -82,6 +82,8 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │       flagged-bubble.cpp
 │       insertion.cpp
 │       readme.md
+│       merge.cpp
+│       quick.cpp
 │       shell.cpp
 │
 ├───ch2-recursion and backtracking
