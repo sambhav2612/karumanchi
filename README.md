@@ -20,7 +20,7 @@ Add arrays part to the codechef sub-directory.
 
 ```bash
 $ g++ <FILENAME.cpp> -o <OUTPUT-BINARY-NAME>
-$ "OUTPUT-BINARY-NAME" # on windows cmd
+$ "OUTPUT-BINARY-NAME" # on windows cmd (using "")
 $ ./OUTPUT-BINARY-NAME # on macOS and Unix-like
 ```
 
@@ -69,10 +69,6 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │   Makefile
 │   package.json
 │   README.md
-│   set.js
-│   sparse-set.cpp
-│   sparse-set.h
-│   stl.h
 │
 ├───.vscode
 │       compile_commands.json
@@ -81,6 +77,12 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │
 ├───ch1-introduction
 │       readme.md
+│
+├───ch10-sorting
+│       flagged-bubble.cpp
+│       insertion.cpp
+│       readme.md
+│       shell.cpp
 │
 ├───ch2-recursion and backtracking
 │       check-sorting-recursion.cpp
@@ -107,16 +109,15 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │       growth.cpp
 │       infix-to-postfix.cpp
 │       postfix.cpp
+│       readme.md
 │       reverse.cpp
 │       span.cpp
 │       stack.cpp
-│       stack.js
 │       symbol-parser.cpp
 │
 ├───ch5-queues
 │       linked-list-queue.cpp
-│       priority-queue.js
-│       queue.js
+│       readme.md
 │       simple-queue.cpp
 │
 ├───ch6-trees
@@ -131,6 +132,7 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │       kth-smallest.cpp
 │       preorder-sucessor.cpp
 │       ranger.cpp
+│       readme.md
 │       readme.txt
 │       reverse-lca.cpp
 │       threaded-tree.cpp
@@ -150,6 +152,8 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │           SALARY.cpp
 │
 ├───codeforces
+│       readme.md
+│
 ├───includes
 │       cll.h
 │       dll.h
@@ -158,7 +162,22 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │       stack.h
 │       tree.h
 │
+├───js
+│       priority-queue.js
+│       queue.js
+│       readme.md
+│       set.js
+│       stack.js
+│
+├───misc
+│       sparse-set.cpp
+│       sparse-set.h
+│
+├───spoj
+│       readme.md
+│
 └───stl
+        stl.h
 ```
 
 ### License
