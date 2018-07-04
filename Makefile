@@ -5,7 +5,7 @@ LDFLAGS=
 
 DIRS=./ch1-introduction ./ch10-sorting ./ch2-recursion-and-backtracking ./ch3-linked-lists ./ch4-stacks ./ch5-queues ./ch6-trees ./codechef/arrays ./misc
 HEADERS=./includes
-SRC=$(wildcard $(DIRS)/**/*.cpp)
+SRC=$(wildcard $(DIRS)/*.cpp)
 OBJ=$(patsubst $(DIRS)/%.cpp, obj/%.o, $(SRC))
 
 all: $(OBJ)
