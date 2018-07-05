@@ -79,14 +79,19 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │       readme.md
 │
 ├───ch10-sorting
-│       bucket.cpp
-│       counting.cpp
-│       flagged-bubble.cpp
-│       insertion.cpp
-│       readme.md
-│       merge.cpp
-│       quick.cpp
-│       shell.cpp
+│   │   bucket.cpp
+│   │   counting.cpp
+│   │   flagged-bubble.cpp
+│   │   insertion.cpp
+│   │   merge.cpp
+│   │   quick.cpp
+│   │   readme.md
+│   │   shell.cpp
+│   │
+│   └───external-sorting
+│           gfg.cpp
+│           kway.cpp
+│           kwaymergesort.h
 │
 ├───ch2-recursion-and-backtracking
 │       check-sorting-recursion.cpp
