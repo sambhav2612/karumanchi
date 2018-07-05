@@ -2,15 +2,9 @@
 
 DS Problems from karumanchi
 
-## Known Issues
-
-- Tower of Hanoi [Chapter 2]
-- SLL Header File [Chapter 3] - **causes entire chapter 3 and some of chapter 4 problems to fail.**
-- Last node is not being inserted in BST ADT [Chapter 6] - **causes most of the BST algorithms to fail.**
-
 ## Latest Update
 
-Add arrays part to the codechef sub-directory.
+Start creating npm global module.
 
 ### Guide to run C++ Algos
 
@@ -62,12 +56,16 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 
 ```bash
 .
+│   .babelrc
+│   .editorconfig
+│   .eslintrc.json
 │   .gitignore
 │   CMakeLists.txt
 │   headers.h
 │   headers.h.gch
 │   LICENSE
 │   Makefile
+│   package-lock.json
 │   package.json
 │   README.md
 │
@@ -199,11 +197,20 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │       sparse-set.cpp
 │       sparse-set.h
 │
+├───lib
+│       index.js
+│
 ├───spoj
 │       readme.md
 │
-└───stl
-        stl.h
+├───src
+│       index.js
+│
+├───stl
+│        stl.h
+│
+└───test
+        index.js
 ```
 
 ### License

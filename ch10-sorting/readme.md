@@ -1,4 +1,4 @@
-# Ch-10 Sorting
+# Sorting
 
 ## Known Issues
 

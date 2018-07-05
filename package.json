@@ -1,8 +1,13 @@
 {
   "name": "karumanchi",
-  "version": "0.0.19",
+  "version": "0.1.0",
   "description": "karumanchi ds guides and codes",
+  "main": "index.js",
   "scripts": {
+    "build": "npm run lint && babel ./src -d ./lib",
+    "test": "nyc mocha --require babel-core/register",
+    "lint": "eslint ./src",
+    "prepublishOnly": "npm run build",
     "stack": "node js/stack.js",
     "queue": "node js/queue.js",
     "pq": "node js/priority-queue.js",
@@ -24,5 +29,20 @@
   "bugs": {
     "url": "https://github.com/sambhav2612/karumanchi/issues"
   },
-  "homepage": "https://github.com/sambhav2612/karumanchi#readme"
+  "homepage": "https://github.com/sambhav2612/karumanchi#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.0.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.2"
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  }
 }
