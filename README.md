@@ -61,6 +61,7 @@ $ node ch4-stacks/stack.js
 Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 
 ```bash
+.
 │   .gitignore
 │   CMakeLists.txt
 │   headers.h
@@ -79,19 +80,16 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │       readme.md
 │
 ├───ch10-sorting
-│   │   bucket.cpp
-│   │   counting.cpp
-│   │   flagged-bubble.cpp
-│   │   insertion.cpp
-│   │   merge.cpp
-│   │   quick.cpp
-│   │   readme.md
-│   │   shell.cpp
-│   │
-│   └───external-sorting
-│           gfg.cpp
-│           kway.cpp
-│           kwaymergesort.h
+│       bucket.cpp
+│       check-repeat.cpp
+│       counting.cpp
+│       flagged-bubble.cpp
+│       insertion.cpp
+│       merge.cpp
+│       quick.cpp
+│       readme.md
+│       shell.cpp
+│       sort.h
 │
 ├───ch2-recursion-and-backtracking
 │       check-sorting-recursion.cpp
@@ -162,6 +160,25 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │
 ├───codeforces
 │       readme.md
+│
+├───external-sorting
+│   │   kway.cpp
+│   │   kwaymergesort.h
+│   │
+│   └───gfg
+│           0
+│           1
+│           2
+│           3
+│           4
+│           5
+│           6
+│           7
+│           8
+│           9
+│           gfg.cpp
+│           input.txt
+│           output.txt
 │
 ├───includes
 │       cll.h
