@@ -1,44 +1,39 @@
-'use strict';
+(function () {
+	'use strict';
+}());
 
-var stack = function () {
-	this.count = 0;
-	this.sequence = {};
-
-	this.push = function (value) {
-		this.sequence[this.count] = value;
-		this.count++;
-
-		console.log("Pushed " + value + " to stack.")
-	};
-
-	this.pop = function () {
-		if (this.count == 0) {
-			return undefined;
-		}
-
-		this.count--;
-		var res = this.sequence[this.count];
-		delete this.sequence[this.count];
-
-		return res;
-	};
-
-	this.len = function () {
-		return this.count;
-	};
-
-	this.top = function () {
-		return this.sequence[this.count - 1];
-	};
-
-	this.counter = function () {
-		return this.count;
-	};
-
-	this.printer = function () {
-		console.log("Traversing queue... \t" + this.sequence);
-	};
-};
+class stack {
+	constructor() {
+		this.count = 0;
+		this.sequence = {};
+		this.push = function (value) {
+			this.sequence[this.count] = value;
+			this.count++;
+			console.log("Pushed " + value + " to stack.");
+		};
+		this.pop = function () {
+			if (this.count == 0) {
+				return undefined;
+			}
+			this.count--;
+			var res = this.sequence[this.count];
+			delete this.sequence[this.count];
+			return res;
+		};
+		this.len = function () {
+			return this.count;
+		};
+		this.top = function () {
+			return this.sequence[this.count - 1];
+		};
+		this.counter = function () {
+			return this.count;
+		};
+		this.printer = function () {
+			console.log("Traversing queue... \t" + this.sequence);
+		};
+	}
+}
 
 var obj = new stack();
 
@@ -53,7 +48,7 @@ obj.push(0);
 obj.push("Camp");
 
 console.log("\nCount value is: " + obj.counter());
-console.log("\""+ obj.pop() + "\" has been popped.");
+console.log("\"" + obj.pop() + "\" has been popped.");
 console.log("Element at top is: " + obj.top());
 console.log("Length of stack is:" + obj.len());
 console.log(obj.printer());

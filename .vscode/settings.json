@@ -22,5 +22,6 @@
     "javascript.format.insertSpaceAfterSemicolonInForStatements": true,
     "javascript.format.insertSpaceBeforeAndAfterBinaryOperators": true,
     "javascript.nameSuggestions": true,
-    "javascript.showUnused": true
+    "javascript.showUnused": true,
+    "jshint.enable": true
 }

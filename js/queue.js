@@ -1,34 +1,31 @@
-'use strict';
+(function () {
+	'use strict';
+}());
 
-var queue = function () {
-	var sequence = [];
-
-	this.inqueue = function (value) {
-		sequence.push(value);
-
-		console.log("Pushed " + value + " to queue.")
-	};
-
-	this.dequeue = function () {
-		return sequence.shift();
-	};
-
-	this.len = function () {
-		return sequence.length;
-	};
-
-	this.top = function () {
-		return sequence[0];
-	};
-
-	this.isEmpty = function () {
-		return (sequence.length === 0);
-	};
-
-	this.printer = function () {
-		console.log("Traversing queue... \t first->" + sequence + "->last");
-	};
-};
+class queue {
+	constructor() {
+		var sequence = [];
+		this.inqueue = function (value) {
+			sequence.push(value);
+			console.log("Pushed " + value + " to queue.");
+		};
+		this.dequeue = function () {
+			return sequence.shift();
+		};
+		this.len = function () {
+			return sequence.length;
+		};
+		this.top = function () {
+			return sequence[0];
+		};
+		this.isEmpty = function () {
+			return (sequence.length === 0);
+		};
+		this.printer = function () {
+			console.log("Traversing queue... \t first->" + sequence + "->last");
+		};
+	}
+}
 
 var obj = new queue();
 
