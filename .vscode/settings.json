@@ -12,8 +12,9 @@
     "editor.wordWrap": "on",
     "C_Cpp.intelliSenseEngine": "Default",
     "clang.cxxflags": [
-        "-std=c++11",
-        "-std=c++14"
+        "-O",
+        "-Wall",
+        "-g"
     ],
     "clang.diagnostic.enable": true,
     "clang.executable": "clang",
@@ -23,5 +24,6 @@
     "javascript.format.insertSpaceBeforeAndAfterBinaryOperators": true,
     "javascript.nameSuggestions": true,
     "javascript.showUnused": true,
-    "jshint.enable": true
+    "jshint.enable": true,
+    "C_Cpp.intelliSenseEngineFallback": "Enabled"
 }

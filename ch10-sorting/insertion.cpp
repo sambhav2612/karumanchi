@@ -20,19 +20,19 @@ void bs(int array[], int n)
 
 int main(int argc, char const *argv[])
 {
-	int size = atoi(argv[1]);
+	int size = atoi(argv[1]), i;
 	int array[size] = {0};
 
-	for (int i = 0; i < size; ++i)
+	for (i = 0; i < size; ++i)
 		cin >> array[i];
 
-	for (int i = 0; i < size; ++i)
+	for (i = 0; i < size; ++i)
 		cout << array[i] << " ";
 
 	bs(array, size);
 
 	cout << endl;
-	for (int i = 0; i < size; ++i)
+	for (i = 0; i < size; ++i)
 		cout << array[i] << " ";
 
 	return 0;

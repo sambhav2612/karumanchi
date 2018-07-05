@@ -79,6 +79,8 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │       readme.md
 │
 ├───ch10-sorting
+│       bucket.cpp
+│       counting.cpp
 │       flagged-bubble.cpp
 │       insertion.cpp
 │       readme.md

@@ -1,27 +1,16 @@
 #include "../headers.h"
+#define BUCKETS 10
 
-void bs(int array[], int n)
+void bs(int array[], int size)
 {
-	int x, j, h;
-	for (h = 0; h < n / 4; h = 2 * h + 1)
-		;
+	int bucket[BUCKETS] = {0}, i;
 
-	for (; h > 0; h = h / 2)
-	{
-		for (int i = h + 1; i < n; ++i)
-		{
-			x = array[i];
-			j = i;
+	for (i = 0; i < size; ++i)
+		++bucket[array[i]];
 
-			while (j > h && array[j - h] > x)
-			{
-				array[j] = array[j - h];
-				j -= h;
-			}
-
-			array[j] = x;
-		}
-	}
+	for (int j = 0, i = 0; j < BUCKETS; ++j)
+		for (int k = bucket[j]; k > 0; --k)
+			array[i++] = j;
 }
 
 int main(int argc, char const *argv[])
