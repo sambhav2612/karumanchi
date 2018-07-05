@@ -1,40 +1,4 @@
-#include "../headers.h"
-
-int partition(int array[], int low, int high)
-{
-	int l, r, item = array[low];
-	l = low;
-	r = high;
-
-	while (l < r)
-	{
-		while (array[l] <= item)
-			++l;
-
-		while (array[r] > item)
-			--r;
-
-		if (left < right)
-			swap(array[l], array[r]);
-	}
-
-	array[low] = array[r];
-	array[r] = item;
-
-	return r;
-}
-
-void bs(int array[], int low, int high)
-{
-	int pivot;
-
-	if (low < high)
-	{
-		pivot = partition(array, low, high);
-		bs(array, low, pivot - 1);
-		bs(array, pivot + 1, high);
-	}
-}
+#include "sort.h"
 
 int main(int argc, char const *argv[])
 {
@@ -47,7 +11,7 @@ int main(int argc, char const *argv[])
 	for (i = 0; i < size; ++i)
 		cout << array[i] << " ";
 
-	bs(array, 0, size - 1);
+	quicksort(array, 0, size - 1);
 
 	cout << endl;
 	for (i = 0; i < size; ++i)

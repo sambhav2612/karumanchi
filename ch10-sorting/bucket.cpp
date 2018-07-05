@@ -1,17 +1,4 @@
-#include "../headers.h"
-#define BUCKETS 10
-
-void bs(int array[], int size)
-{
-	int bucket[BUCKETS] = {0}, i;
-
-	for (i = 0; i < size; ++i)
-		++bucket[array[i]];
-
-	for (int j = 0, i = 0; j < BUCKETS; ++j)
-		for (int k = bucket[j]; k > 0; --k)
-			array[i++] = j;
-}
+#include "sort.h"
 
 int main(int argc, char const *argv[])
 {
@@ -24,7 +11,7 @@ int main(int argc, char const *argv[])
 	for (i = 0; i < size; ++i)
 		cout << array[i] << " ";
 
-	bs(array, size);
+	bucketsort(array, size);
 
 	cout << endl;
 	for (i = 0; i < size; ++i)

@@ -1,22 +1,4 @@
-#include "../headers.h"
-
-void bs(int array[], int n)
-{
-	int x, j;
-	for (int i = 1; i < n; ++i)
-	{
-		x = array[i];
-		j = i;
-
-		while (array[j - 1] > x && j >= 0)
-		{
-			array[j] = array[j - 1];
-			--j;
-		}
-
-		array[j] = x;
-	}
-}
+#include "sort.h"
 
 int main(int argc, char const *argv[])
 {
@@ -29,7 +11,7 @@ int main(int argc, char const *argv[])
 	for (i = 0; i < size; ++i)
 		cout << array[i] << " ";
 
-	bs(array, size);
+	insertionsort(array, size);
 
 	cout << endl;
 	for (i = 0; i < size; ++i)
