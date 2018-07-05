@@ -60,6 +60,7 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │   .editorconfig
 │   .eslintrc.json
 │   .gitignore
+│   .travis.yml
 │   CMakeLists.txt
 │   headers.h
 │   headers.h.gch
