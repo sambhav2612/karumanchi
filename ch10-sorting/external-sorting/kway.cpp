@@ -1,4 +1,4 @@
-#include "../headers.h"
+#include "../../headers.h"
 #include "kwaymergesort.h"
 
 int main(int argc, char const *argv[])
