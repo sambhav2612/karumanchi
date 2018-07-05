@@ -63,7 +63,6 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │   .travis.yml
 │   CMakeLists.txt
 │   headers.h
-│   headers.h.gch
 │   LICENSE
 │   Makefile
 │   package-lock.json
