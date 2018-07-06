@@ -3,7 +3,6 @@
 ## Known Issues
 
 * Shell Sort
-* Quick Sort
 * Merge Sort
 * Counting Sort:
 

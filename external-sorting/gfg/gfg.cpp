@@ -222,8 +222,7 @@ void mergeFiles(char *output_file, int n, int k)
 
 // Using a merge-sort algorithm, create the initial runs
 // and divide them evenly among the output files
-void createInitialRuns(char *input_file, int run_size,
-					   int num_ways)
+void createInitialRuns(char *input_file, int run_size, int num_ways)
 {
 	// For big input file
 	FILE *in = openFile(input_file, "r");
@@ -280,8 +279,7 @@ void createInitialRuns(char *input_file, int run_size,
 }
 
 // For sorting data stored on disk
-void externalSort(char *input_file, char *output_file,
-				  int num_ways, int run_size)
+void externalSort(char *input_file, char *output_file, int num_ways, int run_size)
 {
 	// read the input file, create the initial runs,
 	// and assign the runs to the scratch output files
@@ -313,8 +311,7 @@ int main()
 
 	fclose(in);
 
-	externalSort(input_file, output_file, num_ways,
-				 run_size);
+	externalSort(input_file, output_file, num_ways, run_size);
 
 	return 0;
 }

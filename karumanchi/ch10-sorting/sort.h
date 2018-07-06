@@ -65,22 +65,21 @@ void insertionsort(int array[], int n)
 
 void merge(int array[], int low, int mid, int high)
 {
-	int l, temp;
-	l = mid - 1;
+	int l = mid - 1, temp = 0;
 
 	while (low <= l && mid <= high)
 	{
 		if (array[low] <= array[mid])
-			array[++temp] = array[++low];
+			array[temp++] = array[low++];
 		else
-			array[++temp] = array[++mid];
+			array[temp++] = array[mid++];
 	}
 
 	while (low <= l)
-		array[++temp] = array[++low];
+		array[temp++] = array[low++];
 
 	while (mid <= high)
-		array[++temp] = array[++mid];
+		array[temp++] = array[mid++];
 }
 
 void mergesort(int array[], int low, int high)
@@ -110,7 +109,7 @@ int partition(int array[], int low, int high)
 		while (array[r] > item)
 			--r;
 
-		if (left < right)
+		if (l < r)
 			swap(array[l], array[r]);
 	}
 

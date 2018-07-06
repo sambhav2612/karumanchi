@@ -4,7 +4,7 @@ DS Problems from karumanchi
 
 ## Latest Update
 
-Publish v0.0.4 of the [karumanchi](https://www.npmjs.com/package/karumanchi) module.
+Add Chapter 14 - Hashing.
 
 ### Guide to run C++ Algos
 
@@ -136,6 +136,14 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │   │       readme.md
 │   │       shell.cpp
 │   │       sort.h
+│   │
+│   ├───ch14-hashing
+│   │       array-matching.cpp
+│   │       hash-pairs.cpp
+│   │       readme.md
+│   │       remove-duplicates.cpp
+│   │       seperate-chaining.h
+│   │       two-arrays.cpp
 │   │
 │   ├───ch2-recursion-and-backtracking
 │   │       check-sorting-recursion.cpp
