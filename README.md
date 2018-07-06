@@ -126,9 +126,12 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │   │       bucket.cpp
 │   │       check-repeat.cpp
 │   │       counting.cpp
+│   │       election.cpp
 │   │       flagged-bubble.cpp
 │   │       insertion.cpp
+│   │       max.cpp
 │   │       merge.cpp
+│   │       mergeAB.cpp
 │   │       quick.cpp
 │   │       readme.md
 │   │       shell.cpp
