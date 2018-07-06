@@ -4,7 +4,7 @@ DS Problems from karumanchi
 
 ## Latest Update
 
-Publish initial [npm module](https://www.npmjs.com/package/karumanchi).
+Publish v0.0.4 of the [karumanchi](https://www.npmjs.com/package/karumanchi) module.
 
 ### Guide to run C++ Algos
 
