@@ -33,30 +33,40 @@
     "ds",
     "algo"
   ],
-  "author": "Sambhav Jain",
+  "author": "Sambhav Jain <sambhavjain2612@gmail.com>",
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/sambhav2612/karumanchi/issues"
   },
   "homepage": "https://github.com/sambhav2612/karumanchi#readme",
   "dependencies": {
+    "@octokit/rest": "^15.9.4",
     "chalk": "^2.4.1",
+    "clear": "^0.1.0",
+    "clui": "^0.3.6",
     "commander": "^2.16.0",
-    "shelljs": "^0.8.2"
+    "configstore": "^3.1.2",
+    "figlet": "^1.2.0",
+    "inquirer": "^6.0.0",
+    "lodash": "^4.17.10",
+    "minimist": "^1.2.0",
+    "shelljs": "^0.8.2",
+    "simple-git": "^1.96.0",
+    "touch": "^3.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-minify": "^0.4.3",
-    "babel-polyfill": "^6.26.0",
     "babel-eslint": "^8.2.5",
     "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-minify": "^0.4.3",
+    "cross-env": "^5.2.0",
     "eslint": "^5.0.1",
     "eslint-plugin-import": "^2.13.0",
     "mocha": "^5.2.0",
     "nyc": "^12.0.2",
-    "rimraf": "^2.6.2",
-    "cross-env": "^5.2.0"
+    "rimraf": "^2.6.2"
   },
   "nyc": {
     "reporter": [
