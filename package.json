@@ -1,6 +1,6 @@
 {
   "name": "karumanchi",
-  "version": "0.1.2",
+  "version": "0.1.1",
   "description": "karumanchi ds guides and codes",
   "main": ".lib/index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "clean": "rimraf lib",
     "deploy": "github-deploy",
     "prepublishOnly": "npm run clean && npm run lint && npm run build",
-    "publish": "npm version patch && npm publish --access=public"
+    "publishing": "npm version patch && npm publish --access=public"
   },
   "bin": {
     "download": "lib/index.js",
