@@ -74,75 +74,6 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │       c_cpp_properties.json
 │       settings.json
 │
-├───ch1-introduction
-│       readme.md
-│
-├───ch10-sorting
-│       bucket.cpp
-│       check-repeat.cpp
-│       counting.cpp
-│       flagged-bubble.cpp
-│       insertion.cpp
-│       merge.cpp
-│       quick.cpp
-│       readme.md
-│       shell.cpp
-│       sort.h
-│
-├───ch2-recursion-and-backtracking
-│       check-sorting-recursion.cpp
-│       n-ary-strings.cpp
-│       readme.md
-│       tower-of-hanoi.cpp
-│
-├───ch3-linked-lists
-│       cycle.cpp
-│       fractional-node.cpp
-│       merge.cpp
-│       nth-element-from-end.cpp
-│       pairwise-reverse.cpp
-│       palindrome.cpp
-│       readme.md
-│       reverse-kth.cpp
-│       reverse-sll.cpp
-│       sort.cpp
-│       split-cll.cpp
-│
-├───ch4-stacks
-│       adjacentBigger.cpp
-│       adjacentRepeat.cpp
-│       growth.cpp
-│       infix-to-postfix.cpp
-│       postfix.cpp
-│       readme.md
-│       reverse.cpp
-│       span.cpp
-│       stack.cpp
-│       symbol-parser.cpp
-│
-├───ch5-queues
-│       linked-list-queue.cpp
-│       readme.md
-│       simple-queue.cpp
-│
-├───ch6-trees
-│       array2bst.cpp
-│       bst2dll.cpp
-│       check-bst.cpp
-│       count-tree.cpp
-│       dll2bst.cpp
-│       expression-tree.cpp
-│       find-max.cpp
-│       inorder-sucessor.cpp
-│       kth-smallest.cpp
-│       preorder-sucessor.cpp
-│       ranger.cpp
-│       readme.md
-│       readme.txt
-│       reverse-lca.cpp
-│       threaded-tree.cpp
-│       threaded-tree.txt
-│
 ├───codechef
 │   │   codechef.h
 │   │   readme.md
@@ -178,14 +109,6 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │           input.txt
 │           output.txt
 │
-├───includes
-│       cll.h
-│       dll.h
-│       queue.h
-│       sll.h
-│       stack.h
-│       tree.h
-│
 ├───js
 │       priority-queue.js
 │       queue.js
@@ -193,15 +116,93 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │       set.js
 │       stack.js
 │
-├───misc
-│       sparse-set.cpp
-│       sparse-set.h
+├───karumanchi
+│   ├───ch1-introduction
+│   │       readme.md
+│   │
+│   ├───ch10-sorting
+│   │       bucket.cpp
+│   │       check-repeat.cpp
+│   │       counting.cpp
+│   │       flagged-bubble.cpp
+│   │       insertion.cpp
+│   │       merge.cpp
+│   │       quick.cpp
+│   │       readme.md
+│   │       shell.cpp
+│   │       sort.h
+│   │
+│   ├───ch2-recursion-and-backtracking
+│   │       check-sorting-recursion.cpp
+│   │       n-ary-strings.cpp
+│   │       readme.md
+│   │       tower-of-hanoi.cpp
+│   │
+│   ├───ch3-linked-lists
+│   │       cycle.cpp
+│   │       fractional-node.cpp
+│   │       merge.cpp
+│   │       nth-element-from-end.cpp
+│   │       pairwise-reverse.cpp
+│   │       palindrome.cpp
+│   │       readme.md
+│   │       reverse-kth.cpp
+│   │       reverse-sll.cpp
+│   │       sort.cpp
+│   │       split-cll.cpp
+│   │
+│   ├───ch4-stacks
+│   │       adjacentBigger.cpp
+│   │       adjacentRepeat.cpp
+│   │       growth.cpp
+│   │       infix-to-postfix.cpp
+│   │       postfix.cpp
+│   │       readme.md
+│   │       reverse.cpp
+│   │       span.cpp
+│   │       stack.cpp
+│   │       symbol-parser.cpp
+│   │
+│   ├───ch5-queues
+│   │       linked-list-queue.cpp
+│   │       readme.md
+│   │       simple-queue.cpp
+│   │
+│   ├───ch6-trees
+│   │       array2bst.cpp
+│   │       bst2dll.cpp
+│   │       check-bst.cpp
+│   │       count-tree.cpp
+│   │       dll2bst.cpp
+│   │       expression-tree.cpp
+│   │       find-max.cpp
+│   │       inorder-sucessor.cpp
+│   │       kth-smallest.cpp
+│   │       preorder-sucessor.cpp
+│   │       ranger.cpp
+│   │       readme.md
+│   │       readme.txt
+│   │       reverse-lca.cpp
+│   │       threaded-tree.cpp
+│   │       threaded-tree.txt
+│   │
+│   └───includes
+│           cll.h
+│           dll.h
+│           queue.h
+│           sll.h
+│           stack.h
+│           tree.h
 │
 ├───lib
 │       commit.js
 │       deploy.js
 │       index.js
 │       push.js
+│
+├───misc
+│       sparse-set.cpp
+│       sparse-set.h
 │
 ├───spoj
 │       readme.md

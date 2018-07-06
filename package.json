@@ -2,17 +2,19 @@
   "name": "karumanchi",
   "version": "0.1.1",
   "description": "karumanchi ds guides and codes",
-  "main": "index.js",
+  "main": ".lib/index.js",
   "scripts": {
-    "build": "npm run lint && babel ./src -d ./lib",
-    "test": "nyc mocha --require babel-core/register",
+    "build": "npm run lint && cross-env BABEL_ENV=production babel src --out-dir lib",
+    "test": "npm run lint && npm run cover",
+    "test:prod": "cross-env BABEL_ENV=production npm run test",
+    "test:only": "mocha --require babel-core/register --require babel-polyfill --recursive",
+    "test:watch": "npm test -- --watch",
+    "cover": "nyc mocha --require babel-core/register",
     "lint": "eslint ./src",
+    "clean": "rimraf lib",
     "deploy": "github-deploy",
-    "prepublishOnly": "npm run build",
-    "stack": "node js/stack.js",
-    "queue": "node js/queue.js",
-    "pq": "node js/priority-queue.js",
-    "set": "node js/set.js"
+    "prepublishOnly": "npm run clean && npm run lint && npm run build",
+    "publish": "npm version patch && npm publish --access=public"
   },
   "bin": {
     "download": "lib/index.js",
@@ -38,15 +40,23 @@
   },
   "homepage": "https://github.com/sambhav2612/karumanchi#readme",
   "dependencies": {
+    "chalk": "^2.4.1",
+    "commander": "^2.16.0",
     "shelljs": "^0.8.2"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-minify": "^0.4.3",
+    "babel-polyfill": "^6.26.0",
+    "babel-eslint": "^8.2.5",
+    "babel-plugin-add-module-exports": "^0.2.1",
     "eslint": "^5.0.1",
     "eslint-plugin-import": "^2.13.0",
     "mocha": "^5.2.0",
-    "nyc": "^12.0.2"
+    "nyc": "^12.0.2",
+    "rimraf": "^2.6.2",
+    "cross-env": "^5.2.0"
   },
   "nyc": {
     "reporter": [
