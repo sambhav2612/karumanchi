@@ -4,7 +4,7 @@ DS Problems from karumanchi
 
 ## Latest Update
 
-Start creating npm global module.
+Publish initial [npm module](https://www.npmjs.com/package/karumanchi).
 
 ### Guide to run C++ Algos
 
@@ -198,13 +198,19 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │       sparse-set.h
 │
 ├───lib
+│       commit.js
+│       deploy.js
 │       index.js
+│       push.js
 │
 ├───spoj
 │       readme.md
 │
 ├───src
+│       commit.js
+│       deploy.js
 │       index.js
+│       push.js
 │
 ├───stl
 │        stl.h
