@@ -29,7 +29,7 @@ Adding following flags in optional and depends on the users thugh are sugegsted 
 - `-L<library path>` - specify a lib directory
 - `-l<library>` - link with library lib<library>.a
 
-**H**owever, it is suggested that you use **_first, second and fourth_** (while compiling source files) for best results and local development.
+**H**owever, it is suggested that you use **_first, second, third and fourth_** (while compiling source files) for best results and local development.
 
 ### Guide to run JS Algos
 
