@@ -13,21 +13,13 @@
             2,
             4
         ],
-        "quotes": [
-            2,
-            "single"
-        ],
-        "semi": [
-            2,
-            "always"
-        ],
         "comma-dangle": [
             "error",
             "only-multiline"
         ]
     },
     "parserOptions": {
-        "ecmaVersion": 6,
+        "ecmaVersion": 2015,
         "sourceType": "module"
     }
 }

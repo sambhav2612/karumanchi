@@ -137,8 +137,15 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │   │       shell.cpp
 │   │       sort.h
 │   │
+│   ├───ch13-symbol-tables
+│   │       readme.md
+│   │
 │   ├───ch14-hashing
 │   │       array-matching.cpp
+│   │       delete-array.cpp
+│   │       find-pairs.cpp
+│   │       first-non-repeat.cpp
+│   │       first-repeat.cpp
 │   │       hash-pairs.cpp
 │   │       readme.md
 │   │       remove-duplicates.cpp
