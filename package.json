@@ -1,6 +1,6 @@
 {
   "name": "karumanchi",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "karumanchi ds guides and codes",
   "main": ".lib/index.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "cover": "nyc mocha --require babel-core/register",
     "lint": "eslint ./src",
     "clean": "rimraf lib",
-    "deploy": "github-deploy",
+    "push": "github-deploy",
     "prepublishOnly": "npm run clean && npm run lint && npm run build",
     "publishing": "npm version patch && npm publish --access=public"
   },
