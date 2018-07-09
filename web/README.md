@@ -21,4 +21,8 @@ Things you may want to cover:
 
 * Deployment instructions
 
+```bash
+$ rails s # or ruby bin/rails server
+```
+
 * ...

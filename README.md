@@ -4,7 +4,7 @@ DS Problems from karumanchi
 
 ## Latest Update
 
-Add Chapter 14 - Hashing.
+Update Rails Controllers.
 
 ### Guide to run C++ Algos
 
