@@ -1,1 +1,3 @@
 web
+.nyc_output
+coverage

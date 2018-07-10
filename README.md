@@ -4,7 +4,7 @@ DS Problems from karumanchi
 
 ## Latest Update
 
-Update Rails Controllers.
+Add Chapter 7.
 
 ### Guide to run C++ Algos
 
@@ -116,7 +116,7 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │       set.js
 │       stack.js
 │
-├───karumanchi
+├───main
 │   │   headers.h
 │   │
 │   ├───ch1-introduction
@@ -205,6 +205,16 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │   │       reverse-lca.cpp
 │   │       threaded-tree.cpp
 │   │       threaded-tree.txt
+│   │
+│   ├───ch7-priority-queues
+│   │       fimd-max-in-min-heap.cpp
+│   │       find-k.cpp
+│   │       heap-sort.cpp
+│   │       heap.h
+│   │       median.cpp
+│   │       pq.h
+│   │       readme.md
+│   │       stack.cpp
 │   │
 │   └───includes
 │           cll.h
