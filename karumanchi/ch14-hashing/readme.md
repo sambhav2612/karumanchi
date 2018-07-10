@@ -1,4 +1,4 @@
-# Hashing
+# Chapter 14 - Hashing
 
 Some issues have been discovered in the source codes - like:
 

@@ -1,4 +1,4 @@
-# Linked Lists
+# Chapter 3 - Linked Lists
 
 Linked Lists are a sequential way to storage. No, unlike arrays where each element would have an adjacent neighbour from its domain, linked lists can have their nodes (elements) scattered in the memort anywhere. The access is provided by an extra pointer (taking extra space) to store the address of the next element in the structure. This sort of provides an analogous approach to implementing ordinary arrays.
 

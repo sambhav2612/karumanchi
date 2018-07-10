@@ -1,4 +1,4 @@
-# Introduction
+# Chapter 1 - Introduction
 
 The chapter introduces to various paradigms followed in algorithm anaylysis and programming in general. It starts from defining `variables` as an unit to store data of a particular type.
 

@@ -4,9 +4,9 @@ DS Problems from karumanchi
 
 ## Latest Update
 
-Add Chapter 7.
+Add Chapter 8 and 12.
 
-### Guide to run C++ Algos
+### Guide to run C++ Algorithms
 
 - Clone this repo
 - Install MinGW on Windows and g++ on macOS & Unix-like.
@@ -31,9 +31,9 @@ Adding following flags in optional and depends on the users thugh are sugegsted 
 
 **H**owever, it is suggested that you use **_first, second, third and fourth_** (while compiling source files) for best results and local development.
 
-### Guide to run JS Algos
+### Guide to run JS Algorithms
 
-- Install Node
+- Install Node.js
 - Clone this repo
 - Open the `package.json` file to find the appropriate command under **scripts tag**.
 - Run in a terminal in following fashion:
@@ -126,36 +126,6 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │   ├───ch1-introduction
 │   │       readme.md
 │   │
-│   ├───ch10-sorting
-│   │       bucket.cpp
-│   │       check-repeat.cpp
-│   │       counting.cpp
-│   │       election.cpp
-│   │       flagged-bubble.cpp
-│   │       insertion.cpp
-│   │       max.cpp
-│   │       merge.cpp
-│   │       mergeAB.cpp
-│   │       quick.cpp
-│   │       readme.md
-│   │       shell.cpp
-│   │       sort.h
-│   │
-│   ├───ch13-symbol-tables
-│   │       readme.md
-│   │
-│   ├───ch14-hashing
-│   │       array-matching.cpp
-│   │       delete-array.cpp
-│   │       find-pairs.cpp
-│   │       first-non-repeat.cpp
-│   │       first-repeat.cpp
-│   │       hash-pairs.cpp
-│   │       readme.md
-│   │       remove-duplicates.cpp
-│   │       seperate-chaining.h
-│   │       two-arrays.cpp
-│   │
 │   ├───ch2-recursion-and-backtracking
 │   │       check-sorting-recursion.cpp
 │   │       n-ary-strings.cpp
@@ -220,6 +190,44 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │   │       readme.md
 │   │       stack.cpp
 │   │
+│   ├───ch8-disjoint-sets
+│   │       adt.h
+│   │       cities.cpp
+│   │       readme.md
+│   │
+│   ├───ch10-sorting
+│   │       bucket.cpp
+│   │       check-repeat.cpp
+│   │       counting.cpp
+│   │       election.cpp
+│   │       flagged-bubble.cpp
+│   │       insertion.cpp
+│   │       max.cpp
+│   │       merge.cpp
+│   │       mergeAB.cpp
+│   │       quick.cpp
+│   │       readme.md
+│   │       shell.cpp
+│   │       sort.h
+│   │
+│   ├───ch12-selection-algorithms
+│   │       readme.md
+│   │
+│   ├───ch13-symbol-tables
+│   │       readme.md
+│   │
+│   ├───ch14-hashing
+│   │       array-matching.cpp
+│   │       delete-array.cpp
+│   │       find-pairs.cpp
+│   │       first-non-repeat.cpp
+│   │       first-repeat.cpp
+│   │       hash-pairs.cpp
+│   │       readme.md
+│   │       remove-duplicates.cpp
+│   │       seperate-chaining.h
+│   │       two-arrays.cpp
+│   │
 │   └───includes
 │           cll.h
 │           dll.h
@@ -227,12 +235,6 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │           sll.h
 │           stack.h
 │           tree.h
-│
-├───lib
-│       commit.js
-│       deploy.js
-│       index.js
-│       push.js
 │
 ├───misc
 │       sparse-set.cpp

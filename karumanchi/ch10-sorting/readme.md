@@ -1,4 +1,4 @@
-# Sorting
+# Chapter 10 - Sorting
 
 ## Known Issues
 
