@@ -58,11 +58,12 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 .
 │   .babelrc
 │   .editorconfig
+│   .eslintignore
 │   .eslintrc.json
 │   .gitignore
+│   .npmignore
 │   .travis.yml
 │   CMakeLists.txt
-│   headers.h
 │   LICENSE
 │   Makefile
 │   package-lock.json
@@ -73,6 +74,9 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │       compile_commands.json
 │       c_cpp_properties.json
 │       settings.json
+│
+├───bloom-filter
+│       readme.md
 │
 ├───codechef
 │   │   codechef.h
