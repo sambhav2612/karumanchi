@@ -48,7 +48,5 @@ for word in test_words:
 
 ### Dependencies
 
-- Twine
 - bitarray
-- setuptools
-- wheel
+- mmh3
