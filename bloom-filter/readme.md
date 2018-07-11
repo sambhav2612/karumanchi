@@ -12,7 +12,41 @@ Implemented in Python 3.7.
 
 Distributed as a [PyPi](https://pypi.org/project/bloomf/) Package.
 
-## Dependencies
+## Usage
+
+You can use this bloom filter as follows -
+
+```python
+from bloomf import BloomFilter
+
+n = 10  # number of items to be added
+p = 0.04  # FP Probablity
+
+filter = BloomFilter(n, p)
+
+print("Size of bit array: {}" . format(filter.size))
+print("False positive Probability: {}" . format(filter.fp_prob))
+print("Number of hash functions: {}" . format(filter.hash_count))
+
+word_present = ['abound', 'abounds', 'abundance', 'abundant', 'accessable', 'bloom', 'blossom', 'bolster', 'bonny', 'bonus', 'bonuses']
+word_absent = ['bluff', 'cheater', 'hate', 'war', 'humanity', 'racism', 'hurt', 'facebook', 'sambhav', 'twitter']
+
+for i in word_present:
+    filter.add(i)
+
+test_words = word_present[:5] + word_absent
+
+for word in test_words:
+    if filter.check(word):
+        if word in word_absent:
+            print("'{}' is a false positive!" . format(word))
+        else:
+            print("'{}' is a probably present!" . format(word))
+    else:
+        print("'{}' is 100% not present!" . format(word))
+```
+
+### Dependencies
 
 - Twine
 - bitarray
