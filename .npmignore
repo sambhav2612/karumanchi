@@ -1,3 +1,4 @@
 web
 .nyc_output
 coverage
+.vscode

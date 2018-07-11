@@ -22,4 +22,7 @@ node_modules/
 .eslintcache
 *.tgz
 .env
-/lib/*
+lib
+
+.vscode
+__pycache__
