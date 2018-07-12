@@ -1,14 +1,14 @@
 /**
  * Implmeentation of Binary Search Tree ADT
  *
- * Optimisations required: add a sub-routine for remove() that returns both 
- * the pointer to element to be deleted after finding it and it's parent as 
- * while deletion I think both it's link to parent and itself should be 
+ * Optimisations required: add a sub-routine for remove() that returns both
+ * the pointer to element to be deleted after finding it and it's parent as
+ * while deletion I think both it's link to parent and itself should be
  * deleted and it'd not be cool otherwise.
- * 
+ *
  */
 
-#include "../headers.h"
+#include "../headers.hpp"
 #include <queue>
 #include <stack>
 
@@ -16,659 +16,659 @@
 // global sub-routine functions
 int max(int a, int b)
 {
-	if (a >= b)
-	{
-		return a;
-	}
+    if (a >= b)
+    {
+        return a;
+    }
 
-	return b;
+    return b;
 }
 
 void printArray(int array[], int len)
 {
-	for (int i = 0; i < len; ++i)
-	{
-		cout << array[i] << " ";
-	}
+    for (int i = 0; i < len; ++i)
+    {
+        cout << array[i] << " ";
+    }
 }
 // end
 
 class node
 {
   public:
-	int data;
-	node *left;
-	node *right;
+    int data;
+    node *left;
+    node *right;
 
-	node()
-	{
-		data = INT_MIN;
-		left = NULL;
-		right = NULL;
-	}
+    node()
+    {
+        data = INT_MIN;
+        left = NULL;
+        right = NULL;
+    }
 
-	node(int value)
-	{
-		data = value;
-		left = NULL;
-		right = NULL;
-	}
+    node(int value)
+    {
+        data = value;
+        left = NULL;
+        right = NULL;
+    }
 };
 
 class tree
 {
-	node *root;
+    node *root;
 
   public:
-	tree()
-	{
-		root = NULL;
-	}
+    tree()
+    {
+        root = NULL;
+    }
 
-	node *returnRoot()
-	{
-		return root;
-	}
+    node *returnRoot()
+    {
+        return root;
+    }
 
-	void insert(int ele);
-	node *remove(node *root, int ele);
+    void insert(int ele);
+    node *remove(node *root, int ele);
 
-	void deleteTree(node *root)
-	{
-		if (!root)
-		{
-			return;
-		}
+    void deleteTree(node *root)
+    {
+        if (!root)
+        {
+            return;
+        }
 
-		deleteTree(root->left);
-		deleteTree(root->right);
+        deleteTree(root->left);
+        deleteTree(root->right);
 
-		delete (root);
+        delete (root);
 
-		if (!root)
-		{
-			cout << endl
-				 << "Tree deleted successfully!";
-		}
-	}
+        if (!root)
+        {
+            cout << endl
+                 << "Tree deleted successfully!";
+        }
+    }
 
-	int search(int ele);
-	void traverse();
+    int search(int ele);
+    void traverse();
 
-	int size(node *root)
-	{
-		if (!root)
-		{
-			return 0;
-		}
-		else
-		{
-			return (size(root->left) + 1 + size(root->right));
-		}
-	}
+    int size(node *root)
+    {
+        if (!root)
+        {
+            return 0;
+        }
+        else
+        {
+            return (size(root->left) + 1 + size(root->right));
+        }
+    }
 
-	int height(node *root)
-	{
-		if (!root)
-		{
-			return 0;
-		}
-		else
-		{
-			int leftSub = height(root->left);
-			int rightSub = height(root->right);
+    int height(node *root)
+    {
+        if (!root)
+        {
+            return 0;
+        }
+        else
+        {
+            int leftSub = height(root->left);
+            int rightSub = height(root->right);
 
-			if (leftSub > rightSub)
-			{
-				return (leftSub + 1);
-			}
-			else
-			{
-				return (rightSub + 1);
-			}
-		}
-	}
+            if (leftSub > rightSub)
+            {
+                return (leftSub + 1);
+            }
+            else
+            {
+                return (rightSub + 1);
+            }
+        }
+    }
 
-	int leaves(node *root);
-	int maxLevelSum(node *root);
+    int leaves(node *root);
+    int maxLevelSum(node *root);
 
-	int diameter(node *root, int *ptr)
-	{
-		int left, right;
-		if (!root)
-		{
-			return 0;
-		}
+    int diameter(node *root, int *ptr)
+    {
+        int left, right;
+        if (!root)
+        {
+            return 0;
+        }
 
-		left = diameter(root->left, ptr);
-		right = diameter(root->right, ptr);
+        left = diameter(root->left, ptr);
+        right = diameter(root->right, ptr);
 
-		if (left + right > *ptr)
-		{
-			*ptr = left + right;
-		}
+        if (left + right > *ptr)
+        {
+            *ptr = left + right;
+        }
 
-		return max(left, right) + 1;
-	}
+        return max(left, right) + 1;
+    }
 
-	void lca();
-	node *shortest_path(node *root, node *a, node *b)
-	{
-		if ((a->data > root->data && b->data < root->data) || (a->data < root->data && b->data > root->data))
-			return root;
+    void lca();
+    node *shortest_path(node *root, node *a, node *b)
+    {
+        if ((a->data > root->data && b->data < root->data) || (a->data < root->data && b->data > root->data))
+            return root;
 
-		if (a->data < root->data)
-			return shortest_path(root->left, a, b);
-		else
-			return shortest_path(root->right, a, b);
-	}
+        if (a->data < root->data)
+            return shortest_path(root->left, a, b);
+        else
+            return shortest_path(root->right, a, b);
+    }
 
-	// sub-routines of traverse()
-	void inorder(node *root);
-	void inorderIt(node *root);
-	void inorderRe(node *root)
-	{
-		inorderRe(root->left);
-		cout << root->data << " ";
-		inorderRe(root->right);
-	}
+    // sub-routines of traverse()
+    void inorder(node *root);
+    void inorderIt(node *root);
+    void inorderRe(node *root)
+    {
+        inorderRe(root->left);
+        cout << root->data << " ";
+        inorderRe(root->right);
+    }
 
-	void preorder(node *root);
-	void preorderIt(node *root);
-	void preorderRe(node *root)
-	{
-		cout << root->data << " ";
-		preorderRe(root->left);
-		preorderRe(root->right);
-	}
+    void preorder(node *root);
+    void preorderIt(node *root);
+    void preorderRe(node *root)
+    {
+        cout << root->data << " ";
+        preorderRe(root->left);
+        preorderRe(root->right);
+    }
 
-	void postorder(node *root);
-	void postorderIt(node *root);
-	void postorderRe(node *root)
-	{
-		postorderRe(root->left);
-		postorderRe(root->right);
-		cout << root->data << " ";
-	}
+    void postorder(node *root);
+    void postorderIt(node *root);
+    void postorderRe(node *root)
+    {
+        postorderRe(root->left);
+        postorderRe(root->right);
+        cout << root->data << " ";
+    }
 
-	void pathLength(node *root, int array[], int pathLen);
+    void pathLength(node *root, int array[], int pathLen);
 
-	node *findmin(node *root)
-	{
-		if (!root)
-			return nullptr;
-		else if (!root->left)
-			return root;
-		else
-			return findmin(root->left);
-	}
+    node *findmin(node *root)
+    {
+        if (!root)
+            return nullptr;
+        else if (!root->left)
+            return root;
+        else
+            return findmin(root->left);
+    }
 
-	node *findmax(node *root)
-	{
-		if (!root)
-			return nullptr;
-		else if (!root->right)
-			return root;
-		else
-			return findmax(root->right);
-	}
+    node *findmax(node *root)
+    {
+        if (!root)
+            return nullptr;
+        else if (!root->right)
+            return root;
+        else
+            return findmax(root->right);
+    }
 };
 
 void tree::insert(int ele)
 {
-	queue<node *> obj;
+    queue<node *> obj;
 
-	node *newNode = new node(ele);
-	node *temp;
+    node *newNode = new node(ele);
+    node *temp;
 
-	if (!newNode)
-	{
-		cout << "\n New node could not be created!";
-		return;
-	}
+    if (!newNode)
+    {
+        cout << "\n New node could not be created!";
+        return;
+    }
 
-	if (!root)
-	{
-		root = newNode;
-		root->left = NULL;
-		root->right = NULL;
+    if (!root)
+    {
+        root = newNode;
+        root->left = NULL;
+        root->right = NULL;
 
-		cout << "\n New Node " << ele << " inserted at root successfully!";
+        cout << "\n New Node " << ele << " inserted at root successfully!";
 
-		return;
-	}
+        return;
+    }
 
-	obj.push(root);
+    obj.push(root);
 
-	while (!obj.empty())
-	{
-		temp = obj.front();
-		obj.pop();
+    while (!obj.empty())
+    {
+        temp = obj.front();
+        obj.pop();
 
-		if (temp->left)
-		{
-			obj.push(temp->left);
-		}
-		else
-		{
-			temp->left = newNode;
-			cout << "\n New node " << ele << " inserted at left of " << temp->data << " successfully!";
+        if (temp->left)
+        {
+            obj.push(temp->left);
+        }
+        else
+        {
+            temp->left = newNode;
+            cout << "\n New node " << ele << " inserted at left of " << temp->data << " successfully!";
 
-			return;
-		}
+            return;
+        }
 
-		if (temp->right)
-		{
-			obj.push(temp->right);
-		}
-		else
-		{
-			temp->right = newNode;
-			cout << "\n New node " << ele << " inserted at right of " << temp->data << " successfully!";
+        if (temp->right)
+        {
+            obj.push(temp->right);
+        }
+        else
+        {
+            temp->right = newNode;
+            cout << "\n New node " << ele << " inserted at right of " << temp->data << " successfully!";
 
-			return;
-		}
-	}
+            return;
+        }
+    }
 }
 
 node *tree::remove(node *root, int ele)
 {
-	node *temp = nullptr;
+    node *temp = nullptr;
 
-	if (!root)
-		cout << endl
-			 << "Tree not found!";
-	else if (ele < root->data)
-		root->left = remove(root->left, ele);
-	else if (ele > root->data)
-		root->right = remove(root->right, ele);
-	else
-	{
-		if (root->left && root->right)
-		{
-			temp = findmax(root->left); // or, temp = findmin(root->right)
-			root->data = temp->data;
-			root->left = remove(root->left, root->data);
-		}
-		else
-		{
-			// single child
-			temp = root;
+    if (!root)
+        cout << endl
+             << "Tree not found!";
+    else if (ele < root->data)
+        root->left = remove(root->left, ele);
+    else if (ele > root->data)
+        root->right = remove(root->right, ele);
+    else
+    {
+        if (root->left && root->right)
+        {
+            temp = findmax(root->left); // or, temp = findmin(root->right)
+            root->data = temp->data;
+            root->left = remove(root->left, root->data);
+        }
+        else
+        {
+            // single child
+            temp = root;
 
-			if (!root->left)
-				root = root->right;
-			if (!root->right)
-				root = root->left;
+            if (!root->left)
+                root = root->right;
+            if (!root->right)
+                root = root->left;
 
-			delete (temp);
-		}
-	}
+            delete (temp);
+        }
+    }
 
-	return root;
+    return root;
 }
 
 int tree::search(int ele)
 {
-	node *p = root;
+    node *p = root;
 
-	if (ele < p->data)
-	{
-		// go to left while correct position not reached
-		while (ele < p->data)
-		{
-			p = p->left;
-		}
-	}
-	else
-	{
-		// go to right while correct position not reached
-		while (ele >= p->data)
-		{
-			p = p->right;
-		}
-	}
+    if (ele < p->data)
+    {
+        // go to left while correct position not reached
+        while (ele < p->data)
+        {
+            p = p->left;
+        }
+    }
+    else
+    {
+        // go to right while correct position not reached
+        while (ele >= p->data)
+        {
+            p = p->right;
+        }
+    }
 
-	if (p)
-	{
-		return 1;
-	}
-	else if (!p)
-	{
-		return 0; // not found
-	}
-	else
-	{
-		return -1; // error code
-	}
+    if (p)
+    {
+        return 1;
+    }
+    else if (!p)
+    {
+        return 0; // not found
+    }
+    else
+    {
+        return -1; // error code
+    }
 }
 
 int tree::leaves(node *root)
 {
-	queue<node *> obj;
-	node *temp;
+    queue<node *> obj;
+    node *temp;
 
-	int count = 0;
+    int count = 0;
 
-	if (!root)
-	{
-		return 0;
-	}
+    if (!root)
+    {
+        return 0;
+    }
 
-	obj.push(root);
+    obj.push(root);
 
-	while (!obj.empty())
-	{
-		temp = obj.front();
-		obj.pop();
+    while (!obj.empty())
+    {
+        temp = obj.front();
+        obj.pop();
 
-		if (!temp->left && !temp->right)
-		{
-			++count;
-		}
-		else
-		{
-			if (temp->left)
-			{
-				obj.push(temp->left);
-			}
+        if (!temp->left && !temp->right)
+        {
+            ++count;
+        }
+        else
+        {
+            if (temp->left)
+            {
+                obj.push(temp->left);
+            }
 
-			if (temp->right)
-			{
-				obj.push(temp->right);
-			}
-		}
-	}
+            if (temp->right)
+            {
+                obj.push(temp->right);
+            }
+        }
+    }
 
-	return count;
+    return count;
 }
 
 int tree::maxLevelSum(node *root)
 {
-	queue<node *> obj;
-	node *temp = NULL;
+    queue<node *> obj;
+    node *temp = NULL;
 
-	int level = 0, maxLevel = 0, currentSum = 0, maxSum = 0;
+    int level = 0, maxLevel = 0, currentSum = 0, maxSum = 0;
 
-	obj.push(root);
-	obj.push(NULL);
+    obj.push(root);
+    obj.push(NULL);
 
-	while (!obj.empty())
-	{
-		temp = obj.front();
-		obj.pop();
+    while (!obj.empty())
+    {
+        temp = obj.front();
+        obj.pop();
 
-		if (temp == NULL)
-		{
-			if (currentSum > maxSum)
-			{
-				maxSum = currentSum;
-				maxLevel = level;
-			}
+        if (temp == NULL)
+        {
+            if (currentSum > maxSum)
+            {
+                maxSum = currentSum;
+                maxLevel = level;
+            }
 
-			currentSum = 0;
+            currentSum = 0;
 
-			if (!obj.empty())
-			{
-				obj.push(NULL);
-			}
+            if (!obj.empty())
+            {
+                obj.push(NULL);
+            }
 
-			++level;
-		}
-		else
-		{
-			currentSum += temp->data;
+            ++level;
+        }
+        else
+        {
+            currentSum += temp->data;
 
-			if (temp->left)
-			{
-				obj.push(temp->left);
-			}
+            if (temp->left)
+            {
+                obj.push(temp->left);
+            }
 
-			if (temp->right)
-			{
-				obj.push(temp->right);
-			}
-		}
-	}
+            if (temp->right)
+            {
+                obj.push(temp->right);
+            }
+        }
+    }
 }
 
 void tree::lca()
 {
-	queue<node *> obj;
-	node *temp;
+    queue<node *> obj;
+    node *temp;
 
-	if (!root)
-	{
-		return;
-	}
+    if (!root)
+    {
+        return;
+    }
 
-	obj.push(root);
+    obj.push(root);
 
-	while (!obj.empty())
-	{
-		temp = obj.front();
+    while (!obj.empty())
+    {
+        temp = obj.front();
 
-		cout << " " << temp->data;
-		obj.pop();
+        cout << " " << temp->data;
+        obj.pop();
 
-		if (temp->left)
-		{
-			obj.push(temp->left);
-		}
+        if (temp->left)
+        {
+            obj.push(temp->left);
+        }
 
-		if (temp->right)
-		{
-			obj.push(temp->right);
-		}
-	}
+        if (temp->right)
+        {
+            obj.push(temp->right);
+        }
+    }
 }
 
 void tree::traverse()
 {
-	// now traverse will have both recursive and iterative routines
+    // now traverse will have both recursive and iterative routines
 
-	char ch = '\0';
+    char ch = '\0';
 
-	cout << endl
-		 << "Traverse using? - Inorder(i) or Preorder(p) or Postorder(o): ";
-	cin >> ch;
+    cout << endl
+         << "Traverse using? - Inorder(i) or Preorder(p) or Postorder(o): ";
+    cin >> ch;
 
-	switch (ch)
-	{
-	case 'i':
-		cout << endl
-			 << "Executing Inorder Traversal...";
-		inorder(root);
-		break;
+    switch (ch)
+    {
+    case 'i':
+        cout << endl
+             << "Executing Inorder Traversal...";
+        inorder(root);
+        break;
 
-	case 'p':
-		cout << endl
-			 << "Executing Preorder Traversal...";
-		preorder(root);
-		break;
+    case 'p':
+        cout << endl
+             << "Executing Preorder Traversal...";
+        preorder(root);
+        break;
 
-	case 'o':
-		cout << endl
-			 << "Executing Postorder Traversal...";
-		postorder(root);
-		break;
+    case 'o':
+        cout << endl
+             << "Executing Postorder Traversal...";
+        postorder(root);
+        break;
 
-	default:
-		cout << endl
-			 << "Wrong traversal method entered, try again...";
-		break;
-	}
+    default:
+        cout << endl
+             << "Wrong traversal method entered, try again...";
+        break;
+    }
 }
 
 void tree::inorder(node *root)
 {
-	switch (rand() % 2)
-	{
-	case 0: //recursive
-		inorderRe(root);
-		break;
+    switch (rand() % 2)
+    {
+    case 0: //recursive
+        inorderRe(root);
+        break;
 
-	case 1: //iterative
-		//inorderIt(root);
-		break;
+    case 1: //iterative
+        //inorderIt(root);
+        break;
 
-	default:
-		break;
-	}
+    default:
+        break;
+    }
 }
 
 void tree::inorderIt(node *root)
 {
-	stack<node *> obj;
-	node *p = root;
+    stack<node *> obj;
+    node *p = root;
 
-	while (1)
-	{
-		while (p)
-		{
-			obj.push(p);
-			p = root->left;
-		}
+    while (1)
+    {
+        while (p)
+        {
+            obj.push(p);
+            p = root->left;
+        }
 
-		if (obj.empty())
-		{
-			break;
-		}
+        if (obj.empty())
+        {
+            break;
+        }
 
-		p = obj.top();
-		obj.pop();
+        p = obj.top();
+        obj.pop();
 
-		cout << p->data << " ";
+        cout << p->data << " ";
 
-		p = p->right;
-	}
+        p = p->right;
+    }
 }
 
 void tree::preorder(node *root)
 {
-	switch (rand() % 2)
-	{
-	case 0: //recursive
-		preorderRe(root);
-		break;
+    switch (rand() % 2)
+    {
+    case 0: //recursive
+        preorderRe(root);
+        break;
 
-	case 1: //iterative
-		preorderIt(root);
-		break;
+    case 1: //iterative
+        preorderIt(root);
+        break;
 
-	default:
-		break;
-	}
+    default:
+        break;
+    }
 }
 
 void tree::preorderIt(node *root)
 {
-	stack<node *> obj;
-	node *p = root;
+    stack<node *> obj;
+    node *p = root;
 
-	while (1)
-	{
-		while (p)
-		{
-			cout << p->data << " ";
-			obj.push(p);
-			p = root->left;
-		}
+    while (1)
+    {
+        while (p)
+        {
+            cout << p->data << " ";
+            obj.push(p);
+            p = root->left;
+        }
 
-		if (obj.empty())
-		{
-			break;
-		}
+        if (obj.empty())
+        {
+            break;
+        }
 
-		p = obj.top();
-		obj.pop();
+        p = obj.top();
+        obj.pop();
 
-		p = p->right;
-	}
+        p = p->right;
+    }
 }
 
 void tree::postorder(node *root)
 {
-	switch (rand() % 2)
-	{
-	case 0: //recursive
-		postorderRe(root);
-		break;
+    switch (rand() % 2)
+    {
+    case 0: //recursive
+        postorderRe(root);
+        break;
 
-	case 1: //iterative
-		postorderIt(root);
-		break;
+    case 1: //iterative
+        postorderIt(root);
+        break;
 
-	default:
-		break;
-	}
+    default:
+        break;
+    }
 }
 
 void tree::postorderIt(node *root)
 {
-	stack<node *> obj;
-	node *p = root;
-	node *q = NULL;
+    stack<node *> obj;
+    node *p = root;
+    node *q = NULL;
 
-	while (1)
-	{
-		if (p)
-		{
-			obj.push(p);
-			p = p->left;
-		}
-		else
-		{
-			if (obj.empty())
-			{
-				cout << endl
-					 << "Stack is empty > underflow!";
-				break;
-			}
-			else if (obj.top()->right == NULL)
-			{
-				p = obj.top();
-				obj.pop();
+    while (1)
+    {
+        if (p)
+        {
+            obj.push(p);
+            p = p->left;
+        }
+        else
+        {
+            if (obj.empty())
+            {
+                cout << endl
+                     << "Stack is empty > underflow!";
+                break;
+            }
+            else if (obj.top()->right == NULL)
+            {
+                p = obj.top();
+                obj.pop();
 
-				cout << p->data << "";
+                cout << p->data << "";
 
-				if (p == obj.top()->right)
-				{
-					cout << p->data << "";
-					// put in an unused object
-					q = obj.top();
-					obj.pop();
-				}
-			}
+                if (p == obj.top()->right)
+                {
+                    cout << p->data << "";
+                    // put in an unused object
+                    q = obj.top();
+                    obj.pop();
+                }
+            }
 
-			if (!obj.empty())
-			{
-				p = obj.top()->right;
-			}
-			else
-			{
-				p = NULL;
-			}
-		}
-	}
+            if (!obj.empty())
+            {
+                p = obj.top()->right;
+            }
+            else
+            {
+                p = NULL;
+            }
+        }
+    }
 }
 
 void pathLength(node *root, int array[], int pathLen)
 {
-	if (root == NULL)
-	{
-		return;
-	}
+    if (root == NULL)
+    {
+        return;
+    }
 
-	array[pathLen] = root->data;
-	++pathLen;
+    array[pathLen] = root->data;
+    ++pathLen;
 
-	if (root->left == NULL && root->right == NULL)
-	{
-		printArray(array, pathLen);
-	}
-	else
-	{
-		pathLength(root->left, array, pathLen);
-		pathLength(root->right, array, pathLen);
-	}
+    if (root->left == NULL && root->right == NULL)
+    {
+        printArray(array, pathLen);
+    }
+    else
+    {
+        pathLength(root->left, array, pathLen);
+        pathLength(root->right, array, pathLen);
+    }
 }

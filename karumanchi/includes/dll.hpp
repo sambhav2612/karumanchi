@@ -1,173 +1,173 @@
-#include "../headers.h"
+#include "../headers.hpp"
 
 template <typename T>
 class node
 {
   public:
-	T data;
-	node *next;
-	node *prev;
+    T data;
+    node *next;
+    node *prev;
 
-	node()
-	{
-		data = 0;
-		next = NULL;
-		prev = NULL;
-	}
+    node()
+    {
+        data = 0;
+        next = NULL;
+        prev = NULL;
+    }
 
-	node(T ele)
-	{
-		data = ele;
-		next = NULL;
-		prev = NULL;
-	}
+    node(T ele)
+    {
+        data = ele;
+        next = NULL;
+        prev = NULL;
+    }
 };
 
 template <typename T>
 class dll
 {
-	node<T> *head;
+    node<T> *head;
 
   public:
-	void insert(int ele, int pos);
-	void remove(int pos);
+    void insert(int ele, int pos);
+    void remove(int pos);
 
-	void print();
-	int length();
+    void print();
+    int length();
 };
 
 template <typename T>
 void dll<T>::insert(int ele, int pos)
 {
-	node<T> *newNode = new node<T>(ele);
-	node<T> *p = head;
-	node<T> *q = head;
+    node<T> *newNode = new node<T>(ele);
+    node<T> *p = head;
+    node<T> *q = head;
 
-	if (pos == 1)
-	{
-		if (!head)
-		{
-			head = newNode;
-			head->next = NULL;
-			head->prev = NULL;
-			return;
-		}
+    if (pos == 1)
+    {
+        if (!head)
+        {
+            head = newNode;
+            head->next = NULL;
+            head->prev = NULL;
+            return;
+        }
 
-		newNode->next = head;
-		newNode->prev = NULL;
-		head = newNode;
+        newNode->next = head;
+        newNode->prev = NULL;
+        head = newNode;
 
-		if (head && head == newNode)
-		{
-			cout << "New node successfully inserted at head." << endl;
-		}
+        if (head && head == newNode)
+        {
+            cout << "New node successfully inserted at head." << endl;
+        }
 
-		return;
-	}
+        return;
+    }
 
-	int k = 1;
+    int k = 1;
 
-	while (k < pos && p != NULL)
-	{
-		k++;
-		q = p;
-		p = p->next;
-	}
+    while (k < pos && p != NULL)
+    {
+        k++;
+        q = p;
+        p = p->next;
+    }
 
-	q->next = newNode;
-	newNode->prev = q;
-	newNode->next = p;
-	p->prev = newNode;
+    q->next = newNode;
+    newNode->prev = q;
+    newNode->next = p;
+    p->prev = newNode;
 
-	cout << "New node successfully inserted at " << pos << endl;
+    cout << "New node successfully inserted at " << pos << endl;
 }
 
 template <typename T>
 void dll<T>::remove(int pos)
 {
-	node<T> *p = head;
-	node<T> *q = head;
+    node<T> *p = head;
+    node<T> *q = head;
 
-	if (pos == 1)
-	{
-		if (!head)
-		{
-			cout << "\nUnderflow detected." << endl;
-			return;
-		}
+    if (pos == 1)
+    {
+        if (!head)
+        {
+            cout << "\nUnderflow detected." << endl;
+            return;
+        }
 
-		head = head->next;
-		head->prev = NULL;
-		delete (p);
+        head = head->next;
+        head->prev = NULL;
+        delete (p);
 
-		if (p)
-		{
-			delete (p);
-			cout << "Node removed from head." << endl;
-		}
+        if (p)
+        {
+            delete (p);
+            cout << "Node removed from head." << endl;
+        }
 
-		return;
-	}
+        return;
+    }
 
-	int k = 1;
+    int k = 1;
 
-	while (k < pos && p != NULL)
-	{
-		k++;
-		q = p;
-		p = p->next;
-	}
+    while (k < pos && p != NULL)
+    {
+        k++;
+        q = p;
+        p = p->next;
+    }
 
-	q->next = p->next;
-	p->next->prev = q;
-	delete (p);
+    q->next = p->next;
+    p->next->prev = q;
+    delete (p);
 
-	if (p)
-	{
-		delete (p);
-		cout << "Node removed from " << pos << endl;
-	}
+    if (p)
+    {
+        delete (p);
+        cout << "Node removed from " << pos << endl;
+    }
 }
 
 template <typename T>
 void dll<T>::print()
 {
-	node<T> *p = head;
+    node<T> *p = head;
 
-	if (!head)
-	{
-		cout << "\nUnderflow detected." << endl;
-		return;
-	}
+    if (!head)
+    {
+        cout << "\nUnderflow detected." << endl;
+        return;
+    }
 
-	cout << "\n List content are: ";
-	while (p != NULL)
-	{
-		cout << p->data << " ";
-		p = p->next;
-	}
+    cout << "\n List content are: ";
+    while (p != NULL)
+    {
+        cout << p->data << " ";
+        p = p->next;
+    }
 
-	return;
+    return;
 }
 
 template <typename T>
 int dll<T>::length()
 {
-	node<T> *p = head;
+    node<T> *p = head;
 
-	int count = 0;
+    int count = 0;
 
-	if (!head)
-	{
-		cout << "\nUnderflow detected." << endl;
-		return -1;
-	}
+    if (!head)
+    {
+        cout << "\nUnderflow detected." << endl;
+        return -1;
+    }
 
-	while (p != NULL)
-	{
-		++count;
-		p = p->next;
-	}
+    while (p != NULL)
+    {
+        ++count;
+        p = p->next;
+    }
 
-	return count;
+    return count;
 }

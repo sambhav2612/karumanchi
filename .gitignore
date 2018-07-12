@@ -15,14 +15,15 @@ pids
 *.pid
 *.seed
 *.pid.lock
-coverage
-.nyc_output
+coverage/
+.nyc_output/
 node_modules/
 .npm
 .eslintcache
 *.tgz
 .env
-lib
+lib/
 
-.vscode
-__pycache__
+.vscode/
+__pycache__/
+bloomf.egg-info/

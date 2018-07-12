@@ -1,6 +1,6 @@
 # Bloom Filter
 
-Implemented in Python 3.7.
+Implemented in Python 3.
 
 - The price we pay for efficiency through bloom filters is that it is probabilistic in nature that means, there might be some **_False Positive_** results. False positive means, it might tell that given username is already taken but actually it’s not.
 - Not being **_False Negative_** such that telling that username doesn't exist while it is there, i.e., if exists it reports it's existenece in terms of maybe, else if not present it is 100% confident to report the same.

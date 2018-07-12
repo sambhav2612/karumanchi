@@ -4,7 +4,7 @@ DS Problems from karumanchi
 
 ## Latest Update
 
-Update C headers to become complaint with GCC (`.h` to `.hpp`) and add bloom filter in Python.
+Push v0.1.15
 
 ## Pathway
 
@@ -110,10 +110,23 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │       settings.json
 │
 ├───bloom-filter
-│       readme.md
+│   │   readme.md
+│   │   requirements.txt
+│   │   setup.py
+│   │
+│   ├───bloomf
+│   │       main.py
+│   │       test.py
+│   │       __init__.py
+│   │
+│   └───dist
+│          bloomf-0.1-py3-none-any.whl
+│          bloomf-0.1.tar.gz
+│          bloomf-0.2-py3-none-any.whl
+│          bloomf-0.2.tar.gz
 │
 ├───codechef
-│   │   codechef.h
+│   │   codechef.hpp
 │   │   readme.md
 │   │
 │   └───arrays
@@ -130,7 +143,7 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │
 ├───external-sorting
 │   │   kway.cpp
-│   │   kwaymergesort.h
+│   │   kwaymergesort.hpp
 │   │
 │   └───gfg
 │           0
@@ -155,7 +168,7 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │       stack.js
 │
 ├───main
-│   │   headers.h
+│   │   headers.hpp
 │   │
 │   ├───ch1-introduction
 │   │       readme.md
@@ -218,14 +231,14 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │   │       fimd-max-in-min-heap.cpp
 │   │       find-k.cpp
 │   │       heap-sort.cpp
-│   │       heap.h
+│   │       heap.hpp
 │   │       median.cpp
-│   │       pq.h
+│   │       pq.hpp
 │   │       readme.md
 │   │       stack.cpp
 │   │
 │   ├───ch8-disjoint-sets
-│   │       adt.h
+│   │       adt.hpp
 │   │       cities.cpp
 │   │       readme.md
 │   │
@@ -242,9 +255,12 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │   │       quick.cpp
 │   │       readme.md
 │   │       shell.cpp
-│   │       sort.h
+│   │       sort.hpp
 │   │
 │   ├───ch12-selection-algorithms
+│   │       kth-smallest-2.cpp
+│   │       kth-smallest.cpp
+│   │       merge.cpp
 │   │       readme.md
 │   │
 │   ├───ch13-symbol-tables
@@ -259,20 +275,20 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │   │       hash-pairs.cpp
 │   │       readme.md
 │   │       remove-duplicates.cpp
-│   │       seperate-chaining.h
+│   │       seperate-chaining.hpp
 │   │       two-arrays.cpp
 │   │
 │   └───includes
-│           cll.h
-│           dll.h
-│           queue.h
-│           sll.h
-│           stack.h
-│           tree.h
+│           cll.hpp
+│           dll.hpp
+│           queue.hpp
+│           sll.hpp
+│           stack.hpp
+│           tree.hpp
 │
 ├───misc
 │       sparse-set.cpp
-│       sparse-set.h
+│       sparse-set.hpp
 │
 ├───spoj
 │       readme.md
@@ -284,7 +300,7 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │       push.js
 │
 ├───stl
-│        stl.h
+│        stl.hpp
 │
 └───test
         index.js
