@@ -1,30 +1,30 @@
-#include "pq.h"
+#include "pq.hpp"
 
 int c = 0;
 
 void push(int data)
 {
-	pq.insert(c, data);		// or pq.insert(-gettime(), data) to remove c
-	c--;
+    pq.insert(c, data); // or pq.insert(-gettime(), data) to remove c
+    c--;
 }
 
 int pop()
 {
-	return pq.delete_min();
-	c++;
+    return pq.delete_min();
+    c++;
 }
 
 int top()
 {
-	return pq.min();
+    return pq.min();
 }
 
 int size()
 {
-	return pq.size();
+    return pq.size();
 }
 
 int isEmpty()
 {
-	return ppq.isEmpty();
+    return ppq.isEmpty();
 }

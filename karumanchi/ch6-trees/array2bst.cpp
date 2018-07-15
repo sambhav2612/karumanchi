@@ -1,4 +1,4 @@
-#include "../includes/tree.h"
+#include "../includes/tree.hpp"
 
 node *buildBST(int array[], int left, int right)
 {

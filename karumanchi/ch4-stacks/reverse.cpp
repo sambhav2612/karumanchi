@@ -1,45 +1,45 @@
-#include "../includes/stack.h"
+#include "../includes/stack.hpp"
 
 void insertAtBottom(stack<int> obj, int data)
 {
-	int temp;
+    int temp;
 
-	if (obj.isEmpty())
-	{
-		obj.insert(data);
-		return;
-	}
+    if (obj.isEmpty())
+    {
+        obj.insert(data);
+        return;
+    }
 
-	temp = obj.remove();
-	insertAtBottom(obj, data);
-	obj.insert(temp);
+    temp = obj.remove();
+    insertAtBottom(obj, data);
+    obj.insert(temp);
 }
 
 void reverse(stack<int> obj)
 {
-	int data;
+    int data;
 
-	if (obj.isEmpty())
-	{
-		return;
-	}
+    if (obj.isEmpty())
+    {
+        return;
+    }
 
-	data = obj.remove();
-	reverse(obj);
-	insertAtBottom(obj, data);
+    data = obj.remove();
+    reverse(obj);
+    insertAtBottom(obj, data);
 }
 
 int main()
 {
-	stack<int> obj;
+    stack<int> obj;
 
-	obj.insert(5);
-	obj.insert(4);
-	obj.insert(3);
-	obj.insert(2);
-	obj.insert(1);
+    obj.insert(5);
+    obj.insert(4);
+    obj.insert(3);
+    obj.insert(2);
+    obj.insert(1);
 
-	reverse(obj);
+    reverse(obj);
 
-	return 0;
+    return 0;
 }

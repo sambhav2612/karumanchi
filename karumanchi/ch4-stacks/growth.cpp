@@ -1,28 +1,28 @@
-#include "../headers.h"
+#include "../headers.hpp"
 
 void sg(int *temp)
 {
-	int temp2;
+    int temp2;
 
-	cout << "\nOne: " << temp;
-	cout << "\nTwo: " << &temp2;
+    cout << "\nOne: " << temp;
+    cout << "\nTwo: " << &temp2;
 
-	if (temp > &temp2)
-	{
-		cout << endl
-			 << "UP";
-	}
-	else
-	{
-		cout << endl
-			 << "DOWN";
-	}
+    if (temp > &temp2)
+    {
+        cout << endl
+             << "UP";
+    }
+    else
+    {
+        cout << endl
+             << "DOWN";
+    }
 }
 
 int main()
 {
-	int temp;
-	sg(&temp);
+    int temp;
+    sg(&temp);
 
-	return 0;
+    return 0;
 }

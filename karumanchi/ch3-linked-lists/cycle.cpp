@@ -1,20 +1,20 @@
-#include "../includes/sll.h"
+#include "../includes/sll.hpp"
 
 int main()
 {
-	sll obj;
-	
-	bool checkForStartNode = false;
-	bool checkForLengthOfLoop = false;
+    sll obj;
 
-	obj.insert(5, 1);
-	obj.insert(4, 1);
-	obj.insert(3, 1);
+    bool checkForStartNode = false;
+    bool checkForLengthOfLoop = false;
 
-	cout << "\n Check for start node? and Check for length of the loop? ";
-	cin >> checkForStartNode >> checkForLengthOfLoop;
+    obj.insert(5, 1);
+    obj.insert(4, 1);
+    obj.insert(3, 1);
 
-	obj.cycle(checkForStartNode, checkForLengthOfLoop);
+    cout << "\n Check for start node? and Check for length of the loop? ";
+    cin >> checkForStartNode >> checkForLengthOfLoop;
 
-	return 0;
+    obj.cycle(checkForStartNode, checkForLengthOfLoop);
+
+    return 0;
 }
