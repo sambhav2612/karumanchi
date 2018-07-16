@@ -1,10 +1,10 @@
 # karumanchi
 
-DS Problems from karumanchi. This reposistory follows the [C++ Best Practices](https://lefticus.gitbooks.io/cpp-best-practices/content) written by Jason Turner. Som of code follows C++ 11 guidelines such as replacing the conventional `NULL` pointers with `nullptr`.
+DS Problems from karumanchi. This repository  follows the [C++ Best Practices](https://lefticus.gitbooks.io/cpp-best-practices/content) written by Jason Turner. Some of the code follows the general C++ 11 guidelines such as replacing conventional `NULL` pointers with `nullptr`.
 
 ## Latest Update
 
-Update Chapter 9 and push v0.1.17
+Remove RoR.
 
 ## Pathway
 
