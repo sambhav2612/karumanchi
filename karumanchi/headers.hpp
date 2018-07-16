@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 #include <cstring>
 #include <cstdlib>
@@ -8,5 +10,3 @@
 #include <algorithm>
 #include <ctime>
 #include <valarray>
-
-using namespace std;

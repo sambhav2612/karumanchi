@@ -5,7 +5,7 @@ with open("readme.md", "r") as fh:
 
 setuptools.setup(
     name='bloomf',
-    version='0.2',
+    version='0.3',
     description='Simple Bloom Filter implmentation in Python',
     long_description=long_description,
     long_description_content_type="text/markdown",

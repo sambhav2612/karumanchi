@@ -1,42 +1,43 @@
 #include "../headers.hpp"
+using namespace std;
 
 class node
 {
-    int vertex_num;
-    node *next;
+    int m_vertex_num;
+    node *m_next;
 };
 
 class graph
 {
   private:
-    int v;
-    int e;
+    int m_v;
+    int m_e;
 
   public:
     int *adj;
-    graph(int v, int e)
+    graph(int t_v, int t_e)
     {
-        this.v = v;
-        this.e = e;
-        this.adj = malloc(sizeof(this.v * sizeof(class node)));
-        for (int u = 0; u < this.v; ++u)
+        this.m_v = t_v;
+        this.m_e = t_e;
+        this.adj = malloc(sizeof(this.m_v * sizeof(class node)));
+        for (int u = 0; u < this.m_v; ++u)
             this.adj[u] = 0;
     }
     int returnV()
     {
-        return this.v;
+        return this.m_v;
     }
     int returnE()
     {
-        return this.e;
+        return this.m_e;
     }
-    graph create_list(int v, int e);
+    graph create_list(int t_v, int t_e);
 };
 
-graph graph::create_list(int v, int e)
+graph graph::create_list(int t_v, int t_e)
 {
     int i, x, y;
-    graph g = new graph(v, e);
+    graph g = new graph(t_v, t_e);
     node *temp;
 
     if (!g)
@@ -45,8 +46,8 @@ graph graph::create_list(int v, int e)
     for (i = 0; i < g.returnV(); ++i)
     {
         g.adj[i] = (class node *)malloc(sizeof(class node));
-        g.adj[i]->vertex_num = i;
-        g.adj[i]->next = g.adj[i]; //circle back
+        g.adj[i]->m_vertex_num = i;
+        g.adj[i]->m_next = g.adj[i]; //circle back
     }
 
     for (i = 0; i < g.returnE(); ++i) // for all edges
@@ -54,9 +55,9 @@ graph graph::create_list(int v, int e)
         cout << endl
              << "Reading edge [u, v]";
         cin >> x >> y;
-        temp->vertex_num = y;
-        temp->next = g.adj[x];
-        g.adj[x]->next = temp;
+        temp->m_vertex_num = y;
+        temp->m_next = g.adj[x];
+        g.adj[x]->m_next = temp;
     }
 
     return g;

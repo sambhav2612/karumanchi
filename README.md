@@ -1,10 +1,10 @@
 # karumanchi
 
-DS Problems from karumanchi
+DS Problems from karumanchi. This reposistory follows the [C++ Best Practices](https://lefticus.gitbooks.io/cpp-best-practices/content) written by Jason Turner. Som of code follows C++ 11 guidelines such as replacing the conventional `NULL` pointers with `nullptr`.
 
 ## Latest Update
 
-Update most chapters for new headers (**`.hpp`**) in v0.1.16
+Update Chapter 9 and push v0.1.17
 
 ## Pathway
 
@@ -28,6 +28,7 @@ Update most chapters for new headers (**`.hpp`**) in v0.1.16
                         <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch6-trees" target="_blank">Chapter 6 - Trees</a></li>
                         <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch7-priority-queues" target="_blank">Chapter 7 - Priority Queues and Heaps</a></li>
                         <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch8-disjoint-sets" target="_blank">Chapter 8 - Disjoint Sets ADT</a></li>
+                        <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch9-graph-algorithms" target="_blank">Chapter 9 - Graph ALgorithms</a></li>
                         <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch10-sorting" target="_blank">Chapter 10 - Sorting</a></li>
                         <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch12-selection-algorithms" target="_blank">Chapter 12 - Selection Algorithms [Medians]</a></li>
                         <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch13-symbol-tables" target="_blank">Chapter 13 - Symbol Tables</a></li>
@@ -52,10 +53,12 @@ $ "OUTPUT-BINARY-NAME" # on windows cmd (using "")
 $ ./OUTPUT-BINARY-NAME # on macOS and Unix-like
 ```
 
+**NOTE**: While running any of the C++ code missing their respective headers, please add `using namespace std;` after the pre-included headers. [Reference](https://lefticus.gitbooks.io/cpp-best-practices/content/03-Style.html)
+
 Adding following flags in optional and depends on the users thugh are sugegsted to be used while developing-compiling locally:
 
 - `-g` - turn on debugging (so GDB gives more friendly output)
-- `-Wall` - turns on most warnings
+- `-Wall` or `-Weverything` - turns on most warnings
 - `-O or -O2` - turn on optimizations
 - `-o <name>` - name of the output file
 - `-c` - output an object file (.o)
@@ -103,11 +106,6 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │   package-lock.json
 │   package.json
 │   README.md
-│
-├───.vscode
-│       compile_commands.json
-│       c_cpp_properties.json
-│       settings.json
 │
 ├───bloom-filter
 │   │   readme.md
@@ -240,6 +238,13 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │   ├───ch8-disjoint-sets
 │   │       adt.hpp
 │   │       cities.cpp
+│   │       readme.md
+│   │
+│   ├───ch9-graph-algorithms
+│   │       alist.hpp
+│   │       amatrix.hpp
+│   │       bfs.cpp
+│   │       dfs.cpp
 │   │       readme.md
 │   │
 │   ├───ch10-sorting

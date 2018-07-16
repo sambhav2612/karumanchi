@@ -8,7 +8,7 @@ Implemented in Python 3.
 
 ## Installation
 
-**`pip install bloomf==0.2`**
+**`pip install bloomf==0.3`**
 
 Distributed as a [PyPi](https://pypi.org/project/bloomf/) Package.
 
