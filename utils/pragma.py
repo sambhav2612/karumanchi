@@ -13,6 +13,10 @@ def createOut(directory):
             # creates a output directory
             if not os.path.exists(out):
                 os.makedirs(out)
+            with open(os.path.join(out + "readme.md").replace('\\', '/'), "a") as fh:
+                fh.seek(0)
+                fh.write("# Out\n")
+                fh.close()
             # list all files inside the sub-directories
             files = os.listdir(current)
             for fil in files:
@@ -29,6 +33,7 @@ def createOut(directory):
                         fh.seek(0)
                         text.insert(2, "using namespace std;\n")
                         fh.writelines(text)
+                        fh.close()
                 # check for every header file
                 if fil.endswith(".hpp"):
                     with open(fil, 'r+') as fh:
@@ -36,6 +41,7 @@ def createOut(directory):
                         fh.seek(0)
                         text.insert(0, "#pragma once\n")
                         fh.writelines(text)
+                        fh.close()
 
     except OSError:
         print('Error: Creating directory - ' + out)

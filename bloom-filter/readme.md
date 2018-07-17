@@ -1,5 +1,7 @@
 # Bloom Filter
 
+[![PyPI version](https://badge.fury.io/py/bloomf.svg)](https://badge.fury.io/py/bloomf)
+
 Implemented in Python 3.
 
 - The price we pay for efficiency through bloom filters is that it is probabilistic in nature that means, there might be some **_False Positive_** results. False positive means, it might tell that given username is already taken but actually it’s not.

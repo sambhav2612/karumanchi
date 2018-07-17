@@ -1,20 +1,23 @@
 # karumanchi
 
-[![Download karumanchi](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/karumanchi/files/latest/download) [![Download karumanchi](https://img.shields.io/sourceforge/dt/karumanchi.svg)](https://sourceforge.net/projects/karumanchi/files/latest/download)
+[![Build Status](https://travis-ci.org/sambhav2612/karumanchi.svg?branch=master)](https://travis-ci.org/sambhav2612/karumanchi) [![npm version](https://badge.fury.io/js/karumanchi.svg)](https://badge.fury.io/js/karumanchi) [![Download karumanchi](https://img.shields.io/sourceforge/dt/karumanchi.svg)](https://sourceforge.net/projects/karumanchi/files/latest/download)
 
-DS Problems from karumanchi. This repository  follows the [C++ Best Practices](https://lefticus.gitbooks.io/cpp-best-practices/content) written by Jason Turner. Some of the code follows the general C++ 11 guidelines such as replacing conventional `NULL` pointers with `nullptr`.
+Almost all problems and codes from Data Structures Made Easy by Narasimha Karumanchi. Mostly written in C++, this repository  follows the [C++ Best Practices](https://lefticus.gitbooks.io/cpp-best-practices/content) written by Jason Turner. Some of the code follows the general C++ 11 guidelines such as replacing conventional `NULL` pointers with `nullptr`.
+
+Some extra implementations have been added as side-projects, mostly in Python with a utility to constantly manage the CPP executables from their source files.
 
 ## Changelog
 
-- v0.2.3: Seperate executables from source files.
-- v0.2.2: Update Chapter 9.
+- **v0.2.4**: Update python utility.
+- **v0.2.3**: Seperate executables from source files.
+- **v0.2.2**: Update Chapter 9.
 
 ## Pathway
 
 <details>
 <summary>How do I find stuff in this repo?</summary>
     <ul>
-        <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/bloom-filter" target="_blank">Bloom Filter</a></li>
+        <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/bloom-filter" target="_blank">Bloom Filter <a href="https://badge.fury.io/py/bloomf"><img src="https://badge.fury.io/py/bloomf.svg" alt="PyPI version" height="18"></a></a></li>
         <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/codechef" target="_blank">Codechef</a></li>
         <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/codeforces" target="_blank">Codeforces</a></li>
         <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/external-sorting" target="_blank">External Sorting</a></li>
@@ -324,4 +327,3 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 ### License
 
 © 2018 Sambhav Jain under GPL-v3.0
-# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out
