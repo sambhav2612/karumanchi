@@ -4,9 +4,10 @@
 
 DS Problems from karumanchi. This repository  follows the [C++ Best Practices](https://lefticus.gitbooks.io/cpp-best-practices/content) written by Jason Turner. Some of the code follows the general C++ 11 guidelines such as replacing conventional `NULL` pointers with `nullptr`.
 
-## Latest Update
+## Changelog
 
-Update Chapter 9 in v0.2.2
+- v0.2.3: Seperate executables from source files.
+- v0.2.2: Update Chapter 9.
 
 ## Pathway
 
@@ -323,3 +324,4 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 ### License
 
 © 2018 Sambhav Jain under GPL-v3.0
+# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out# Out

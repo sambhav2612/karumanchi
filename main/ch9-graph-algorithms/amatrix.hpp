@@ -62,13 +62,18 @@ class graph
                     q.push(v);
         }
     }
-    void dfs_traversal()
+    int dfs_traversal()
     {
+        int count = 0;
         for (int i = 0; i < returnV(); ++i)
             visited[i] = 0;
         for (int i = 0; i < returnV(); ++i)
             if (!visited[i])
+            {
                 dfs(i);
+                count++;
+            }
+        return count;
     }
     void bfs_traversal()
     {
@@ -77,6 +82,32 @@ class graph
         for (int i = 0; i < returnV(); ++i)
             if (!visited[i])
                 bfs(i);
+    }
+    bool cycle()
+    {
+        int mark[returnV()] = {0};
+        vector<int> set;
+        for (int i = 0; i < returnV(); ++i)
+            for (int j = 0; j < returnV(); ++j)
+                if (mark[i] && mark[j])
+                    return true;
+                else
+                {
+                    set.push_back(adj[i][j]);
+                    mark[i] = mark[j] = 1;
+                }
+        return false;
+    }
+    void reverse_graph(int t_v)
+    {
+        for (int i = 0; i < returnV(); ++i)
+        {
+            if (adj[t_v][i]) // reverse
+            {
+                adj[i][t_v] = 1;
+                adj[t_v][i] = 0;
+            }
+        }
     }
 };
 
