@@ -1,4 +1,5 @@
 #include "../headers.hpp"
+using namespace std;
 
 string A;
 

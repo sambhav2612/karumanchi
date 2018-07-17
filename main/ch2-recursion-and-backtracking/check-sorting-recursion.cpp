@@ -1,4 +1,5 @@
 #include "../headers.hpp"
+using namespace std;
 
 int checkSorting(int array[], int n)
 {

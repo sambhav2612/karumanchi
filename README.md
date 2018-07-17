@@ -1,4 +1,4 @@
-# karumanchi 
+# karumanchi
 
 [![Download karumanchi](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/karumanchi/files/latest/download) [![Download karumanchi](https://img.shields.io/sourceforge/dt/karumanchi.svg)](https://sourceforge.net/projects/karumanchi/files/latest/download)
 
@@ -6,7 +6,7 @@ DS Problems from karumanchi. This repository  follows the [C++ Best Practices](h
 
 ## Latest Update
 
-Remove RoR.
+Update Chapter 9 in v0.2.2
 
 ## Pathway
 
@@ -22,19 +22,19 @@ Remove RoR.
             <details>
                 <summary>Karumanchi</summary>
                 <ul>
-                        <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch1-introduction" target="_blank">Chapter 1 - Introduction</a></li>
-                        <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch2-recursion-and-backtracking" target="_blank">Chapter 2 - Recursion and Backtracking</a></li>
-                        <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch3-linked-lists" target="_blank">Chapter 3 - Linked Lists</a></li>
-                        <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch4-stacks" target="_blank">Chapter 4 - Stacks</a></li>
-                        <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch5-queues" target="_blank">Chapter 5 - Queues</a></li>
-                        <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch6-trees" target="_blank">Chapter 6 - Trees</a></li>
-                        <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch7-priority-queues" target="_blank">Chapter 7 - Priority Queues and Heaps</a></li>
-                        <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch8-disjoint-sets" target="_blank">Chapter 8 - Disjoint Sets ADT</a></li>
-                        <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch9-graph-algorithms" target="_blank">Chapter 9 - Graph ALgorithms</a></li>
-                        <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch10-sorting" target="_blank">Chapter 10 - Sorting</a></li>
-                        <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch12-selection-algorithms" target="_blank">Chapter 12 - Selection Algorithms [Medians]</a></li>
-                        <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch13-symbol-tables" target="_blank">Chapter 13 - Symbol Tables</a></li>
-                        <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch14-hashing" target="_blank">Chapter 14 - Hashing</a></li>
+                    <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch1-introduction" target="_blank">Chapter 1 - Introduction</a></li>
+                    <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch2-recursion-and-backtracking" target="_blank">Chapter 2 - Recursion and Backtracking</a></li>
+                    <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch3-linked-lists" target="_blank">Chapter 3 - Linked Lists</a></li>
+                    <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch4-stacks" target="_blank">Chapter 4 - Stacks</a></li>
+                    <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch5-queues" target="_blank">Chapter 5 - Queues</a></li>
+                    <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch6-trees" target="_blank">Chapter 6 - Trees</a></li>
+                    <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch7-priority-queues" target="_blank">Chapter 7 - Priority Queues and Heaps</a></li>
+                    <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch8-disjoint-sets" target="_blank">Chapter 8 - Disjoint Sets ADT</a></li>
+                    <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch9-graph-algorithms" target="_blank">Chapter 9 - Graph ALgorithms</a></li>
+                    <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch10-sorting" target="_blank">Chapter 10 - Sorting</a></li>
+                    <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch12-selection-algorithms" target="_blank">Chapter 12 - Selection Algorithms [Medians]</a></li>
+                    <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch13-symbol-tables" target="_blank">Chapter 13 - Symbol Tables</a></li>
+                    <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch14-hashing" target="_blank">Chapter 14 - Hashing</a></li>
                 </ul>
             </details>
         </li>
@@ -114,16 +114,10 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │   │   requirements.txt
 │   │   setup.py
 │   │
-│   ├───bloomf
-│   │       main.py
-│   │       test.py
-│   │       __init__.py
-│   │
-│   └───dist
-│          bloomf-0.1-py3-none-any.whl
-│          bloomf-0.1.tar.gz
-│          bloomf-0.2-py3-none-any.whl
-│          bloomf-0.2.tar.gz
+│   └───bloomf
+│           main.py
+│           test.py
+│           __init__.py
 │
 ├───codechef
 │   │   codechef.hpp
@@ -243,11 +237,16 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │   │       readme.md
 │   │
 │   ├───ch9-graph-algorithms
-│   │       alist.hpp
-│   │       amatrix.hpp
-│   │       bfs.cpp
-│   │       dfs.cpp
-│   │       readme.md
+│   │   │   alist.hpp
+│   │   │   amatrix.hpp
+│   │   │   bfs.cpp
+│   │   │   dfs.cpp
+│   │   │   readme.md
+│   │   │   tsort.cpp
+│   │   │
+│   │   └───shortest-path
+│   │           bellman-ford.cpp
+│   │           unweighted.cpp
 │   │
 │   ├───ch10-sorting
 │   │       bucket.cpp
@@ -307,10 +306,18 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │       push.js
 │
 ├───stl
-│        stl.hpp
+│       stl.hpp
 │
-└───test
-        index.js
+├───test
+│       index.js
+│
+└───utils
+        add-namespace.py
+        create-out.py
+        delete-exe.py
+        pragma-once.py
+        readme.md
+        requirements.txt
 ```
 
 ### License
