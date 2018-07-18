@@ -26,10 +26,8 @@
     "javascript.showUnused": true,
     "jshint.enable": true,
     "C_Cpp.intelliSenseEngineFallback": "Enabled",
-    "editor.formatOnSave": true,
     "[go]": {
         "editor.insertSpaces": false,
-        "editor.formatOnSave": true
     },
     "python.pythonPath": "C:\\Users\\Sambhav Jain\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe",
     "python.linting.pylintEnabled": false,

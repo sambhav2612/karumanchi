@@ -1,7 +1,6 @@
 #pragma once
 
 #include "../headers.hpp"
-using namespace std;
 
 class node
 {

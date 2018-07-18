@@ -3,7 +3,7 @@ node_js:
 - '8'
 - '6'
 script:
-- npm publish --access=public
+- npm publish
 branches:
   only:
   - master

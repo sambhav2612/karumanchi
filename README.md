@@ -2,17 +2,20 @@
 
 [![Build Status](https://travis-ci.org/sambhav2612/karumanchi.svg?branch=master)](https://travis-ci.org/sambhav2612/karumanchi) [![npm version](https://badge.fury.io/js/karumanchi.svg)](https://badge.fury.io/js/karumanchi) [![Download karumanchi](https://img.shields.io/sourceforge/dt/karumanchi.svg)](https://sourceforge.net/projects/karumanchi/files/latest/download)
 
-Almost all problems and codes from Data Structures Made Easy by Narasimha Karumanchi. Mostly written in C++, this repository  follows the [C++ Best Practices](https://lefticus.gitbooks.io/cpp-best-practices/content) written by Jason Turner. Some of the code follows the general C++ 11 guidelines such as replacing conventional `NULL` pointers with `nullptr`.
+Almost all problems and codes from **_Data Structures Made Easy by Narasimha Karumanchi_**. Mostly written in C++, this repository follows the [C++ Best Practices](https://lefticus.gitbooks.io/cpp-best-practices/content) written by Jason Turner. Some of the code follows the general C++ 11 guidelines such as replacing conventional `NULL` pointers with `nullptr`.
 
-Some extra implementations have been added as side-projects, mostly in Python with a utility to constantly manage the CPP executables from their source files.
+Some extra implementations have been added as side-projects, mostly in Python with an additional utility to constantly manage [and seperate] the CPP executables from their source files.
+
+Each sub-directory has been enclosed with a readme to help you in understamding the workflow of the source code in that directory. Please find the same as you are contributing.
 
 ## Changelog
 
+- **0.2.7**: Update and complete Chapter 11.
 - **0.2.6**: Update travis configuration for package deloyment.
 - **0.2.5**: Add Chapter 11.
 - **0.2.4**: Update python utility.
-- **0.2.3**: Seperate executables from source files.
-- **0.2.2**: Update Chapter 9.
+- **0.2.3**: Add python utility to seperate executables from source code.
+- **0.2.2**: Update and complete Chapter 9.
 
 ## Pathway
 
@@ -98,7 +101,7 @@ $ node js/stack.js
 
 ### Directory Tree
 
-Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
+Generated in Windows 10 using `tree /F` command in terminal.
 
 ```bash
 .
@@ -165,131 +168,161 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │   │       readme.md
 │   │
 │   ├───ch2-recursion-and-backtracking
-│   │       check-sorting-recursion.cpp
-│   │       n-ary-strings.cpp
-│   │       readme.md
-│   │       tower-of-hanoi.cpp
+│   │   │   check-sorting-recursion.cpp
+│   │   │   n-ary-strings.cpp
+│   │   │   readme.md
+│   │   │   tower-of-hanoi.cpp
+│   │   │
+│   │   └───out
 │   │
 │   ├───ch3-linked-lists
-│   │       cycle.cpp
-│   │       fractional-node.cpp
-│   │       merge.cpp
-│   │       nth-element-from-end.cpp
-│   │       pairwise-reverse.cpp
-│   │       palindrome.cpp
-│   │       readme.md
-│   │       reverse-kth.cpp
-│   │       reverse-sll.cpp
-│   │       sort.cpp
-│   │       split-cll.cpp
+│   │   │   cycle.cpp
+│   │   │   fractional-node.cpp
+│   │   │   merge.cpp
+│   │   │   nth-element-from-end.cpp
+│   │   │   pairwise-reverse.cpp
+│   │   │   palindrome.cpp
+│   │   │   readme.md
+│   │   │   reverse-kth.cpp
+│   │   │   reverse-sll.cpp
+│   │   │   sort.cpp
+│   │   │   split-cll.cpp
+│   │   │
+│   │   └───out
 │   │
 │   ├───ch4-stacks
-│   │       adjacentBigger.cpp
-│   │       adjacentRepeat.cpp
-│   │       growth.cpp
-│   │       infix-to-postfix.cpp
-│   │       postfix.cpp
-│   │       readme.md
-│   │       reverse.cpp
-│   │       span.cpp
-│   │       stack.cpp
-│   │       symbol-parser.cpp
+│   │   │   adjacentBigger.cpp
+│   │   │   adjacentRepeat.cpp
+│   │   │   growth.cpp
+│   │   │   infix-to-postfix.cpp
+│   │   │   postfix.cpp
+│   │   │   readme.md
+│   │   │   reverse.cpp
+│   │   │   span.cpp
+│   │   │   stack.cpp
+│   │   │   symbol-parser.cpp
+│   │   │
+│   │   └───out
 │   │
 │   ├───ch5-queues
-│   │       linked-list-queue.cpp
-│   │       readme.md
-│   │       simple-queue.cpp
+│   │   │   linked-list-queue.cpp
+│   │   │   readme.md
+│   │   │   simple-queue.cpp
+│   │   │
+│   │   └───out
 │   │
 │   ├───ch6-trees
-│   │       array2bst.cpp
-│   │       bst2dll.cpp
-│   │       check-bst.cpp
-│   │       count-tree.cpp
-│   │       dll2bst.cpp
-│   │       expression-tree.cpp
-│   │       find-max.cpp
-│   │       inorder-sucessor.cpp
-│   │       kth-smallest.cpp
-│   │       preorder-sucessor.cpp
-│   │       ranger.cpp
-│   │       readme.md
-│   │       readme.txt
-│   │       reverse-lca.cpp
-│   │       threaded-tree.cpp
-│   │       threaded-tree.txt
+│   │   │   array2bst.cpp
+│   │   │   bst2dll.cpp
+│   │   │   check-bst.cpp
+│   │   │   count-tree.cpp
+│   │   │   dll2bst.cpp
+│   │   │   expression-tree.cpp
+│   │   │   find-max.cpp
+│   │   │   inorder-sucessor.cpp
+│   │   │   kth-smallest.cpp
+│   │   │   preorder-sucessor.cpp
+│   │   │   ranger.cpp
+│   │   │   readme.md
+│   │   │   reverse-lca.cpp
+│   │   │   threaded-tree.cpp
+│   │   │   threaded-tree.txt
+│   │   │
+│   │   └───out
 │   │
 │   ├───ch7-priority-queues
-│   │       fimd-max-in-min-heap.cpp
-│   │       find-k.cpp
-│   │       heap-sort.cpp
-│   │       heap.hpp
-│   │       median.cpp
-│   │       pq.hpp
-│   │       readme.md
-│   │       stack.cpp
+│   │   │   fimd-max-in-min-heap.cpp
+│   │   │   find-k.cpp
+│   │   │   heap-sort.cpp
+│   │   │   heap.hpp
+│   │   │   median.cpp
+│   │   │   pq.hpp
+│   │   │   readme.md
+│   │   │   stack.cpp
+│   │   │
+│   │   └───out
 │   │
 │   ├───ch8-disjoint-sets
-│   │       adt.hpp
-│   │       cities.cpp
-│   │       readme.md
+│   │   │   adt.hpp
+│   │   │   cities.cpp
+│   │   │   readme.md
+│   │   │
+│   │   └───out
 │   │
 │   ├───ch9-graph-algorithms
 │   │   │   alist.hpp
 │   │   │   amatrix.hpp
 │   │   │   bfs.cpp
 │   │   │   dfs.cpp
+│   │   │   path.cpp
 │   │   │   readme.md
 │   │   │   tsort.cpp
+│   │   │
+│   │   ├───out
 │   │   │
 │   │   └───shortest-path
 │   │           bellman-ford.cpp
 │   │           unweighted.cpp
 │   │
 │   ├───ch10-sorting
-│   │       bucket.cpp
-│   │       check-repeat.cpp
-│   │       counting.cpp
-│   │       election.cpp
-│   │       flagged-bubble.cpp
-│   │       insertion.cpp
-│   │       max.cpp
-│   │       merge.cpp
-│   │       mergeAB.cpp
-│   │       quick.cpp
-│   │       readme.md
-│   │       shell.cpp
-│   │       sort.hpp
+│   │   │   bucket.cpp
+│   │   │   check-repeat.cpp
+│   │   │   counting.cpp
+│   │   │   election.cpp
+│   │   │   flagged-bubble.cpp
+│   │   │   insertion.cpp
+│   │   │   max.cpp
+│   │   │   merge.cpp
+│   │   │   mergeAB.cpp
+│   │   │   quick.cpp
+│   │   │   readme.md
+│   │   │   shell.cpp
+│   │   │   sort.hpp
+│   │   │
+│   │   └───out
 │   │
 │   ├───ch11-searching
-│   │       bin-search.cpp
-│   │       closest2zero.cpp
-│   │       counter.cpp
-│   │       duplicates.cpp
-│   │       findk.cpp
-│   │       first-repeat.cpp
-│   │       missing.cpp
-│   │       readme.md
+│   │   │   bin-search-first.cpp
+│   │   │   bin-search-last.cpp
+│   │   │   bin-search-rotated.cpp
+│   │   │   bin-search.cpp
+│   │   │   closest2zero.cpp
+│   │   │   counter.cpp
+│   │   │   duplicates.cpp
+│   │   │   findk.cpp
+│   │   │   first-repeat.cpp
+│   │   │   intercept.cpp
+│   │   │   missing.cpp
+│   │   │   readme.md
+│   │   │   rgb.cpp
+│   │   │   trailing0.cpp
+│   │   │
+│   │   └───out
 │   │
 │   ├───ch12-selection-algorithms
-│   │       kth-smallest-2.cpp
-│   │       kth-smallest.cpp
-│   │       merge.cpp
-│   │       readme.md
+│   │   │   kth-smallest-2.cpp
+│   │   │   kth-smallest.cpp
+│   │   │   merge.cpp
+│   │   │   readme.md
+│   │   │
+│   │   └───out
 │   │
 │   ├───ch13-symbol-tables
 │   │       readme.md
 │   │
 │   ├───ch14-hashing
-│   │       array-matching.cpp
-│   │       delete-array.cpp
-│   │       find-pairs.cpp
-│   │       first-non-repeat.cpp
-│   │       first-repeat.cpp
-│   │       hash-pairs.cpp
-│   │       readme.md
-│   │       remove-duplicates.cpp
-│   │       seperate-chaining.hpp
-│   │       two-arrays.cpp
+│   │   │   array-matching.cpp
+│   │   │   delete-array.cpp
+│   │   │   find-pairs.cpp
+│   │   │   first-non-repeat.cpp
+│   │   │   first-repeat.cpp
+│   │   │   hash-pairs.cpp
+│   │   │   readme.md
+│   │   │   remove-duplicates.cpp
+│   │   │   seperate-chaining.hpp
+│   │   │   two-arrays.cpp
+│   │   │
+│   │   └───out
 │   │
 │   └───includes
 │           cll.hpp
@@ -325,4 +358,4 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 
 ### License
 
-© 2018 Sambhav Jain under GPL-v3.0
+Copyright © 2018 Sambhav Jain under GPL-3.0
