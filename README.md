@@ -8,6 +8,7 @@ Some extra implementations have been added as side-projects, mostly in Python wi
 
 ## Changelog
 
+- **0.2.6**: Update travis configuration for package deloyment.
 - **0.2.5**: Add Chapter 11.
 - **0.2.4**: Update python utility.
 - **0.2.3**: Seperate executables from source files.
@@ -146,16 +147,6 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │   │   kwaymergesort.hpp
 │   │
 │   └───gfg
-│           0
-│           1
-│           2
-│           3
-│           4
-│           5
-│           6
-│           7
-│           8
-│           9
 │           gfg.cpp
 │           input.txt
 │           output.txt
@@ -269,6 +260,16 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │   │       shell.cpp
 │   │       sort.hpp
 │   │
+│   ├───ch11-searching
+│   │       bin-search.cpp
+│   │       closest2zero.cpp
+│   │       counter.cpp
+│   │       duplicates.cpp
+│   │       findk.cpp
+│   │       first-repeat.cpp
+│   │       missing.cpp
+│   │       readme.md
+│   │
 │   ├───ch12-selection-algorithms
 │   │       kth-smallest-2.cpp
 │   │       kth-smallest.cpp
@@ -318,12 +319,8 @@ Generated in Windows 10 using `tree /F` command in `cmd //C tree` terminal.
 │       index.js
 │
 └───utils
-        add-namespace.py
-        create-out.py
-        delete-exe.py
-        pragma-once.py
+        pragma.py
         readme.md
-        requirements.txt
 ```
 
 ### License

@@ -1,9 +1,18 @@
 language: node_js
 node_js:
-  - '8'
-  - '6'
+- '8'
+- '6'
 script:
-  - npm publish --access=public
+- npm publish --access=public
 branches:
   only:
-    - master
+  - master
+deploy:
+  provider: npm
+  email: sambhavjain2612@gmail.com
+  api_key:
+    secure: EZRT46cgZd1Y8utyZcDBXFXCvDF/3xDqa3NA2uI5cz3WmH8LiLa9wHDtrKiomEtHN0nvphv2KoiiDJuw1Yo0LOEmlw6Y2G9CdMrdnF0qtd7TVYob02F9U86yXCvLvnzLeut+oYuZ6P1vGhkE+1LCeEmau4fDH3PjYOihYsAtLUDUJUk+XHSF7oyylsc5JfjtMe58LNvJSPr4w52DxZ40LYWFiIXYl/aF7EJRHGttajpiwzrekPKEMNWryQSny6nRRKWBCaxD0JL9MWQg2O5bQyjqMUK5IQmtQlwX7/+YN1w0o7uGKmW6XNXVkgHamnxXO8h5RxLjD7Ra7hm7VozafX9GRK/Fb9T0L8qg1CrqK0YdwX65gOX4vtTjTzdBRGZv9a32Y3+JC7N54Qee9mrIH2o5XEq6V929287cZneKGlVc5ULy+br+QWRtn0mMtMbkbP3gqqPXkHHjsx1bnjnomgnQfHZJov2jsqZBwauNh4RZa5q4iJLVXO6c3YGNJK0BSI0OrSn8/amfjIzQHn1K7PDLmHZBSkBvfmpUHhUhmimTRrY9qvCqyHdwCsmPqhHivRvXP161Z4gaTPZvIQ4nIHFv2Bhh9AXmO8hrL5lDr2I0Fw1oVq9RNYgNU+oFhhhSzQujemDl+TavnITUJk+zzQ3fQhKhevvs0YUTFOsHQ4Q=
+  on:
+    tags: false
+    repo: sambhav2612/karumanchi
+    branch: master
