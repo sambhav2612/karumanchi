@@ -1,3 +1,6 @@
+#ifndef SORTING_HEADER
+#define SORTING_HEADER
+
 #include "../headers.hpp"
 #define BUCKETS 10
 
@@ -39,7 +42,7 @@ void bubblesort(int array[], int n)
         for (int j = 0; j < i; ++j)
             if (array[j] > array[j + 1])
             {
-                swap(array[j], array[j + 1]);
+                std::swap(array[j], array[j + 1]);
                 swapped = 1;
             }
     }
@@ -110,7 +113,7 @@ int partition(int array[], int low, int high)
             --r;
 
         if (l < r)
-            swap(array[l], array[r]);
+            std::swap(array[l], array[r]);
     }
 
     array[low] = array[r];
@@ -154,3 +157,5 @@ void shellsort(int array[], int n)
         }
     }
 }
+
+#endif

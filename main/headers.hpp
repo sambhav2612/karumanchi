@@ -1,4 +1,5 @@
-#pragma once
+#ifndef KARUMANCHI_HEADER
+#define KARUMANCHI_HEADER
 
 #include <iostream>
 #include <cstring>
@@ -10,3 +11,5 @@
 #include <algorithm>
 #include <ctime>
 #include <valarray>
+
+#endif

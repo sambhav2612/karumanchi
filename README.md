@@ -8,9 +8,10 @@ Some extra implementations have been added as side-projects, mostly in Python wi
 
 ## Changelog
 
-- **v0.2.4**: Update python utility.
-- **v0.2.3**: Seperate executables from source files.
-- **v0.2.2**: Update Chapter 9.
+- **0.2.5**: Add Chapter 11.
+- **0.2.4**: Update python utility.
+- **0.2.3**: Seperate executables from source files.
+- **0.2.2**: Update Chapter 9.
 
 ## Pathway
 
@@ -36,6 +37,7 @@ Some extra implementations have been added as side-projects, mostly in Python wi
                     <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch8-disjoint-sets" target="_blank">Chapter 8 - Disjoint Sets ADT</a></li>
                     <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch9-graph-algorithms" target="_blank">Chapter 9 - Graph ALgorithms</a></li>
                     <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch10-sorting" target="_blank">Chapter 10 - Sorting</a></li>
+                    <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch11-searching" target="_blank">Chapter 11 - Searching</a></li>
                     <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch12-selection-algorithms" target="_blank">Chapter 12 - Selection Algorithms [Medians]</a></li>
                     <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch13-symbol-tables" target="_blank">Chapter 13 - Symbol Tables</a></li>
                     <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch14-hashing" target="_blank">Chapter 14 - Hashing</a></li>

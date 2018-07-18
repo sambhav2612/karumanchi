@@ -15,6 +15,8 @@ def createOut(directory):
                 os.makedirs(out)
             with open(os.path.join(out + "readme.md").replace('\\', '/'), "a") as fh:
                 fh.seek(0)
+                text = fh.readlines()
+                #if not text[0] === "# Out":
                 fh.write("# Out\n")
                 fh.close()
             # list all files inside the sub-directories
