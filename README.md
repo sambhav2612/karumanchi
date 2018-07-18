@@ -4,7 +4,7 @@
 
 Almost all problems and codes from **_Data Structures Made Easy by Narasimha Karumanchi_**. Mostly written in C++, this repository follows the [C++ Best Practices](https://lefticus.gitbooks.io/cpp-best-practices/content) written by Jason Turner. Some of the code follows the general C++ 11 guidelines such as replacing conventional `NULL` pointers with `nullptr`.
 
-Some extra implementations have been added as side-projects, mostly in Python with an additional utility to constantly manage [and seperate] the CPP executables from their source files.
+Some extra implementations have been added as side-projects, mostly written in Python with an additional utility to constantly manage [and seperate] the CPP executables from their source files.
 
 Each sub-directory has been enclosed with a readme to help you in understamding the workflow of the source code in that directory. Please find the same as you are contributing.
 
