@@ -10,6 +10,7 @@ Each sub-directory has been enclosed with a readme to help you in understamding 
 
 ## Changelog
 
+- **0.2.10**: Add [DCO](https://github.com/sambhav2612/karumanchi/blob/master/README.md).
 - **0.2.9**: Add Chapter 15.
 - **0.2.8**: Update readme.
 - **0.2.7**: Update and complete Chapter 11.
@@ -58,7 +59,7 @@ Each sub-directory has been enclosed with a readme to help you in understamding 
 
 ## Contributing
 
-Please checkout the contributing guideline [here](https://github.com/sambhav2612/karumanchi/blob/master/CONTRIBUTING.md).
+Please checkout the contribution guideline [here](https://github.com/sambhav2612/karumanchi/blob/master/CONTRIBUTING.md).
 
 ### Guide to run the C++ Algorithms
 
@@ -112,7 +113,7 @@ You can find [this](https://yuchengkai.cn/docs/cs/dataStruct.html) resource part
 
 Generated in Windows 10 using `tree /F` command in terminal.
 
-```bash
+```sh
 .
 │   .babelrc
 │   .editorconfig
@@ -122,6 +123,9 @@ Generated in Windows 10 using `tree /F` command in terminal.
 │   .npmignore
 │   .travis.yml
 │   CMakeLists.txt
+│   CODE_OF_CONDUCT.md
+│   CONTRIBUTING.md
+│   DCO
 │   LICENSE
 │   Makefile
 │   package-lock.json
