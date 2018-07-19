@@ -10,6 +10,8 @@ Each sub-directory has been enclosed with a readme to help you in understamding 
 
 ## Changelog
 
+- **0.2.9**: Add Chapter 15.
+- **0.2.8**: Update readme.
 - **0.2.7**: Update and complete Chapter 11.
 - **0.2.6**: Update travis configuration for package deloyment.
 - **0.2.5**: Add Chapter 11.
@@ -45,6 +47,7 @@ Each sub-directory has been enclosed with a readme to help you in understamding 
                     <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch12-selection-algorithms" target="_blank">Chapter 12 - Selection Algorithms [Medians]</a></li>
                     <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch13-symbol-tables" target="_blank">Chapter 13 - Symbol Tables</a></li>
                     <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch14-hashing" target="_blank">Chapter 14 - Hashing</a></li>
+                    <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch15-string-algorithms" target="_blank">Chapter 15 - String Algorithms</a></li>
                 </ul>
             </details>
         </li>
@@ -52,6 +55,10 @@ Each sub-directory has been enclosed with a readme to help you in understamding 
         <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/stl" target="_blank">Standard Template Library (C++)</a></li>
     </ul>
 </details>
+
+## Contributing
+
+Please checkout the contributing guideline [here](https://github.com/sambhav2612/karumanchi/blob/master/CONTRIBUTING.md).
 
 ### Guide to run the C++ Algorithms
 
@@ -97,7 +104,9 @@ $ npm run stack
 $ node js/stack.js
 ```
 
-**NOTE:** Langauge formatting done automatically using VS Code IntelliSense. Better suggestions are welcome!
+### Craving for more?
+
+You can find [this](https://yuchengkai.cn/docs/cs/dataStruct.html) resource particularly cool to put in use while you're here.
 
 ### Directory Tree
 
