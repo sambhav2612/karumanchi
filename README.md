@@ -10,6 +10,7 @@ Each sub-directory has been enclosed with a readme to help you in understamding 
 
 ## Changelog
 
+- **0.3.1**: :pencil: files.
 - **0.3.0**: Start electron application development and remove local packages.
 - **0.2.10**: Add [DCO](https://github.com/sambhav2612/karumanchi/blob/master/DCO).
 - **0.2.9**: Add Chapter 15.
@@ -62,49 +63,7 @@ Each sub-directory has been enclosed with a readme to help you in understamding 
 
 Please checkout the contribution guideline [here](https://github.com/sambhav2612/karumanchi/blob/master/CONTRIBUTING.md).
 
-### Guide to run the C++ Algorithms
-
-- Clone this repo
-- Install MinGW on Windows and g++ on macOS & Unix-like.
-- Compile and run using:
-
-```bash
-$ g++ <FILENAME.cpp> -o <OUTPUT-BINARY-NAME>
-$ "OUTPUT-BINARY-NAME" # on windows cmd (using "")
-$ ./OUTPUT-BINARY-NAME # on macOS and Unix-like
-```
-
-**NOTE**: While running any of the C++ code missing their respective headers, please add `using namespace std;` after the pre-included headers. [Reference](https://lefticus.gitbooks.io/cpp-best-practices/content/03-Style.html)
-
-Adding following flags in optional and depends on the users thugh are sugegsted to be used while developing-compiling locally:
-
-- `-g` - turn on debugging (so GDB gives more friendly output)
-- `-Wall` or `-Weverything` - turns on most warnings
-- `-O or -O2` - turn on optimizations
-- `-o <name>` - name of the output file
-- `-c` - output an object file (.o)
-- `-I<include path>` - specify an include directory
-- `-L<library path>` - specify a lib directory
-- `-l<library>` - link with library lib<library>.a
-
-**H**owever, it is suggested that you use **_first, second, third and fourth_** (while compiling source files) for best results and local development.
-
-### Guide to run the JS Algorithms
-
-- Install Node.js
-- Clone this repo
-- Open the `package.json` file to find the appropriate command under **scripts tag**.
-- Run in a terminal in following fashion:
-
-```sh
-$ npm run <TAG-NAME-INSIDE-SCRIPTS>
-
-# ex: to run stack.js in chapter 4
-$ npm run stack
-
-# OR, run directly via node
-$ node js/stack.js
-```
+### How to run?
 
 ### Craving for more?
 
@@ -112,7 +71,7 @@ You can find [this](https://yuchengkai.cn/docs/cs/dataStruct.html) resource part
 
 ### Directory Tree
 
-Generated in Windows 10 using `tree /F` command in terminal.
+Generated in Windows 10 using `tree /F` command in terminal. Inside the main book directory, each chapter has a folder named `out`, which contains all the preprocessed headers and execuatables seperated from source files by the python utility I wrote a while back.
 
 ```sh
 .
@@ -120,14 +79,64 @@ Generated in Windows 10 using `tree /F` command in terminal.
 │   .gitignore
 │   .npmignore
 │   .travis.yml
+│   binding.gyp
 │   CODE_OF_CONDUCT.md
 │   CONTRIBUTING.md
 │   DCO
 │   LICENSE
 │   Makefile
+│   native.cc
 │   package-lock.json
 │   package.json
 │   README.md
+│
+├───app
+│   │   .babelrc
+│   │   .editorconfig
+│   │   .gitignore
+│   │   LICENSE
+│   │   package-lock.json
+│   │   package.json
+│   │   README.md
+│   │
+│   ├───app
+│   │       app.html
+│   │
+│   ├───config
+│   │       env_development.json
+│   │       env_production.json
+│   │       env_test.json
+│   │
+│   ├───e2e
+│   │       hello_world.e2e.js
+│   │       utils.js
+│   │
+│   ├───resources
+│   │   │   icon.icns
+│   │   │   icon.ico
+│   │   │
+│   │   └───icons
+│   │           512x512.png
+│   │
+│   └───src
+│       │   app.js
+│       │   background.js
+│       │
+│       ├───hello_world
+│       │       hello_world.js
+│       │       hello_world.spec.js
+│       │
+│       ├───helpers
+│       │       context_menu.js
+│       │       external_links.js
+│       │       window.js
+│       │
+│       ├───menu
+│       │       dev_menu_template.js
+│       │       edit_menu_template.js
+│       │
+│       └───stylesheets
+│               main.css
 │
 ├───bloom-filter
 │   │   readme.md
@@ -349,12 +358,6 @@ Generated in Windows 10 using `tree /F` command in terminal.
 ├───spoj
 │       readme.md
 │
-├───src
-│       commit.js
-│       deploy.js
-│       index.js
-│       push.js
-│
 ├───stl
 │       stl.hpp
 │
@@ -369,3 +372,5 @@ Generated in Windows 10 using `tree /F` command in terminal.
 ### License
 
 Copyright © 2018 Sambhav Jain under GPL-3.0
+
+**_Happy Hacking!_**
