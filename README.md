@@ -10,6 +10,7 @@ Each sub-directory has been enclosed with a readme to help you in understamding 
 
 ## Changelog
 
+- **0.3.0**: Start electron application development and remove local packages.
 - **0.2.10**: Add [DCO](https://github.com/sambhav2612/karumanchi/blob/master/DCO).
 - **0.2.9**: Add Chapter 15.
 - **0.2.8**: Update readme.
@@ -115,14 +116,10 @@ Generated in Windows 10 using `tree /F` command in terminal.
 
 ```sh
 .
-│   .babelrc
 │   .editorconfig
-│   .eslintignore
-│   .eslintrc.json
 │   .gitignore
 │   .npmignore
 │   .travis.yml
-│   CMakeLists.txt
 │   CODE_OF_CONDUCT.md
 │   CONTRIBUTING.md
 │   DCO

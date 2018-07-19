@@ -1,30 +1,14 @@
 {
   "name": "karumanchi",
-  "version": "0.2.10",
+  "version": "0.3.0",
   "description": "karumanchi ds guides and codes",
   "main": ".lib/index.js",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "build": "cross-env BABEL_ENV=production babel src --out-dir lib",
-    "test": "npm run lint && npm run cover",
-    "test:prod": "cross-env BABEL_ENV=production npm run test",
-    "test:only": "mocha --require babel-core/register --require babel-polyfill --recursive",
-    "test:watch": "npm test -- --watch",
-    "cover": "nyc mocha --require babel-core/register",
-    "lint": "eslint ./src",
-    "clean": "rimraf lib",
-    "push": "github-deploy",
-    "prepublishOnly": "npm run clean && npm run lint && npm run build",
-    "publishing": "npm version patch && npm publish --access=public",
+    "publish": "npm version patch && npm publish --access=public",
     "bloomf": "pip install bloomf==0.3"
-  },
-  "bin": {
-    "download": "lib/index.js",
-    "github-commit": "lib/commit.js",
-    "github-push": "lib/push.js",
-    "github-deploy": "lib/deploy.js"
   },
   "repository": {
     "type": "git",
@@ -44,50 +28,6 @@
   },
   "homepage": "https://github.com/sambhav2612/karumanchi#readme",
   "dependencies": {
-    "@octokit/rest": "^15.9.4",
-    "@types/errorhandler": "0.0.32",
-    "body-parser": "^1.18.3",
-    "chalk": "^2.4.1",
-    "clear": "^0.1.0",
-    "clui": "^0.3.6",
-    "commander": "^2.16.0",
-    "configstore": "^3.1.2",
-    "cors": "^2.8.4",
-    "crypto": "^1.0.1",
-    "errorhandler": "^1.5.0",
-    "express": "^4.16.3",
-    "express-session": "^1.15.6",
-    "figlet": "^1.2.0",
-    "inquirer": "^6.0.0",
-    "jsonwebtoken": "^8.3.0",
-    "lodash": "^4.17.10",
-    "minimist": "^1.2.0",
-    "mongoose": "^5.2.1",
-    "morgan": "^1.9.0",
-    "passport": "^0.4.0",
-    "passport-local": "^1.0.0",
-    "shelljs": "^0.8.2",
-    "simple-git": "^1.96.0",
-    "touch": "^3.1.0"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-eslint": "^8.2.5",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-minify": "^0.4.3",
-    "cross-env": "^5.2.0",
-    "eslint": "^5.0.1",
-    "eslint-plugin-import": "^2.13.0",
-    "mocha": "^5.2.0",
-    "nyc": "^12.0.2",
-    "rimraf": "^2.6.2"
-  },
-  "nyc": {
-    "reporter": [
-      "lcov",
-      "text"
-    ]
+    "bindings": "^1.3.0"
   }
 }

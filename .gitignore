@@ -22,8 +22,8 @@ node_modules/
 .eslintcache
 *.tgz
 .env
-lib/
+build
 
-.vscode/
-__pycache__/
-bloomf.egg-info/
+.vscode
+__pycache__
+bloomf.egg-info
