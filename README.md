@@ -63,7 +63,9 @@ Each sub-directory has been enclosed with a readme to help you in understamding 
 
 Please checkout the contribution guideline [here](https://github.com/sambhav2612/karumanchi/blob/master/CONTRIBUTING.md).
 
-### How to run?
+### How to run the algorithms?
+
+Please find the the how to run guide [here](https://github.com/sambhav2612/karumanchi/blob/master/HOW_TO_RUN.md).
 
 ### Craving for more?
 
@@ -83,6 +85,7 @@ Generated in Windows 10 using `tree /F` command in terminal. Inside the main boo
 │   CODE_OF_CONDUCT.md
 │   CONTRIBUTING.md
 │   DCO
+│   HOW_TO_RUN.md
 │   LICENSE
 │   Makefile
 │   native.cc

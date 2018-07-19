@@ -1,4 +1,4 @@
-# How to run?
+# How to run the algorithms?
 
 ## C++
 
