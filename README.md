@@ -10,6 +10,7 @@ Each sub-directory has been enclosed with a readme to help you in understamding 
 
 ## Changelog
 
+- **0.3.2**: Update Chapter 15.
 - **0.3.1**: :pencil: files.
 - **0.3.0**: Start electron application development and remove local packages.
 - **0.2.10**: Add [DCO](https://github.com/sambhav2612/karumanchi/blob/master/DCO).
@@ -79,7 +80,6 @@ Generated in Windows 10 using `tree /F` command in terminal. Inside the main boo
 .
 │   .editorconfig
 │   .gitignore
-│   .npmignore
 │   .travis.yml
 │   binding.gyp
 │   CODE_OF_CONDUCT.md
@@ -343,6 +343,15 @@ Generated in Windows 10 using `tree /F` command in terminal. Inside the main boo
 │   │   │   remove-duplicates.cpp
 │   │   │   seperate-chaining.hpp
 │   │   │   two-arrays.cpp
+│   │   │
+│   │   └───out
+│   │
+│   ├───ch15-string-algorithms
+│   │   │   brute-force.cpp
+│   │   │   kmp.cpp
+│   │   │   readme.md
+│   │   │   robin-karp.cpp
+│   │   │   trie.hpp
 │   │   │
 │   │   └───out
 │   │

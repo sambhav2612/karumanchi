@@ -17,11 +17,13 @@ In my mind and checklist, I've many side-projects that can be [written in Python
 
 - Getting out of a maze using DFS Algorithm
 - Resolving deadlocks with Topological Sorting
-- Bitonic Arrays
-- Fibonacci Heaps
+- Constructing Bitonic Arrays
+- Simulating Finite Automata
+- Building Fibonacci Heaps
 - Computationally proving equivalnce of Disjoint Sets (ADT)
 - Solving the Classic Tournament Problem
 - XOR'ing in search algorithms
+- Building Suffix Trees
 
 To proceed, please create a new issue telling your requirements and we'll assign that issue to you ASAP, without any conflict on
 first-come-first-served basis. We follow the **_Developer Certificate of Origin_** on Pull Requests. It requires all commit messages to contain the `Signed-off-by` line with an email address that matches the commit author. The [Developer Certificate of Origin (DCO)](https://github.com/sambhav2612/karumanchi/blob/master/DCO) is a lightweight way for contributors to certify that they wrote or otherwise have the right to submit the code they are contributing to the project. Contributors _sign-off_ that they adhere to these requirements by adding a `Signed-off-by` line to commit messages.
