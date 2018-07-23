@@ -11,11 +11,9 @@ Each sub-directory has been enclosed with a readme to help you in understamding 
 ## Changelog
 
 - **0.3.2**: Update Chapter 15.
-- **0.3.1**: :pencil: files.
 - **0.3.0**: Start electron application development and remove local packages.
 - **0.2.10**: Add [DCO](https://github.com/sambhav2612/karumanchi/blob/master/DCO).
 - **0.2.9**: Add Chapter 15.
-- **0.2.8**: Update readme.
 - **0.2.7**: Update and complete Chapter 11.
 - **0.2.6**: Update travis configuration for package deloyment.
 - **0.2.5**: Add Chapter 11.
