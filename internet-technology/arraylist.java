@@ -47,6 +47,7 @@ public class arraylist {
             name = scanner.nextLine();
             // randomly generating roll numbers while taking name as input from user
             array.add(new Student(randInt(1, 43), name));
+            System.out.println("Added new student ... " + name);
         }
 
         // display using foreach
@@ -61,6 +62,7 @@ public class arraylist {
         System.out.print("Enter a name - ");
         name = scanner.nextLine();
         array.add(new Student(randInt(1, 43), name));
+        System.out.println("Added new student ... " + name);
 
         scanner.close();
 

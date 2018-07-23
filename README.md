@@ -8,6 +8,7 @@ Some extra implementations have been added as side-projects, mostly written in J
 
 ## Changelog
 
+- **Patch #100**: Start Chapter 18.
 - **Patch #97**: Add 8086 and update Internet Technology and Quantum Computing.
 - **Patch #96**: Redo versioning.
 - **Patch #95**: Add Internet Technology and Quantum Computing.
@@ -47,6 +48,7 @@ Some extra implementations have been added as side-projects, mostly written in J
                     <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch13-symbol-tables" target="_blank">Chapter 13 - Symbol Tables</a></li>
                     <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch14-hashing" target="_blank">Chapter 14 - Hashing</a></li>
                     <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch15-string-algorithms" target="_blank">Chapter 15 - String Algorithms</a></li>
+                    <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch18-divide-and-conquer" target="_blank">Chapter 18 - Divide and Conquer</a></li>
                 </ul>
             </details>
         </li>
