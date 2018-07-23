@@ -13,6 +13,7 @@
     "C_Cpp.intelliSenseEngine": "Default",
     "clang.cxxflags": [
         "-O",
+        "-O2",
         "-Wall",
         "-g"
     ],
