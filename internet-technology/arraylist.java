@@ -1,6 +1,5 @@
 /**
- * Java Program to demonstrate ArrayList using Classes and Objects
- *
+ * A simple Java program to demonstrate ArrayList using Classes and Objects
  * @author Sambhav Jain
  */
 
@@ -41,10 +40,12 @@ public class arraylist {
     public static void main(String[] args) {
         ArrayList<Student> array = new ArrayList<Student>(5);
         Scanner scanner = new Scanner(System.in);
+        String name;
 
         for (int i = 0; i < 5; ++i) {
             System.out.print("Enter a name - ");
-            String name = scanner.nextLine();
+            name = scanner.nextLine();
+            // randomly generating roll numbers while taking name as input from user
             array.add(new Student(randInt(1, 43), name));
         }
 
@@ -58,7 +59,7 @@ public class arraylist {
 
         // add a new instance
         System.out.print("Enter a name - ");
-        String name = scanner.nextLine();
+        name = scanner.nextLine();
         array.add(new Student(randInt(1, 43), name));
 
         scanner.close();

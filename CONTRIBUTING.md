@@ -3,7 +3,7 @@ Hey Developer! Thanks for coming here, let me get you acknowledged with this rep
 # Why?
 
 I always wanted to complete this book since starting my graduation. Started as another side-project by end of May 2018,
-I'm looking forward to July 2018 as the ecpected endgame. I was heavily motivated to complete this book since high school as well, so that served catalyst to fuel this reaction.
+I'm looking forward to July 2018 as the ecpected endgame. I was heavily motivated to complete this book since high school as well, so that served catalyst to fuel this reaction. I'm an aspiring **_polygot_** developer and working day-=and-night to get myself there in as little time as possible and supposedly this project might take me there.
 
 ## Workflow
 

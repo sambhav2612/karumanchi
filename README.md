@@ -10,8 +10,9 @@ Each sub-directory has been enclosed with a readme to help you in understamding 
 
 ## Changelog
 
+- **Patch #97**: Add 8086 and update Internet Technology and Quantum Computing.
 - **Patch #96**: Redo versioning.
-- **Patch #95**: Add Internet Technology and Quantum.
+- **Patch #95**: Add Internet Technology and Quantum Computing.
 - **Patch #93**: Update Chapter 15.
 - **Patch #90**: Start electron application development and remove local packages.
 - **Patch #88**: Add [DCO](https://github.com/sambhav2612/karumanchi/blob/master/DCO).

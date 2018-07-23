@@ -1,6 +1,6 @@
 # Internet Technology
 
-Course 1 - Semester 5
+**_Course 1 - Semester 5 - B.S. Computer Science Major_**
 
 To run the files from within the directory you're currently visiting, you need to send `classpath` either at runtime or as a path variable. I'm using the former method.
 
