@@ -10,26 +10,29 @@ Each sub-directory has been enclosed with a readme to help you in understamding 
 
 ## Changelog
 
-- **0.3.2**: Update Chapter 15.
-- **0.3.0**: Start electron application development and remove local packages.
-- **0.2.10**: Add [DCO](https://github.com/sambhav2612/karumanchi/blob/master/DCO).
-- **0.2.9**: Add Chapter 15.
-- **0.2.7**: Update and complete Chapter 11.
-- **0.2.6**: Update travis configuration for package deloyment.
-- **0.2.5**: Add Chapter 11.
-- **0.2.4**: Update python utility.
-- **0.2.3**: Add python utility to seperate executables from source code.
-- **0.2.2**: Update and complete Chapter 9.
+- **Patch #96**: Redo versioning.
+- **Patch #95**: Add Internet Technology and Quantum.
+- **Patch #93**: Update Chapter 15.
+- **Patch #90**: Start electron application development and remove local packages.
+- **Patch #88**: Add [DCO](https://github.com/sambhav2612/karumanchi/blob/master/DCO).
+- **Patch #87**: Add Chapter 15.
+- **Patch #82**: Update and complete Chapter 11.
+- **Patch #81**: Update travis configuration for package deloyment.
+- **Patch #80**: Add Chapter 11.
+- **Patch #79**: Update python utility.
+- **Patch #78**: Add python utility to seperate executables from source code and add changelog.
+- **Patch #77**: Update and complete Chapter 9.
 
 ## Pathway
 
 <details>
-<summary>How do I find stuff in this repo?</summary>
+<summary>How to find stuff in this repo?</summary>
     <ul>
         <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/bloom-filter" target="_blank">Bloom Filter <a href="https://badge.fury.io/py/bloomf"><img src="https://badge.fury.io/py/bloomf.svg" alt="PyPI version" height="18"></a></a></li>
         <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/codechef" target="_blank">Codechef</a></li>
         <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/codeforces" target="_blank">Codeforces</a></li>
         <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/external-sorting" target="_blank">External Sorting</a></li>
+        <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/internet-technology" target="_blank">Internet Technology</a></li>
         <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/js" target="_blank">JavaScript Algorithms</a></li>
         <li>
             <details>
@@ -53,6 +56,7 @@ Each sub-directory has been enclosed with a readme to help you in understamding 
                 </ul>
             </details>
         </li>
+        <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/quantum-computing" target="_blank">Quantum Computing</a></li>
         <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/spoj" target="_blank">SPOJ</a></li>
         <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/stl" target="_blank">Standard Template Library (C++)</a></li>
     </ul>
@@ -173,6 +177,12 @@ Generated in Windows 10 using `tree /F` command in terminal. Inside the main boo
 │           gfg.cpp
 │           input.txt
 │           output.txt
+│
+├───internet-technology
+│       arraylist.class
+│       arraylist.java
+│       readme.md
+│       Student.class
 │
 ├───js
 │       priority-queue.js
@@ -364,6 +374,9 @@ Generated in Windows 10 using `tree /F` command in terminal. Inside the main boo
 ├───misc
 │       sparse-set.cpp
 │       sparse-set.hpp
+│
+├───quantum-computing
+│       readme.md
 │
 ├───spoj
 │       readme.md

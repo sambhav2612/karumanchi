@@ -6,7 +6,7 @@
 - Install MinGW on Windows and g++ on macOS & Unix-like.
 - Compile and run using:
 
-```bash
+```sh
 $ g++ <FILENAME.cpp> -o <OUTPUT-BINARY-NAME>
 $ "OUTPUT-BINARY-NAME" # on windows cmd (using "")
 $ ./OUTPUT-BINARY-NAME # on macOS and Unix-like
@@ -36,11 +36,7 @@ Adding following flags in optional and depends on the users thugh are sugegsted 
 
 ```sh
 $ npm run <TAG-NAME-INSIDE-SCRIPTS>
-
-# ex: to run stack.js
 $ npm run stack
-
-# OR, run directly via node
 $ node js/stack.js
 ```
 
