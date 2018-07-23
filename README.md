@@ -8,15 +8,16 @@ Some extra implementations have been added as side-projects, mostly written in J
 
 ## Changelog
 
-- **Patch #100**: Start Chapter 18.
+- **Patch #102**: Start Metaprogramming in C++.
+- **Patch #100**: Start Karumanchi Chapter 18.
 - **Patch #97**: Add 8086 and update Internet Technology and Quantum Computing.
 - **Patch #96**: Redo versioning.
 - **Patch #95**: Add Internet Technology and Quantum Computing.
 - **Patch #90**: Start electron application development and remove local packages.
-- **Patch #88**: Add [DCO](https://github.com/sambhav2612/karumanchi/blob/master/DCO).
-- **Patch #87**: Start Chapter 15.
-- **Patch #80**: Add Chapter 11.
-- **Patch #78**: Add python utility to seperate executables from source code and add changelog.
+- **Patch #88**: Add [Developer Certificate of Origin](https://github.com/sambhav2612/karumanchi/blob/master/DCO).
+- **Patch #87**: Start Karumanchi Chapter 15.
+- **Patch #80**: Add Karumanchi Chapter 11.
+- **Patch #78**: Add python utility to Karumanchi.
 
 ## Pathway
 
