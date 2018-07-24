@@ -8,7 +8,7 @@ Some extra implementations have been added as side-projects, mostly written in J
 
 ## Changelog
 
-- **Patch #102**: Start Metaprogramming in C++.
+- **Patch #102**: Add Template Metaprogramming in C++.
 - **Patch #100**: Start Karumanchi Chapter 18.
 - **Patch #97**: Add 8086 and update Internet Technology and Quantum Computing.
 - **Patch #96**: Redo versioning.
@@ -17,7 +17,7 @@ Some extra implementations have been added as side-projects, mostly written in J
 - **Patch #88**: Add [Developer Certificate of Origin](https://github.com/sambhav2612/karumanchi/blob/master/DCO).
 - **Patch #87**: Start Karumanchi Chapter 15.
 - **Patch #80**: Add Karumanchi Chapter 11.
-- **Patch #78**: Add python utility to Karumanchi.
+- **Patch #78**: Add python utility to redo Karumanchi workflow.
 
 ## Pathway
 
@@ -42,7 +42,7 @@ Some extra implementations have been added as side-projects, mostly written in J
                     <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch6-trees" target="_blank">Chapter 6 - Trees</a></li>
                     <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch7-priority-queues" target="_blank">Chapter 7 - Priority Queues and Heaps</a></li>
                     <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch8-disjoint-sets" target="_blank">Chapter 8 - Disjoint Sets ADT</a></li>
-                    <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch9-graph-algorithms" target="_blank">Chapter 9 - Graph ALgorithms</a></li>
+                    <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch9-graph-algorithms" target="_blank">Chapter 9 - Graph Algorithms</a></li>
                     <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch10-sorting" target="_blank">Chapter 10 - Sorting</a></li>
                     <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch11-searching" target="_blank">Chapter 11 - Searching</a></li>
                     <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch12-selection-algorithms" target="_blank">Chapter 12 - Selection Algorithms [Medians]</a></li>

@@ -23,6 +23,7 @@ node_modules/
 *.tgz
 .env
 build
+out
 
 .vscode
 __pycache__
