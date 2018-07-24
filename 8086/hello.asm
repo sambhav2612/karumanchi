@@ -1,14 +1,15 @@
-section .data   ;this is a data section
-    msg db      "hello, world!"     ;this is a constant
+section	.text
+	global _start       ;must be declared for using gcc
+_start:                     ;tell linker entry point
+	mov	edx, len    ;message length
+	mov	ecx, msg    ;message to write
+	mov	ebx, 1	    ;file descriptor (stdout)
+	mov	eax, 4	    ;system call number (sys_write)
+	int	0x80        ;call kernel
+	mov	eax, 1	    ;system call number (sys_exit)
+	int	0x80        ;call kernel
 
-section .start  ;entry point of the program
-    global _start
-_start:         ;actual execution starts here
-    mov     rax, 1
-    mov     edi, 1
-    mov     rsi, msg
-    mov     rdx, 13
-    syscall
-    mov     rax, 60
-    mov     rdi, 0
-    syscall
+section	.data
+
+msg	db	'Hello, world!',0xa	;our dear string
+len	equ	$ - msg			;length of our dear string
