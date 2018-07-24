@@ -25,6 +25,8 @@ In my mind and checklist, I've many side-projects that can be [written in Python
 - XOR'ing in search algorithms
 - Building Suffix Trees
 - Anagrams
+- Huffman Coding
+- Coim Change Problem
 
 To proceed, please create a new issue telling your requirements and we'll assign that issue to you ASAP, without any conflict on
 first-come-first-served basis. We follow the **_Developer Certificate of Origin_** on Pull Requests. It requires all commit messages to contain the `Signed-off-by` line with an email address that matches the commit author. The [Developer Certificate of Origin (DCO)](https://github.com/sambhav2612/karumanchi/blob/master/DCO) is a lightweight way for contributors to certify that they wrote or otherwise have the right to submit the code they are contributing to the project. Contributors _sign-off_ that they adhere to these requirements by adding a `Signed-off-by` line to commit messages.

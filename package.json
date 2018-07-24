@@ -1,6 +1,6 @@
 {
   "name": "karumanchi",
-  "version": "0.0.105",
+  "version": "0.0.106",
   "description": "karumanchi ds guides and codes",
   "main": ".lib/index.js",
   "publishConfig": {
