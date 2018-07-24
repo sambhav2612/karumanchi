@@ -56,7 +56,9 @@ public class arraylist {
         }
 
         // randomly remove an element in range of 5
-        array.remove(randInt(0, 4));
+        int index = randInt(0, 4);
+        array.remove(index);
+        System.out.println("Removed student ... " + array.get(index).getRollNo());
 
         // add a new instance
         System.out.print("Enter a name - ");
