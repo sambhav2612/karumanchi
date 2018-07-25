@@ -1,0 +1,1 @@
+cd C:\Users\VAIBHAV JAIN\Desktop\sambhav\karumanchi

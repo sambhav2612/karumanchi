@@ -52,6 +52,7 @@ Some extra implementations have been added as side-projects, mostly written in J
                     <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch15-string-algorithms" target="_blank">Chapter 15 - String Algorithms</a></li>
                     <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch17-greedy-algorithms" target="_blank">Chapter 17 - Greedy Algorithms</a></li>
                     <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch18-divide-and-conquer" target="_blank">Chapter 18 - Divide and Conquer</a></li>
+                    <li><a href="https://github.com/sambhav2612/karumanchi/tree/master/karumanchi/ch19-dynamic-programming" target="_blank">Chapter 19 - Dynamic Programming</a></li>
                 </ul>
             </details>
         </li>

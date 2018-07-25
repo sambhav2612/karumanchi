@@ -1,4 +1,4 @@
-# this is a quantum random number generatoir using handmard matrix and qubits
+# this is a quantum random number generator using handmard matrix and qubits
 from projectq.ops import  H, Measure
 from projectq import MainEngine
 
