@@ -8,6 +8,7 @@ Some extra implementations have been added as side-projects, mostly written in J
 
 ## Changelog
 
+- **Patch #109**: Complete practical Karumanchi.
 - **Patch #106**: Start Karumanchi Chapter 17 and 19.
 - **Patch #102**: Add Template Metaprogramming in C++.
 - **Patch #100**: Start Karumanchi Chapter 18.
