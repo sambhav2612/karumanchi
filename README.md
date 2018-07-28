@@ -67,16 +67,18 @@ Some extra implementations have been added as side-projects, mostly written in J
 
 Please checkout the contribution guideline [here](https://github.com/sambhav2612/karumanchi/blob/master/CONTRIBUTING.md).
 
-### How to run the algorithms?
+## How to run the algorithms?
 
 Please find the the how to run guide [here](https://github.com/sambhav2612/karumanchi/blob/master/HOW_TO_RUN.md).
 
-### Craving for more?
+## Craving for more?
 
 You can find [this](https://yuchengkai.cn/docs/cs/dataStruct.html) resource particularly cool to put in use while you're here.
 
-### License
+## License
 
-Copyright © 2018 Sambhav Jain under GPL-3.0
+Copyright © 2018 Sambhav Jain under LGPL-3.0
+
+![LGPL-3.0](https://www.gnu.org/graphics/lgplv3-147x51.png)
 
 **_Happy Hacking!_**
