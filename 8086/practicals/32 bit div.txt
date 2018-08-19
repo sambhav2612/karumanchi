@@ -1,0 +1,108 @@
+.MODEL SMALL
+.386
+.DATA
+   M1 DB 13,10,'Enter the first 32 bit number:$'
+   M2 DB 13,10,'Enter the first 32 bit number:$'
+   M3 DB 13,10,'QUOTIENT is:$'
+   M4 DB 13,10,'REMAINDER is:$'
+ 
+.CODE 
+.STARTUP
+    
+   MOV AH,09H
+   MOV DX,OFFSET M1
+   INT 21H
+   CALL READH   ; Read 1st 32-bit hex number into EAX
+   MOV EBX,EAX  ; Save 1st number in EBX register
+
+   MOV AH,09H
+   MOV DX,OFFSET M2
+   INT 21H
+   CALL READH   ; Read 2nd 32-bit hex number into EAX
+   MOV EDX,00000000H
+
+   DIV EBX  ; 
+   MOV ECX,EAX
+   MOV EBX,EDX
+   MOV AH,09H
+   MOV DX,OFFSET M3
+   INT 21H
+   MOV EAX,ECX
+   CALL DISPH   ; Display EAX
+   MOV AH,09H
+   MOV DX,OFFSET M4
+   INT 21H
+   MOV EAX,EBX
+   CALL DISPH   ;display EDX
+.EXIT
+
+
+
+; Procedure to read 8 hexadecimal digits from keyboard and store it in EAX
+
+READH PROC NEAR
+   PUSH EBX        ; Save EBX as it is used in this procedure on the stack
+   MOV CL,4        ; To shift register by 4 bits
+   MOV SI,8        ; Count for entering 8 digits      
+   MOV EBX,0H
+READH1:
+   MOV AH,1H       ; I/P subprogram
+   INT 21H         ; Call MS-DOS I/P subprogram
+   CALL CONV       ; CALL procedure CONV
+   SHL EBX,CL      ; Shift arithmetic left EBX by 4 bits
+   ADD BL,AL       ; BL=BL+AL
+   DEC SI          
+   JNZ READH1
+   MOV EAX,EBX
+   POP EBX        ; Retrieve the contents of EBX from stack
+   RET
+READH  ENDP
+
+
+
+
+; Procedure to convert AL (ASCII code) into hexadecimal
+CONV PROC NEAR
+   CMP AL,'9'     ; if AL <= '9' , subtract 30H from AL
+   JBE CONV2
+   CMP AL, 'a'    ; if AL < 'a' , subtract 37H from AL
+                  ; if AL >= 'a' , subtract 57H from AL
+   JB CONV1
+   SUB AL,20H
+CONV1:
+   SUB AL,7
+CONV2:
+   SUB AL,30H
+   RET
+CONV ENDP
+
+   
+
+
+;Procedure to display EAX as a 8 digit hex number
+DISPH PROC NEAR
+   PUSH EBX        ; Save EBX
+   MOV CL,4        ; To rotate the register by 4 bits
+   MOV SI,8        ; Count for displaying 8 digits
+DISPH1:
+   ROL EAX,CL      ; Rotate EAX left by 4 bits
+   PUSH EAX        ; Save EAX
+   AND AL,0FH
+   ADD AL,30H
+   CMP AL,'9'      ; if AL <= '9', AL contains the ASCII code
+   JBE DISPH2       
+   ADD AL,7        ; if AL > '9' , add 07H to AL to convert into ASCII
+DISPH2:
+   MOV AH,2H       ; O/P subprogram
+   MOV DL,AL       ; Call MS-DOS O/P subprogram
+   INT 21H         ; Display the data in DL register on screen
+   POP EAX         ; retrieve EAX from Stack
+   DEC SI
+   JNZ DISPH1
+   POP EBX         ; Restore EBX
+   RET
+DISPH ENDP
+
+   END             ; end of file
+   
+

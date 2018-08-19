@@ -1,0 +1,32 @@
+.model tiny
+.code
+.startup
+    mov dl,0
+    mov ah,01
+    int 21h
+    sub al,30h   ; convert into ASCII to number eg 1  i.e 31h - 30h = 1h
+    shl al,4     ; 01h
+    mov dl,al    ; dl=10h
+    
+    mov ah,01    
+    int 21h       ; input =2 i.e 32h
+    sub al,30h    ; 2h
+    add dl,al    ;dl= 12h 
+    
+    mov cl,dl    ;cl=12h
+    mov dl,0
+    mov dl,cl
+    shr dl,4
+    add dl,30h
+    mov ah,02
+    int 21h
+    
+    mov dl,0
+    mov dl,cl
+    and dl,0fh
+    add dl,30h 
+    mov ah,02
+    int 21h
+    
+.exit
+end

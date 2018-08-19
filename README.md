@@ -1,7 +1,6 @@
 # karumanchi
 
-[![Build Status](https://travis-ci.org/sambhav2612/karumanchi.svg?branch=master)](https://travis-ci.org/sambhav2612/karumanchi) [![npm version](https://badge.fury.io/js/karumanchi.svg)](https://www.npmjs.com/package/karumanchi) [![Download karumanchi](https://img.shields.io/sourceforge/dt/karumanchi.svg)](https://sourceforge.net/projects/karumanchi/files/latest/download)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fsambhav2612%2Fkarumanchi.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fsambhav2612%2Fkarumanchi?ref=badge_shield)
+[![Build Status](https://travis-ci.org/sambhav2612/karumanchi.svg?branch=master)](https://travis-ci.org/sambhav2612/karumanchi) [![npm version](https://badge.fury.io/js/karumanchi.svg)](https://www.npmjs.com/package/karumanchi) [![Download karumanchi](https://img.shields.io/sourceforge/dt/karumanchi.svg)](https://sourceforge.net/projects/karumanchi/files/latest/download) [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fsambhav2612%2Fkarumanchi.svg?type=small)](https://app.fossa.io/projects/git%2Bgithub.com%2Fsambhav2612%2Fkarumanchi?ref=badge_small)
 
 Almost all problems and codes from **_Data Structures Made Easy by Narasimha Karumanchi_**. Mostly written in C++, this repository follows the [C++ Best Practices](https://lefticus.gitbooks.io/cpp-best-practices/content) written by Jason Turner. Some of the code follows the general C++ 11 guidelines such as replacing conventional `NULL` pointers with `nullptr`.
 

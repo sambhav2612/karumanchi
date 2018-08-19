@@ -1,0 +1,84 @@
+;Bubble sort
+
+.MODEL SMALL
+.386
+.DATA
+   ARRAY DB 15 DUP (?)
+   M1 DB 13,10,'Enter the number of elements:$'
+   M2 DB 13,10,'Enter the numbers(in any random order):$'
+   M3 DB 13,10,'Sorted sequence is:$'
+   N DB ?
+ 
+.CODE 
+.STARTUP
+
+        MOV AH,09H
+        MOV DX,OFFSET M1
+        INT 21H
+
+        mov AH,01h
+        int 21h
+        SUB AL,30H
+        MOV N,AL
+        MOV CL,N
+        MOV SI,OFFSET ARRAY
+
+  ENT: 
+        MOV AH,09H
+        MOV DX,OFFSET M2
+        INT 21H
+        MOV AH,01H
+        INT 21H
+        SUB AL,30H
+        MOV ARRAY[SI],AL
+        INC SI
+        LOOP ENT
+
+
+        MOV CL,N
+        MOV CH,00H
+        SUB CL,01H
+        
+  LOOP1:
+        MOV SI,OFFSET ARRAY        
+        MOV DI,CX
+      
+
+  LOOP2:
+
+
+         MOV AL,ARRAY[SI]
+         CMP AL,ARRAY[SI+1]
+         JLE P1
+         XCHG AL,ARRAY[SI+1]
+         MOV ARRAY[SI],AL
+         
+               
+ P1:
+       
+       INC SI
+       LOOP LOOP2
+       MOV CX,DI
+       LOOP LOOP1
+
+      MOV AH,09H
+      MOV DX,OFFSET M3
+      INT 21H
+      MOV SI,OFFSET ARRAY
+      MOV CL,N
+      
+DISPLAY:
+
+      MOV DH,00H
+      MOV DL,ARRAY[SI]
+      ADD DL,30H
+      MOV AH,02H
+      INT 21H
+      INC SI
+      LOOP DISPLAY
+      JMP EXIT
+      
+  EXIT:
+        .EXIT          
+
+ END
