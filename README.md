@@ -82,3 +82,6 @@ Copyright © 2018 Sambhav Jain under LGPL-3.0
 ![LGPL-3.0](https://www.gnu.org/graphics/lgplv3-147x51.png)
 
 **_Happy Hacking!_**
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fsambhav2612%2Fkarumanchi.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fsambhav2612%2Fkarumanchi?ref=badge_large)
