@@ -14,9 +14,8 @@ Output
 
 void printPattern(string s)
 {
-   //Your code here
    int j = 1, flag = 0, mid = s.size()/2, y = s.size()-1;
-   for (int i = 0; s[i] != '\0'; ++i) {
+   for (int i = 0; s[i]; ++i) {
        if (s.size() % 2 ? i == mid + 1 : i == mid) {
             j = 1;
             flag = 1; 
@@ -25,11 +24,10 @@ void printPattern(string s)
         while (x++ < y)
             cout << "  ";
         if (flag)
-            cout << s.substr(mid, mid + 1) + s.substr(0, j) << "$";
+            cout << s.substr(mid, mid + 1) + s.substr(0, j);
         else
-            cout << s.substr(mid, j) << "$";
-        --y;
-        ++j;
-        
+            cout << s.substr(mid, j);
+        cout  << "$";
+        --y;    ++j;
    }
 }
