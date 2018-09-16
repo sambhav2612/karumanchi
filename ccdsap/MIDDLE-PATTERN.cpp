@@ -1,18 +1,25 @@
 // GFG Sudo Placement 2 - 2.2 Middle Pattern
 
-Example(To be used only for expected ouput):
-Input
-2
-PROGRAM
-RAT
+/*
+ *  Author: Sambhav Jain
+ *  Contact: sambhavjain2612@gmail.com
+ *  Tested on GCC 7.3.0
+ * 
+ *   Input
+ *   2
+ *   PROGRAM
+ *   RAT
+ *
+ *   Output
+ *
+ *           G$          GR$        GRA$      GRAM$    GRAMP$  GRAMPR$GRAMPRO$
+ *       A$  AT$ATR$
+ * 
+ */
 
-Output
+#include <bits/stdc++.h>
 
-            G$          GR$        GRA$      GRAM$    GRAMP$  GRAMPR$GRAMPRO$
-        A$  AT$ATR$
- 
-
-void printPattern(string s)
+void printPattern(std::string s)
 {
    int j = 1, flag = 0, mid = s.size()/2, y = s.size()-1;
    for (int i = 0; s[i]; ++i) {
@@ -30,4 +37,15 @@ void printPattern(string s)
         cout  << "$";
         --y;    ++j;
    }
+}
+
+int main(void) {
+    int t = 0;
+    std::cin >> t;
+    while (t--) {
+        std::string str = "";
+        getline(std::cin, str);
+        printPattern(str);
+    }
+    return 0;
 }

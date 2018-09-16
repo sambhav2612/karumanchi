@@ -3,6 +3,7 @@ node_js:
 - '8'
 - '6'
 script:
+- npm install karumanchi
 - npm publish
 branches:
   only:
