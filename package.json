@@ -28,6 +28,6 @@
   },
   "homepage": "https://github.com/sambhav2612/karumanchi#readme",
   "dependencies": {
-    "bindings": "^1.3.0"
+    "bindings": " ^1.3.0 "
   }
 }
