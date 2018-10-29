@@ -6,7 +6,7 @@ int numberOfCalls = 0;
 void WhoAmI(const v8::FunctionCallbackInfo<v8::Value> &args)
 {
     v8::Isolate *isolate = args.GetIsolate();
-    auto message = v8::String::NewFromUtf8(isolate, "I'm a Node Hero!");
+    auto message = v8::String::NewFromUtf8(isolate, "I'm a Node Hero !!");
     args.GetReturnValue().Set(message);
 }
 
