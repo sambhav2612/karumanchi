@@ -107,7 +107,7 @@ again:
 		gotoxy(5, 11);
 		cout << "You will be given " << 5 - count - 1 << " more chance(s) to input correct password";
 		gotoxy(5, 13);
-		cout << "or all the info of database will be deleted";
+		cout << " !! or all the info of database will be deleted !! ";
 		count++;
 		cout << " OK(?)";
 		getch();
