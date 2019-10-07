@@ -4,13 +4,13 @@
 
 Almost all problems and codes from **_Data Structures Made Easy by Narasimha Karumanchi_**. Mostly written in C++, this repository follows the [C++ Best Practices](https://lefticus.gitbooks.io/cpp-best-practices/content) written by Jason Turner. Some of the code follows the general C++ 11 guidelines such as replacing conventional `NULL` pointers with `nullptr`.
 
-Some extra implementations have been added as side-projects, mostly written in Java, Python and Assembly. Each sub-directory comes with a readme to help understamd the workflow of the code in the directory. Please find the same as you are contributing.
+Some extra implementations have been added as side-projects, mostly written in Java, Python and Assembly. Each sub-directory comes with a readme to help understand the workflow of the code in the directory. Please find the same as you are contributing.
 
 ## Changelog
 
 - **Patch #112**: Start CCDSAP preparation.
 - **Patch #109**: Complete practical Karumanchi.
-- **Patch #106**: Start Karumanchi Chapter 17 and 19.
+- **Patch #106**: Start Karumanchi Chapters 17 and 19.
 - **Patch #102**: Add Template Metaprogramming in C++.
 - **Patch #100**: Start Karumanchi Chapter 18.
 - **Patch #97**: Add 8086 and update Internet Technology and Quantum Computing.
@@ -70,7 +70,7 @@ Please checkout the contribution guideline [here](https://github.com/sambhav2612
 
 ## How to run the algorithms?
 
-Please find the the how to run guide [here](https://github.com/sambhav2612/karumanchi/blob/master/HOW_TO_RUN.md).
+Please find the how-to run guide [here](https://github.com/sambhav2612/karumanchi/blob/master/HOW_TO_RUN.md).
 
 ## Craving for more?
 
